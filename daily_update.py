@@ -318,21 +318,38 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                 "size": "Small",
             })
 
+            columns = [
+                {"type": "Column", "width": "auto", "items": [
+                    {"type": "TextBlock", "text": "**Menu Item**", "weight": "Bolder", "size": "Small"},
+                ]},
+                {"type": "Column", "width": "stretch", "items": [
+                    {"type": "TextBlock", "text": "**Ingredients**", "weight": "Bolder", "size": "Small"},
+                ]},
+            ]
+
             for item in items:
                 tags = ""
                 if item["dietary"]:
-                    tags = "  (" + ", ".join(item["dietary"]) + ")"
+                    tags = " (" + ", ".join(item["dietary"]) + ")"
 
-                lines = [f"**{item['name']}**{tags}"]
-                if item["description"]:
-                    lines.append(item["description"])
-
-                body.append({
+                columns[0]["items"].append({
                     "type": "TextBlock",
-                    "text": "\n\n".join(lines),
+                    "text": f"{item['name']}{tags}",
                     "wrap": True,
                     "spacing": "Small",
                 })
+                columns[1]["items"].append({
+                    "type": "TextBlock",
+                    "text": item["description"] or "—",
+                    "wrap": True,
+                    "spacing": "Small",
+                })
+
+            body.append({
+                "type": "ColumnSet",
+                "columns": columns,
+                "spacing": "Small",
+            })
     else:
         body.append({
             "type": "TextBlock",
