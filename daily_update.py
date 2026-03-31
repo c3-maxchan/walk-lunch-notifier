@@ -468,9 +468,9 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                 "type": "TextBlock",
                 "text": f"**{station_display}**",
                 "wrap": True,
-                "spacing": "Medium",
+                "spacing": "Large",
                 "weight": "Bolder",
-                "size": "Small",
+                "size": "Medium",
             })
 
             for idx, item in enumerate(items):
@@ -495,12 +495,12 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                 if item.get("image_url"):
                     columns.append({
                         "type": "Column",
-                        "width": "120px",
+                        "width": "auto",
                         "spacing": "None",
                         "items": [{
                             "type": "Image",
                             "url": item["image_url"],
-                            "size": "Medium",
+                            "width": "80px",
                             "style": "default",
                             "altText": item["name"],
                         }],
