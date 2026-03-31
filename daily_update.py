@@ -111,10 +111,43 @@ def fetch_weather() -> dict | None:
     }
 
 
-def walk_recommendation(weather: dict) -> str:
-    code = weather["weather_code"]
+def walk_score(weather: dict) -> int:
+    """Return 0-100 score for how pleasant the walk will be."""
+    score = 100
+
+    # Temperature: ideal 60-75°F, penalize distance from that range
     temp = weather["temp_f"]
+    if temp < 60:
+        score -= min(int((60 - temp) * 1.5), 40)
+    elif temp > 75:
+        score -= min(int((temp - 75) * 1.5), 40)
+
+    # Precipitation probability
     precip = weather["precip_pct"]
+    score -= int(precip * 0.5)
+
+    # Wind: comfortable under 10 mph, unpleasant above 20
+    wind = weather["wind_mph"]
+    if wind > 10:
+        score -= min(int((wind - 10) * 2), 30)
+
+    # Weather code penalties
+    code = weather["weather_code"]
+    if code in RAINY_CODES:
+        score -= 25
+    elif code in {45, 48}:  # fog
+        score -= 10
+    elif code in {71, 73, 75, 77, 85, 86}:  # snow
+        score -= 30
+
+    return max(0, min(100, score))
+
+
+def walk_recommendation(weather: dict) -> str:
+    score = walk_score(weather)
+    code = weather["weather_code"]
+    precip = weather["precip_pct"]
+    temp = weather["temp_f"]
     wind = weather["wind_mph"]
 
     if code in RAINY_CODES or precip >= 60:
@@ -125,7 +158,11 @@ def walk_recommendation(weather: dict) -> str:
         return "It's windy today — heads up on the walk."
     if temp > 90:
         return "It's hot — maybe stick to the shady route."
-    return "Great day for a walk!"
+    if score >= 80:
+        return "Great day for a walk!"
+    if score >= 50:
+        return "Decent conditions for a walk."
+    return "Tough conditions today — consider an indoor walk."
 
 
 # ---------------------------------------------------------------------------
@@ -218,10 +255,11 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
 
     # --- Weather section ---
     if weather:
+        score = walk_score(weather)
         rec = walk_recommendation(weather)
         body.append({
             "type": "TextBlock",
-            "text": f"**{rec}**",
+            "text": f"**Walk Score: {score}/100** — {rec}",
             "wrap": True,
             "spacing": "Small",
         })
@@ -263,23 +301,38 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
     })
 
     if menu:
+        from collections import OrderedDict
+        grouped = OrderedDict()
         for item in menu:
-            tags = ""
-            if item["dietary"]:
-                tags = "  (" + ", ".join(item["dietary"]) + ")"
+            station = item["station"] or "Other"
+            grouped.setdefault(station, []).append(item)
 
-            station_label = f"  *{item['station']}*" if item["station"] else ""
-
-            lines = [f"**{item['name']}**{tags}{station_label}"]
-            if item["description"]:
-                lines.append(item["description"])
-
+        for station, items in grouped.items():
+            station_display = station.lstrip("@").title()
             body.append({
                 "type": "TextBlock",
-                "text": "\n\n".join(lines),
+                "text": f"**{station_display}**",
                 "wrap": True,
-                "spacing": "Small",
+                "spacing": "Medium",
+                "weight": "Bolder",
+                "size": "Small",
             })
+
+            for item in items:
+                tags = ""
+                if item["dietary"]:
+                    tags = "  (" + ", ".join(item["dietary"]) + ")"
+
+                lines = [f"**{item['name']}**{tags}"]
+                if item["description"]:
+                    lines.append(item["description"])
+
+                body.append({
+                    "type": "TextBlock",
+                    "text": "\n\n".join(lines),
+                    "wrap": True,
+                    "spacing": "Small",
+                })
     else:
         body.append({
             "type": "TextBlock",
