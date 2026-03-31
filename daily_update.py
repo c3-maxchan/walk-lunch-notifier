@@ -212,7 +212,7 @@ def search_food_image(query: str) -> str | None:
         resp.raise_for_status()
         photos = resp.json().get("photos", [])
         if photos:
-            return photos[0]["src"]["small"]
+            return photos[0]["src"]["medium"]
     except Exception as exc:
         print(f"Pexels search failed for '{query}': {exc}", file=sys.stderr)
     return None
@@ -447,12 +447,16 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
             })
 
             for item in items:
+                display_name = item["name"]
+                if station.lower() == "@melted":
+                    display_name = f"{display_name} Pizza"
+
                 tags = ""
                 if item["dietary"]:
                     tags = " (" + ", ".join(item["dietary"]) + ")"
 
                 text_items = [
-                    {"type": "TextBlock", "text": f"**{item['name']}**{tags}", "wrap": True},
+                    {"type": "TextBlock", "text": f"**{display_name}**{tags}", "wrap": True},
                 ]
                 if item["description"]:
                     text_items.append(
@@ -464,11 +468,11 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                 if item.get("image_url"):
                     columns.append({
                         "type": "Column",
-                        "width": "80px",
+                        "width": "120px",
                         "items": [{
                             "type": "Image",
                             "url": item["image_url"],
-                            "size": "Small",
+                            "size": "Medium",
                             "style": "default",
                             "altText": item["name"],
                         }],
