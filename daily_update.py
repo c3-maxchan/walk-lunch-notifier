@@ -473,7 +473,7 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                 "size": "Small",
             })
 
-            for item in items:
+            for idx, item in enumerate(items):
                 display_name = item["name"]
                 if station.lower() == "@melted":
                     display_name = f"{display_name} Pizza"
@@ -496,6 +496,7 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                     columns.append({
                         "type": "Column",
                         "width": "120px",
+                        "spacing": "None",
                         "items": [{
                             "type": "Image",
                             "url": item["image_url"],
@@ -507,6 +508,7 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                 columns.append({
                     "type": "Column",
                     "width": "stretch",
+                    "spacing": "Small",
                     "verticalContentAlignment": "Center",
                     "items": text_items,
                 })
@@ -515,6 +517,7 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                     "type": "ColumnSet",
                     "columns": columns,
                     "spacing": "Small",
+                    "separator": idx > 0,
                 })
 
         body.append({
