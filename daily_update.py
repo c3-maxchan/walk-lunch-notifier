@@ -61,19 +61,26 @@ RAINY_CODES = {51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82, 95, 96, 99}
 # Weather
 # ---------------------------------------------------------------------------
 
+WALK_HOURS = ("T11:00", "T12:00", "T13:00", "T14:00")
+
+
 def _extract_noon_weather(times, temps, precips, winds, codes, date_str):
-    """Extract 12pm-1pm weather for a specific date (YYYY-MM-DD)."""
-    noon_indices = [
+    """Extract 11:30am-2pm weather for a specific date (YYYY-MM-DD).
+
+    Open-Meteo reports hourly, so we use the 11:00, 12:00, 13:00, and 14:00
+    hours to cover the full 11:30am-2:00pm window.
+    """
+    indices = [
         i for i, t in enumerate(times)
-        if t.startswith(date_str) and t.endswith(("T12:00", "T13:00"))
+        if t.startswith(date_str) and t.endswith(WALK_HOURS)
     ]
-    if not noon_indices:
+    if not indices:
         return None
 
-    avg_temp = sum(temps[i] for i in noon_indices) / len(noon_indices)
-    max_precip = max(precips[i] for i in noon_indices)
-    avg_wind = sum(winds[i] for i in noon_indices) / len(noon_indices)
-    worst_code = max(codes[i] for i in noon_indices)
+    avg_temp = sum(temps[i] for i in indices) / len(indices)
+    max_precip = max(precips[i] for i in indices)
+    avg_wind = sum(winds[i] for i in indices) / len(indices)
+    worst_code = max(codes[i] for i in indices)
 
     return {
         "temp_f": round(avg_temp),
@@ -139,11 +146,12 @@ def walk_score(w: dict) -> int:
     elif temp > 75:
         score -= min(int((temp - 75) * 1.5), 40)
 
-    # Precipitation probability — aggressive scaling
-    #   10% → -5,  20% → -16,  40% → -40,  60% → -60,  80% → -76,  100% → -90
+    # Precipitation probability — very aggressive scaling
+    #   Any chance at all gets a steep penalty:
+    #   5% → -10,  10% → -15,  20% → -28,  40% → -48,  60% → -68,  80% → -88,  100% → -100
     precip = w["precip_pct"]
     if precip > 0:
-        score -= max(5, int(precip * 0.9))
+        score -= max(10, int(precip * 1.1))
 
     # Wind: comfortable under 10 mph, unpleasant above 20
     wind = w["wind_mph"]
@@ -324,7 +332,7 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
             "type": "TextBlock",
             "size": "Large",
             "weight": "Bolder",
-            "text": f"Walk & Lunch — {today_str}",
+            "text": today_str,
         }
     ]
 
@@ -340,18 +348,19 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
 
         body.append({
             "type": "TextBlock",
-            "text": f"**Walk Score: {today_score}/100** — {rec}",
+            "text": f"Walk Forecast — {today_score}/100",
             "wrap": True,
-            "spacing": "Small",
+            "spacing": "Medium",
+            "size": "Large",
+            "weight": "Bolder",
         })
 
         body.append({
             "type": "TextBlock",
-            "text": "12:00 – 1:00 PM forecast",
+            "text": f"{rec}  ·  11:30 AM – 2:00 PM",
             "wrap": True,
             "spacing": "Small",
             "isSubtle": True,
-            "size": "Small",
         })
 
         tmrw_label = ""
@@ -439,7 +448,7 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
     # --- Menu section ---
     body.append({
         "type": "TextBlock",
-        "size": "Medium",
+        "size": "Large",
         "weight": "Bolder",
         "text": "Today's Lunch Specials",
         "spacing": "Medium",
