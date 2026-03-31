@@ -197,6 +197,27 @@ DIETARY_SHORT = {
 }
 
 
+def search_food_image(query: str) -> str | None:
+    """Search Pexels for a food photo and return a small thumbnail URL."""
+    api_key = os.environ.get("PEXELS_API_KEY", "")
+    if not api_key:
+        return None
+    try:
+        resp = requests.get(
+            "https://api.pexels.com/v1/search",
+            headers={"Authorization": api_key},
+            params={"query": f"{query} food", "per_page": 1, "orientation": "square"},
+            timeout=10,
+        )
+        resp.raise_for_status()
+        photos = resp.json().get("photos", [])
+        if photos:
+            return photos[0]["src"]["small"]
+    except Exception as exc:
+        print(f"Pexels search failed for '{query}': {exc}", file=sys.stderr)
+    return None
+
+
 def fetch_menu() -> list[dict] | None:
     """Return a list of lunch-special dicts, or None on failure."""
     try:
@@ -250,9 +271,17 @@ def fetch_menu() -> list[dict] | None:
             "description": description,
             "station": station,
             "dietary": dietary,
+            "image_url": None,
         })
 
-    return items if items else None
+    if not items:
+        return None
+
+    print(f"Searching images for {len(items)} menu items…")
+    for item in items:
+        item["image_url"] = search_food_image(item["name"])
+
+    return items
 
 
 # ---------------------------------------------------------------------------
@@ -417,49 +446,54 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                 "size": "Small",
             })
 
-            header_row = {
-                "type": "TableRow",
-                "style": "accent",
-                "cells": [
-                    {"type": "TableCell", "items": [
-                        {"type": "TextBlock", "text": "Menu Item", "weight": "Bolder", "wrap": True},
-                    ]},
-                    {"type": "TableCell", "items": [
-                        {"type": "TextBlock", "text": "Ingredients", "weight": "Bolder", "wrap": True},
-                    ]},
-                ],
-            }
-
-            data_rows = []
             for item in items:
                 tags = ""
                 if item["dietary"]:
                     tags = " (" + ", ".join(item["dietary"]) + ")"
 
-                data_rows.append({
-                    "type": "TableRow",
-                    "cells": [
-                        {"type": "TableCell", "verticalContentAlignment": "Center", "items": [
-                            {"type": "TextBlock", "text": f"**{item['name']}**{tags}", "wrap": True},
-                        ]},
-                        {"type": "TableCell", "verticalContentAlignment": "Center", "items": [
-                            {"type": "TextBlock", "text": item["description"] or "—", "wrap": True},
-                        ]},
-                    ],
+                text_items = [
+                    {"type": "TextBlock", "text": f"**{item['name']}**{tags}", "wrap": True},
+                ]
+                if item["description"]:
+                    text_items.append(
+                        {"type": "TextBlock", "text": item["description"], "wrap": True,
+                         "size": "Small", "isSubtle": True, "spacing": "Small"},
+                    )
+
+                columns = []
+                if item.get("image_url"):
+                    columns.append({
+                        "type": "Column",
+                        "width": "80px",
+                        "items": [{
+                            "type": "Image",
+                            "url": item["image_url"],
+                            "size": "Small",
+                            "style": "default",
+                            "altText": item["name"],
+                        }],
+                    })
+                columns.append({
+                    "type": "Column",
+                    "width": "stretch",
+                    "verticalContentAlignment": "Center",
+                    "items": text_items,
                 })
 
-            body.append({
-                "type": "Table",
-                "gridStyle": "accent",
-                "showGridLines": True,
-                "firstRowAsHeader": True,
-                "columns": [
-                    {"width": 1},
-                    {"width": 2},
-                ],
-                "rows": [header_row] + data_rows,
-                "spacing": "Small",
-            })
+                body.append({
+                    "type": "ColumnSet",
+                    "columns": columns,
+                    "spacing": "Small",
+                })
+
+        body.append({
+            "type": "TextBlock",
+            "text": "_Food photos provided by [Pexels](https://www.pexels.com)_",
+            "wrap": True,
+            "isSubtle": True,
+            "size": "Small",
+            "spacing": "Medium",
+        })
     else:
         body.append({
             "type": "TextBlock",

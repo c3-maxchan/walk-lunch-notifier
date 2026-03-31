@@ -24,4 +24,5 @@ jobs:
       - name: Run daily update
         env:
           TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: python daily_update.py
