@@ -61,8 +61,32 @@ RAINY_CODES = {51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82, 95, 96, 99}
 # Weather
 # ---------------------------------------------------------------------------
 
+def _extract_noon_weather(times, temps, precips, winds, codes, date_str):
+    """Extract 12pm-1pm weather for a specific date (YYYY-MM-DD)."""
+    noon_indices = [
+        i for i, t in enumerate(times)
+        if t.startswith(date_str) and t.endswith(("T12:00", "T13:00"))
+    ]
+    if not noon_indices:
+        return None
+
+    avg_temp = sum(temps[i] for i in noon_indices) / len(noon_indices)
+    max_precip = max(precips[i] for i in noon_indices)
+    avg_wind = sum(winds[i] for i in noon_indices) / len(noon_indices)
+    worst_code = max(codes[i] for i in noon_indices)
+
+    return {
+        "temp_f": round(avg_temp),
+        "precip_pct": max_precip,
+        "wind_mph": round(avg_wind),
+        "condition": WMO_CODES.get(worst_code, "Unknown"),
+        "weather_code": worst_code,
+        "date": date_str,
+    }
+
+
 def fetch_weather() -> dict | None:
-    """Return a dict with noon-hour weather data, or None on failure."""
+    """Return a dict with today's and tomorrow's noon-hour weather data."""
     try:
         resp = requests.get(
             "https://api.open-meteo.com/v1/forecast",
@@ -70,7 +94,7 @@ def fetch_weather() -> dict | None:
                 "latitude": LATITUDE,
                 "longitude": LONGITUDE,
                 "hourly": "temperature_2m,precipitation_probability,wind_speed_10m,weather_code",
-                "forecast_days": 1,
+                "forecast_days": 2,
                 "temperature_unit": "fahrenheit",
                 "wind_speed_unit": "mph",
                 "timezone": "America/Los_Angeles",
@@ -90,51 +114,45 @@ def fetch_weather() -> dict | None:
     winds = hourly.get("wind_speed_10m", [])
     codes = hourly.get("weather_code", [])
 
-    noon_indices = [i for i, t in enumerate(times) if t.endswith(("T12:00", "T13:00"))]
-    if not noon_indices:
-        print("No noon data found in weather response", file=sys.stderr)
+    now = datetime.now(PT)
+    today_str = now.strftime("%Y-%m-%d")
+    tomorrow_str = (now + timedelta(days=1)).strftime("%Y-%m-%d")
+
+    today = _extract_noon_weather(times, temps, precips, winds, codes, today_str)
+    tomorrow = _extract_noon_weather(times, temps, precips, winds, codes, tomorrow_str)
+
+    if not today:
+        print("No noon data found for today in weather response", file=sys.stderr)
         return None
 
-    avg_temp = sum(temps[i] for i in noon_indices) / len(noon_indices)
-    max_precip = max(precips[i] for i in noon_indices)
-    avg_wind = sum(winds[i] for i in noon_indices) / len(noon_indices)
-    worst_code = max(codes[i] for i in noon_indices)
-
-    condition = WMO_CODES.get(worst_code, "Unknown")
-
-    return {
-        "temp_f": round(avg_temp),
-        "precip_pct": max_precip,
-        "wind_mph": round(avg_wind),
-        "condition": condition,
-        "weather_code": worst_code,
-    }
+    return {"today": today, "tomorrow": tomorrow}
 
 
-def walk_score(weather: dict) -> int:
+def walk_score(w: dict) -> int:
     """Return 0-100 score for how pleasant the walk will be."""
     score = 100
 
     # Temperature: ideal 60-75°F, penalize distance from that range
-    temp = weather["temp_f"]
+    temp = w["temp_f"]
     if temp < 60:
         score -= min(int((60 - temp) * 1.5), 40)
     elif temp > 75:
         score -= min(int((temp - 75) * 1.5), 40)
 
-    # Precipitation probability
-    precip = weather["precip_pct"]
-    score -= int(precip * 0.5)
+    # Precipitation probability — scaled so even moderate chances hurt
+    #   20% → -8,  40% → -20,  60% → -36,  80% → -52,  100% → -70
+    precip = w["precip_pct"]
+    score -= int(precip * 0.7)
 
     # Wind: comfortable under 10 mph, unpleasant above 20
-    wind = weather["wind_mph"]
+    wind = w["wind_mph"]
     if wind > 10:
         score -= min(int((wind - 10) * 2), 30)
 
-    # Weather code penalties
-    code = weather["weather_code"]
+    # Weather code penalties (on top of precip penalty)
+    code = w["weather_code"]
     if code in RAINY_CODES:
-        score -= 25
+        score -= 15
     elif code in {45, 48}:  # fog
         score -= 10
     elif code in {71, 73, 75, 77, 85, 86}:  # snow
@@ -143,12 +161,12 @@ def walk_score(weather: dict) -> int:
     return max(0, min(100, score))
 
 
-def walk_recommendation(weather: dict) -> str:
-    score = walk_score(weather)
-    code = weather["weather_code"]
-    precip = weather["precip_pct"]
-    temp = weather["temp_f"]
-    wind = weather["wind_mph"]
+def walk_recommendation(w: dict) -> str:
+    score = walk_score(w)
+    code = w["weather_code"]
+    precip = w["precip_pct"]
+    temp = w["temp_f"]
+    wind = w["wind_mph"]
 
     if code in RAINY_CODES or precip >= 60:
         return "Bring an umbrella — rain is likely during your walk."
@@ -255,8 +273,14 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
 
     # --- Weather section ---
     if weather:
-        score = walk_score(weather)
-        rec = walk_recommendation(weather)
+        today_w = weather["today"]
+        tomorrow_w = weather.get("tomorrow")
+
+        score = walk_score(today_w)
+        rec = walk_recommendation(today_w)
+        today_date = datetime.strptime(today_w["date"], "%Y-%m-%d")
+        today_label = today_date.strftime("%A %-m/%-d")
+
         body.append({
             "type": "TextBlock",
             "text": f"**Walk Score: {score}/100** — {rec}",
@@ -264,18 +288,50 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
             "spacing": "Small",
         })
 
-        weather_facts = [
-            {"title": "Condition", "value": weather["condition"]},
-            {"title": "Temperature", "value": f"{weather['temp_f']}°F"},
-            {"title": "Precip. chance", "value": f"{weather['precip_pct']}%"},
-            {"title": "Wind", "value": f"{weather['wind_mph']} mph"},
-        ]
+        body.append({
+            "type": "TextBlock",
+            "text": f"**Today** ({today_label}, 12:00 – 1:00 PM)",
+            "wrap": True,
+            "spacing": "Small",
+            "weight": "Bolder",
+            "size": "Small",
+        })
 
         body.append({
             "type": "FactSet",
-            "facts": weather_facts,
+            "facts": [
+                {"title": "Condition", "value": today_w["condition"]},
+                {"title": "Temperature", "value": f"{today_w['temp_f']}°F"},
+                {"title": "Precip. chance", "value": f"{today_w['precip_pct']}%"},
+                {"title": "Wind", "value": f"{today_w['wind_mph']} mph"},
+            ],
             "spacing": "Small",
         })
+
+        if tomorrow_w:
+            tmrw_date = datetime.strptime(tomorrow_w["date"], "%Y-%m-%d")
+            tmrw_label = tmrw_date.strftime("%A %-m/%-d")
+            tmrw_score = walk_score(tomorrow_w)
+
+            body.append({
+                "type": "TextBlock",
+                "text": f"**Tomorrow** ({tmrw_label}, 12:00 – 1:00 PM)  —  Walk Score: {tmrw_score}/100",
+                "wrap": True,
+                "spacing": "Medium",
+                "weight": "Bolder",
+                "size": "Small",
+            })
+
+            body.append({
+                "type": "FactSet",
+                "facts": [
+                    {"title": "Condition", "value": tomorrow_w["condition"]},
+                    {"title": "Temperature", "value": f"{tomorrow_w['temp_f']}°F"},
+                    {"title": "Precip. chance", "value": f"{tomorrow_w['precip_pct']}%"},
+                    {"title": "Wind", "value": f"{tomorrow_w['wind_mph']} mph"},
+                ],
+                "spacing": "Small",
+            })
     else:
         body.append({
             "type": "TextBlock",
@@ -301,13 +357,24 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
     })
 
     if menu:
-        from collections import OrderedDict
-        grouped = OrderedDict()
+        STATION_ORDER = [
+            "@charred", "@spiced", "@bites", "@melted",
+            "@sweets", "@broiled", "@grown",
+        ]
+
+        grouped = {}
         for item in menu:
             station = item["station"] or "Other"
             grouped.setdefault(station, []).append(item)
 
-        for station, items in grouped.items():
+        def station_sort_key(station):
+            s = station.lower()
+            if s in STATION_ORDER:
+                return STATION_ORDER.index(s)
+            return len(STATION_ORDER)
+
+        for station in sorted(grouped, key=station_sort_key):
+            items = grouped[station]
             station_display = station.lstrip("@").title()
             body.append({
                 "type": "TextBlock",
