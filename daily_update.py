@@ -197,16 +197,43 @@ DIETARY_SHORT = {
 }
 
 
-def search_food_image(query: str) -> str | None:
-    """Search Pexels for a food photo and return a small thumbnail URL."""
+FILLER_WORDS = {
+    "with", "and", "of", "the", "a", "an", "in", "on", "or", "choice",
+    "your", "made", "to", "order", "from", "two", "cafe", "café",
+    "hand", "tossed", "served", "topped", "fresh", "classic",
+}
+
+
+def _build_image_query(name: str, description: str) -> str:
+    """Build a concise Pexels search query from a dish name and description.
+
+    Extracts the most meaningful food words so that dishes like
+    'Fennel Faratto' with description 'farro with fire roasted tomatoes,
+    fennel, parmesan cheese' produce a query like
+    'fennel faratto farro tomatoes parmesan'.
+    """
+    desc_words = [
+        w for w in description.lower().replace(",", "").split()
+        if w not in FILLER_WORDS and len(w) > 2
+    ]
+    # Take up to 5 key words from the description to keep the query focused
+    key_desc = " ".join(desc_words[:5])
+    return f"{name} {key_desc}".strip()
+
+
+def search_food_image(name: str, description: str = "") -> str | None:
+    """Search Pexels for a food photo and return a medium thumbnail URL."""
     api_key = os.environ.get("PEXELS_API_KEY", "")
     if not api_key:
         return None
+
+    query = _build_image_query(name, description)
+
     try:
         resp = requests.get(
             "https://api.pexels.com/v1/search",
             headers={"Authorization": api_key},
-            params={"query": f"{query} food", "per_page": 1, "orientation": "square"},
+            params={"query": query, "per_page": 1, "orientation": "square"},
             timeout=10,
         )
         resp.raise_for_status()
@@ -214,7 +241,7 @@ def search_food_image(query: str) -> str | None:
         if photos:
             return photos[0]["src"]["medium"]
     except Exception as exc:
-        print(f"Pexels search failed for '{query}': {exc}", file=sys.stderr)
+        print(f"Pexels search failed for '{name}': {exc}", file=sys.stderr)
     return None
 
 
@@ -279,7 +306,7 @@ def fetch_menu() -> list[dict] | None:
 
     print(f"Searching images for {len(items)} menu items…")
     for item in items:
-        item["image_url"] = search_food_image(item["name"])
+        item["image_url"] = search_food_image(item["name"], item["description"])
 
     return items
 
