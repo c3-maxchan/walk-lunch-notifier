@@ -318,36 +318,47 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                 "size": "Small",
             })
 
-            columns = [
-                {"type": "Column", "width": "auto", "items": [
-                    {"type": "TextBlock", "text": "**Menu Item**", "weight": "Bolder", "size": "Small"},
-                ]},
-                {"type": "Column", "width": "stretch", "items": [
-                    {"type": "TextBlock", "text": "**Ingredients**", "weight": "Bolder", "size": "Small"},
-                ]},
-            ]
+            header_row = {
+                "type": "TableRow",
+                "style": "accent",
+                "cells": [
+                    {"type": "TableCell", "items": [
+                        {"type": "TextBlock", "text": "Menu Item", "weight": "Bolder", "wrap": True},
+                    ]},
+                    {"type": "TableCell", "items": [
+                        {"type": "TextBlock", "text": "Ingredients", "weight": "Bolder", "wrap": True},
+                    ]},
+                ],
+            }
 
+            data_rows = []
             for item in items:
                 tags = ""
                 if item["dietary"]:
                     tags = " (" + ", ".join(item["dietary"]) + ")"
 
-                columns[0]["items"].append({
-                    "type": "TextBlock",
-                    "text": f"{item['name']}{tags}",
-                    "wrap": True,
-                    "spacing": "Small",
-                })
-                columns[1]["items"].append({
-                    "type": "TextBlock",
-                    "text": item["description"] or "—",
-                    "wrap": True,
-                    "spacing": "Small",
+                data_rows.append({
+                    "type": "TableRow",
+                    "cells": [
+                        {"type": "TableCell", "verticalContentAlignment": "Center", "items": [
+                            {"type": "TextBlock", "text": f"**{item['name']}**{tags}", "wrap": True},
+                        ]},
+                        {"type": "TableCell", "verticalContentAlignment": "Center", "items": [
+                            {"type": "TextBlock", "text": item["description"] or "—", "wrap": True},
+                        ]},
+                    ],
                 })
 
             body.append({
-                "type": "ColumnSet",
-                "columns": columns,
+                "type": "Table",
+                "gridStyle": "accent",
+                "showGridLines": True,
+                "firstRowAsHeader": True,
+                "columns": [
+                    {"width": 1},
+                    {"width": 2},
+                ],
+                "rows": [header_row] + data_rows,
                 "spacing": "Small",
             })
     else:
@@ -367,8 +378,9 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                 "content": {
                     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
                     "type": "AdaptiveCard",
-                    "version": "1.4",
+                    "version": "1.5",
                     "body": body,
+                    "msteams": {"width": "Full"},
                 },
             }
         ],
