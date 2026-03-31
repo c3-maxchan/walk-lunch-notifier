@@ -276,62 +276,94 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
         today_w = weather["today"]
         tomorrow_w = weather.get("tomorrow")
 
-        score = walk_score(today_w)
+        today_score = walk_score(today_w)
         rec = walk_recommendation(today_w)
         today_date = datetime.strptime(today_w["date"], "%Y-%m-%d")
-        today_label = today_date.strftime("%A %-m/%-d")
+        today_label = today_date.strftime("%a %-m/%-d")
 
         body.append({
             "type": "TextBlock",
-            "text": f"**Walk Score: {score}/100** — {rec}",
+            "text": f"**Walk Score: {today_score}/100** — {rec}",
             "wrap": True,
             "spacing": "Small",
         })
 
         body.append({
             "type": "TextBlock",
-            "text": f"**Today** ({today_label}, 12:00 – 1:00 PM)",
+            "text": "12:00 – 1:00 PM forecast",
             "wrap": True,
             "spacing": "Small",
-            "weight": "Bolder",
+            "isSubtle": True,
             "size": "Small",
         })
 
-        body.append({
-            "type": "FactSet",
-            "facts": [
-                {"title": "Condition", "value": today_w["condition"]},
-                {"title": "Temperature", "value": f"{today_w['temp_f']}°F"},
-                {"title": "Precip. chance", "value": f"{today_w['precip_pct']}%"},
-                {"title": "Wind", "value": f"{today_w['wind_mph']} mph"},
-            ],
-            "spacing": "Small",
-        })
-
+        tmrw_label = ""
+        tmrw_score_str = ""
         if tomorrow_w:
             tmrw_date = datetime.strptime(tomorrow_w["date"], "%Y-%m-%d")
-            tmrw_label = tmrw_date.strftime("%A %-m/%-d")
-            tmrw_score = walk_score(tomorrow_w)
+            tmrw_label = tmrw_date.strftime("%a %-m/%-d")
+            tmrw_score_str = f"{walk_score(tomorrow_w)}/100"
 
-            body.append({
-                "type": "TextBlock",
-                "text": f"**Tomorrow** ({tmrw_label}, 12:00 – 1:00 PM)  —  Walk Score: {tmrw_score}/100",
-                "wrap": True,
-                "spacing": "Medium",
-                "weight": "Bolder",
-                "size": "Small",
-            })
+        def _weather_row(field, today_val, tmrw_val):
+            cells = [
+                {"type": "TableCell", "verticalContentAlignment": "Center", "items": [
+                    {"type": "TextBlock", "text": f"**{field}**", "wrap": True},
+                ]},
+                {"type": "TableCell", "verticalContentAlignment": "Center", "items": [
+                    {"type": "TextBlock", "text": str(today_val), "wrap": True},
+                ]},
+            ]
+            if tomorrow_w:
+                cells.append(
+                    {"type": "TableCell", "verticalContentAlignment": "Center", "items": [
+                        {"type": "TextBlock", "text": str(tmrw_val), "wrap": True},
+                    ]}
+                )
+            return {"type": "TableRow", "cells": cells}
 
-            body.append({
-                "type": "FactSet",
-                "facts": [
-                    {"title": "Condition", "value": tomorrow_w["condition"]},
-                    {"title": "Temperature", "value": f"{tomorrow_w['temp_f']}°F"},
-                    {"title": "Precip. chance", "value": f"{tomorrow_w['precip_pct']}%"},
-                    {"title": "Wind", "value": f"{tomorrow_w['wind_mph']} mph"},
-                ],
-                "spacing": "Small",
-            })
+        header_cells = [
+            {"type": "TableCell", "items": [
+                {"type": "TextBlock", "text": " ", "wrap": True},
+            ]},
+            {"type": "TableCell", "items": [
+                {"type": "TextBlock", "text": f"**Today** ({today_label})", "weight": "Bolder", "wrap": True},
+            ]},
+        ]
+        col_defs = [{"width": 1}, {"width": 1}]
+
+        if tomorrow_w:
+            header_cells.append(
+                {"type": "TableCell", "items": [
+                    {"type": "TextBlock", "text": f"**Tomorrow** ({tmrw_label})", "weight": "Bolder", "wrap": True},
+                ]}
+            )
+            col_defs.append({"width": 1})
+
+        header_row = {"type": "TableRow", "style": "accent", "cells": header_cells}
+
+        rows = [
+            header_row,
+            _weather_row("Walk Score", f"{today_score}/100",
+                         tmrw_score_str),
+            _weather_row("Condition", today_w["condition"],
+                         tomorrow_w["condition"] if tomorrow_w else ""),
+            _weather_row("Temperature", f"{today_w['temp_f']}°F",
+                         f"{tomorrow_w['temp_f']}°F" if tomorrow_w else ""),
+            _weather_row("Precip. chance", f"{today_w['precip_pct']}%",
+                         f"{tomorrow_w['precip_pct']}%" if tomorrow_w else ""),
+            _weather_row("Wind", f"{today_w['wind_mph']} mph",
+                         f"{tomorrow_w['wind_mph']} mph" if tomorrow_w else ""),
+        ]
+
+        body.append({
+            "type": "Table",
+            "gridStyle": "accent",
+            "showGridLines": True,
+            "firstRowAsHeader": True,
+            "columns": col_defs,
+            "rows": rows,
+            "spacing": "Small",
+        })
     else:
         body.append({
             "type": "TextBlock",
