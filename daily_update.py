@@ -139,10 +139,11 @@ def walk_score(w: dict) -> int:
     elif temp > 75:
         score -= min(int((temp - 75) * 1.5), 40)
 
-    # Precipitation probability — scaled so even moderate chances hurt
-    #   20% → -8,  40% → -20,  60% → -36,  80% → -52,  100% → -70
+    # Precipitation probability — aggressive scaling
+    #   10% → -5,  20% → -16,  40% → -40,  60% → -60,  80% → -76,  100% → -90
     precip = w["precip_pct"]
-    score -= int(precip * 0.7)
+    if precip > 0:
+        score -= max(5, int(precip * 0.9))
 
     # Wind: comfortable under 10 mph, unpleasant above 20
     wind = w["wind_mph"]
@@ -366,13 +367,13 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                     {"type": "TextBlock", "text": f"**{field}**", "wrap": True},
                 ]},
                 {"type": "TableCell", "verticalContentAlignment": "Center", "items": [
-                    {"type": "TextBlock", "text": str(today_val), "wrap": True},
+                    {"type": "TextBlock", "text": f"**{today_val}**", "weight": "Bolder", "wrap": True},
                 ]},
             ]
             if tomorrow_w:
                 cells.append(
                     {"type": "TableCell", "verticalContentAlignment": "Center", "items": [
-                        {"type": "TextBlock", "text": str(tmrw_val), "wrap": True},
+                        {"type": "TextBlock", "text": str(tmrw_val), "wrap": True, "isSubtle": True},
                     ]}
                 )
             return {"type": "TableRow", "cells": cells}
@@ -390,7 +391,7 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
         if tomorrow_w:
             header_cells.append(
                 {"type": "TableCell", "items": [
-                    {"type": "TextBlock", "text": f"**Tomorrow** ({tmrw_label})", "weight": "Bolder", "wrap": True},
+                    {"type": "TextBlock", "text": f"Tomorrow ({tmrw_label})", "wrap": True, "isSubtle": True},
                 ]}
             )
             col_defs.append({"width": 1})
