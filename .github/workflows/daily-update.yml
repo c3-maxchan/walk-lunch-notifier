@@ -1,0 +1,27 @@
+name: Daily Walk & Lunch Update
+
+on:
+  schedule:
+    # 15:30 UTC = 8:30 AM PDT (summer) / 7:30 AM PST (winter)
+    - cron: "30 15 * * 1-5"
+  workflow_dispatch: {}
+
+jobs:
+  send-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run daily update
+        env:
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+        run: python daily_update.py
