@@ -170,6 +170,14 @@ def walk_score(w: dict) -> int:
     return max(0, min(100, score))
 
 
+def _score_emoji(score: int) -> str:
+    if score >= 70:
+        return "\U0001f7e2"  # green circle
+    if score >= 40:
+        return "\U0001f7e1"  # yellow circle
+    return "\U0001f534"      # red circle
+
+
 def walk_recommendation(w: dict) -> str:
     score = walk_score(w)
     code = w["weather_code"]
@@ -348,7 +356,7 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
 
         body.append({
             "type": "TextBlock",
-            "text": f"Walk Forecast — {today_score}/100",
+            "text": f"{_score_emoji(today_score)} Walk Forecast — {today_score}/100",
             "wrap": True,
             "spacing": "Medium",
             "size": "Large",
@@ -368,7 +376,8 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
         if tomorrow_w:
             tmrw_date = datetime.strptime(tomorrow_w["date"], "%Y-%m-%d")
             tmrw_label = tmrw_date.strftime("%a %-m/%-d")
-            tmrw_score_str = f"{walk_score(tomorrow_w)}/100"
+            tmrw_score_val = walk_score(tomorrow_w)
+            tmrw_score_str = f"{_score_emoji(tmrw_score_val)} {tmrw_score_val}/100"
 
         def _weather_row(field, today_val, tmrw_val):
             cells = [
@@ -409,7 +418,7 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
 
         rows = [
             header_row,
-            _weather_row("Walk Score", f"{today_score}/100",
+            _weather_row("Walk Score", f"{_score_emoji(today_score)} {today_score}/100",
                          tmrw_score_str),
             _weather_row("Condition", today_w["condition"],
                          tomorrow_w["condition"] if tomorrow_w else ""),
