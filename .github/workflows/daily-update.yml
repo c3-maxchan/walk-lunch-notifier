@@ -2,8 +2,8 @@ name: Daily Walk & Lunch Update
 
 on:
   schedule:
-    # 15:30 UTC = 8:30 AM PDT (summer) / 7:30 AM PST (winter)
-    - cron: "30 15 * * 1-5"
+    # 15:00 UTC = 8:00 AM PDT (summer) / 7:00 AM PST (winter)
+    - cron: "0 15 * * 1-5"
   workflow_dispatch: {}
 
 jobs:
