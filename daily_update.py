@@ -297,6 +297,8 @@ def fetch_menu() -> list[dict] | None:
 
         desc_div = item_div.find("div", class_="site-panel__daypart-item-description")
         description = desc_div.get_text(strip=True) if desc_div else ""
+        if description:
+            description = description[0].upper() + description[1:]
 
         station_div = item_div.find("div", class_="site-panel__daypart-item-station")
         station = station_div.get_text(strip=True) if station_div else ""
