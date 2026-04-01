@@ -139,12 +139,12 @@ def walk_score(w: dict) -> int:
     """Return 0-100 score for how pleasant the walk will be."""
     score = 100
 
-    # Temperature: ideal 60-75°F, penalize distance from that range
+    # Temperature: ideal 65-75°F, penalize distance from that range
     temp = w["temp_f"]
-    if temp < 60:
-        score -= min(int((60 - temp) * 1.5), 40)
+    if temp < 65:
+        score -= min(int((65 - temp) * 2), 40)
     elif temp > 75:
-        score -= min(int((temp - 75) * 1.5), 40)
+        score -= min(int((temp - 75) * 2), 40)
 
     # Precipitation probability — very aggressive scaling
     #   Any chance at all gets a steep penalty:
@@ -153,10 +153,11 @@ def walk_score(w: dict) -> int:
     if precip > 0:
         score -= max(10, int(precip * 1.1))
 
-    # Wind: comfortable under 10 mph, unpleasant above 20
+    # Wind: comfortable under 7 mph, increasingly unpleasant above that
+    #   7 mph → -0,  10 mph → -12,  15 mph → -32,  20 mph → -50 (cap)
     wind = w["wind_mph"]
-    if wind > 10:
-        score -= min(int((wind - 10) * 2), 30)
+    if wind > 7:
+        score -= min(int((wind - 7) * 4), 50)
 
     # Weather code penalties (on top of precip penalty)
     code = w["weather_code"]
@@ -185,13 +186,13 @@ def walk_recommendation(w: dict) -> str:
     temp = w["temp_f"]
     wind = w["wind_mph"]
 
-    if code in RAINY_CODES or precip >= 60:
+    if code in RAINY_CODES or precip > 20:
         return "Bring an umbrella — rain is likely during your walk."
     if temp < 50:
         return "Bundle up — it's chilly out there."
-    if wind >= 20:
+    if wind >= 15:
         return "It's windy today — heads up on the walk."
-    if temp > 90:
+    if temp >= 80:
         return "It's hot — maybe stick to the shady route."
     if score >= 80:
         return "Great day for a walk!"
