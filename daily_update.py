@@ -499,6 +499,8 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                 display_name = item["name"]
                 if station.lower() == "@melted":
                     display_name = f"{display_name} Pizza"
+                if station.lower() == "@sweets":
+                    display_name = display_name.replace("Soy-Enriched ", "").replace("Soy Enriched ", "")
 
                 tags = ""
                 if item["dietary"]:
