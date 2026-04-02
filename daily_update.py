@@ -252,8 +252,29 @@ def _build_image_query(name: str, description: str) -> str:
     return f"{name} {key_desc}".strip()
 
 
+def _best_photo(photos: list[dict], name: str, description: str) -> str:
+    """Pick the photo whose alt text best matches the dish name/description."""
+    if len(photos) == 1:
+        return photos[0]["src"]["medium"]
+
+    keywords = {
+        w.lower() for w in (name + " " + description).replace(",", "").split()
+        if w.lower() not in FILLER_WORDS and len(w) > 2
+    }
+
+    best_url = photos[0]["src"]["medium"]
+    best_hits = -1
+    for photo in photos:
+        alt = (photo.get("alt") or "").lower()
+        hits = sum(1 for kw in keywords if kw in alt)
+        if hits > best_hits:
+            best_hits = hits
+            best_url = photo["src"]["medium"]
+    return best_url
+
+
 def search_food_image(name: str, description: str = "") -> str | None:
-    """Search Pexels for a food photo and return a medium thumbnail URL."""
+    """Search Pexels for a food photo and return the best-matching medium URL."""
     api_key = os.environ.get("PEXELS_API_KEY", "")
     if not api_key:
         return None
@@ -264,13 +285,13 @@ def search_food_image(name: str, description: str = "") -> str | None:
         resp = requests.get(
             "https://api.pexels.com/v1/search",
             headers={"Authorization": api_key},
-            params={"query": query, "per_page": 1, "orientation": "square"},
+            params={"query": f"{query} food dish", "per_page": 8, "orientation": "square"},
             timeout=10,
         )
         resp.raise_for_status()
         photos = resp.json().get("photos", [])
         if photos:
-            return photos[0]["src"]["medium"]
+            return _best_photo(photos, name, description)
     except Exception as exc:
         print(f"Pexels search failed for '{name}': {exc}", file=sys.stderr)
     return None
