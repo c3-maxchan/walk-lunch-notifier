@@ -64,7 +64,7 @@ RAINY_CODES = {51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82, 95, 96, 99}
 WALK_HOURS = ("T11:00", "T12:00", "T13:00", "T14:00")
 
 
-def _extract_noon_weather(times, temps, precips, winds, codes, date_str):
+def _extract_noon_weather(times, temps, feels, precips, winds, codes, uvs, date_str):
     """Extract 11:30am-2pm weather for a specific date (YYYY-MM-DD).
 
     Open-Meteo reports hourly, so we use the 11:00, 12:00, 13:00, and 14:00
@@ -78,14 +78,18 @@ def _extract_noon_weather(times, temps, precips, winds, codes, date_str):
         return None
 
     avg_temp = sum(temps[i] for i in indices) / len(indices)
+    avg_feels = sum(feels[i] for i in indices) / len(indices)
     max_precip = max(precips[i] for i in indices)
     avg_wind = sum(winds[i] for i in indices) / len(indices)
     worst_code = max(codes[i] for i in indices)
+    max_uv = max(uvs[i] for i in indices)
 
     return {
         "temp_f": round(avg_temp),
+        "feels_like_f": round(avg_feels),
         "precip_pct": max_precip,
         "wind_mph": round(avg_wind),
+        "uv_index": round(max_uv, 1),
         "condition": WMO_CODES.get(worst_code, "Unknown"),
         "weather_code": worst_code,
         "date": date_str,
@@ -100,7 +104,7 @@ def fetch_weather() -> dict | None:
             params={
                 "latitude": LATITUDE,
                 "longitude": LONGITUDE,
-                "hourly": "temperature_2m,precipitation_probability,wind_speed_10m,weather_code",
+                "hourly": "temperature_2m,apparent_temperature,precipitation_probability,wind_speed_10m,weather_code,uv_index",
                 "forecast_days": 2,
                 "temperature_unit": "fahrenheit",
                 "wind_speed_unit": "mph",
@@ -117,16 +121,18 @@ def fetch_weather() -> dict | None:
     hourly = data.get("hourly", {})
     times = hourly.get("time", [])
     temps = hourly.get("temperature_2m", [])
+    feels = hourly.get("apparent_temperature", [])
     precips = hourly.get("precipitation_probability", [])
     winds = hourly.get("wind_speed_10m", [])
     codes = hourly.get("weather_code", [])
+    uvs = hourly.get("uv_index", [])
 
     now = datetime.now(PT)
     today_str = now.strftime("%Y-%m-%d")
     tomorrow_str = (now + timedelta(days=1)).strftime("%Y-%m-%d")
 
-    today = _extract_noon_weather(times, temps, precips, winds, codes, today_str)
-    tomorrow = _extract_noon_weather(times, temps, precips, winds, codes, tomorrow_str)
+    today = _extract_noon_weather(times, temps, feels, precips, winds, codes, uvs, today_str)
+    tomorrow = _extract_noon_weather(times, temps, feels, precips, winds, codes, uvs, tomorrow_str)
 
     if not today:
         print("No noon data found for today in weather response", file=sys.stderr)
@@ -139,8 +145,9 @@ def walk_score(w: dict) -> int:
     """Return 0-100 score for how pleasant the walk will be."""
     score = 100
 
-    # Temperature: ideal 65-75°F, penalize distance from that range
-    temp = w["temp_f"]
+    # Temperature: use feels-like so wind chill (cold) and heat index (hot)
+    # are reflected in the score. Ideal range 65-75°F.
+    temp = w.get("feels_like_f", w["temp_f"])
     if temp < 65:
         score -= min(int((65 - temp) * 2), 40)
     elif temp > 75:
@@ -167,6 +174,12 @@ def walk_score(w: dict) -> int:
         score -= 10
     elif code in {71, 73, 75, 77, 85, 86}:  # snow
         score -= 30
+
+    # UV index: comfortable under 5, harsh above that
+    #   5 → -0,  6 → -5,  8 → -15,  10 → -25,  11+ → capped -30
+    uv = w.get("uv_index", 0)
+    if uv > 5:
+        score -= min(int((uv - 5) * 5), 30)
 
     return max(0, min(100, score))
 
@@ -427,10 +440,14 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                          tomorrow_w["condition"] if tomorrow_w else ""),
             _weather_row("Temperature", f"{today_w['temp_f']}°F",
                          f"{tomorrow_w['temp_f']}°F" if tomorrow_w else ""),
+            _weather_row("Feels Like", f"{today_w['feels_like_f']}°F",
+                         f"{tomorrow_w['feels_like_f']}°F" if tomorrow_w else ""),
             _weather_row("Precip. chance", f"{today_w['precip_pct']}%",
                          f"{tomorrow_w['precip_pct']}%" if tomorrow_w else ""),
             _weather_row("Wind", f"{today_w['wind_mph']} mph",
                          f"{tomorrow_w['wind_mph']} mph" if tomorrow_w else ""),
+            _weather_row("UV Index", f"{today_w['uv_index']}",
+                         f"{tomorrow_w['uv_index']}" if tomorrow_w else ""),
         ]
 
         body.append({
@@ -506,9 +523,16 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                 if item["dietary"]:
                     tags = " (" + ", ".join(item["dietary"]) + ")"
 
+                has_peanut = "peanut" in (display_name + " " + item.get("description", "")).lower()
+
                 text_items = [
                     {"type": "TextBlock", "text": f"**{display_name}**{tags}", "wrap": True},
                 ]
+                if has_peanut:
+                    text_items.append(
+                        {"type": "TextBlock", "text": "⚠️ Contains Peanuts", "wrap": True,
+                         "size": "Small", "color": "Attention", "spacing": "None"},
+                    )
                 if item["description"]:
                     text_items.append(
                         {"type": "TextBlock", "text": item["description"], "wrap": True,
