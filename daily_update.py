@@ -141,8 +141,8 @@ def fetch_weather() -> dict | None:
     return {"today": today, "tomorrow": tomorrow}
 
 
-def walk_score(w: dict) -> int:
-    """Return 0-100 score for how pleasant the walk will be."""
+def walk_score(w: dict) -> float:
+    """Return 0-10 score for how pleasant the walk will be."""
     score = 100
 
     # Temperature: use feels-like so wind chill (cold) and heat index (hot)
@@ -154,14 +154,11 @@ def walk_score(w: dict) -> int:
         score -= min(int((temp - 75) * 2), 40)
 
     # Precipitation probability — very aggressive scaling
-    #   Any chance at all gets a steep penalty:
-    #   5% → -10,  10% → -15,  20% → -28,  40% → -48,  60% → -68,  80% → -88,  100% → -100
     precip = w["precip_pct"]
     if precip > 0:
         score -= max(10, int(precip * 1.1))
 
     # Wind: comfortable under 7 mph, increasingly unpleasant above that
-    #   7 mph → -0,  10 mph → -12,  15 mph → -32,  20 mph → -50 (cap)
     wind = w["wind_mph"]
     if wind > 7:
         score -= min(int((wind - 7) * 4), 50)
@@ -176,18 +173,17 @@ def walk_score(w: dict) -> int:
         score -= 30
 
     # UV index: comfortable under 5, harsh above that
-    #   5 → -0,  6 → -5,  8 → -15,  10 → -25,  11+ → capped -30
     uv = w.get("uv_index", 0)
     if uv > 5:
         score -= min(int((uv - 5) * 5), 30)
 
-    return max(0, min(100, score))
+    return round(max(0, min(100, score)) / 10, 1)
 
 
-def _score_emoji(score: int) -> str:
-    if score >= 70:
+def _score_emoji(score: float) -> str:
+    if score >= 7:
         return "\U0001f7e2"  # green circle
-    if score >= 40:
+    if score >= 4:
         return "\U0001f7e1"  # yellow circle
     return "\U0001f534"      # red circle
 
@@ -207,9 +203,9 @@ def walk_recommendation(w: dict) -> str:
         return "It's windy today — heads up on the walk."
     if temp >= 80:
         return "It's hot — maybe stick to the shady route."
-    if score >= 80:
+    if score >= 8:
         return "Great day for a walk!"
-    if score >= 50:
+    if score >= 5:
         return "Decent conditions for a walk."
     return "Tough conditions today — consider an indoor walk."
 
@@ -393,7 +389,7 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
 
         body.append({
             "type": "TextBlock",
-            "text": f"{_score_emoji(today_score)} Walk Forecast — {today_score}/100",
+            "text": f"{_score_emoji(today_score)} Walk Forecast — {today_score}/10",
             "wrap": True,
             "spacing": "Medium",
             "size": "Large",
@@ -414,7 +410,7 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
             tmrw_date = datetime.strptime(tomorrow_w["date"], "%Y-%m-%d")
             tmrw_label = tmrw_date.strftime("%a %-m/%-d")
             tmrw_score_val = walk_score(tomorrow_w)
-            tmrw_score_str = f"{_score_emoji(tmrw_score_val)} {tmrw_score_val}/100"
+            tmrw_score_str = f"{_score_emoji(tmrw_score_val)} {tmrw_score_val}/10"
 
         def _weather_row(field, today_val, tmrw_val):
             cells = [
@@ -455,7 +451,7 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
 
         rows = [
             header_row,
-            _weather_row("Walk Score", f"{_score_emoji(today_score)} {today_score}/100",
+            _weather_row("Walk Score", f"{_score_emoji(today_score)} {today_score}/10",
                          tmrw_score_str),
             _weather_row("Condition", today_w["condition"],
                          tomorrow_w["condition"] if tomorrow_w else ""),

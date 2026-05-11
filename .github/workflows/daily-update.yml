@@ -2,9 +2,9 @@ name: Daily Walk & Lunch Update
 
 on:
   schedule:
-    # 14:50 UTC = 7:50 AM PDT (summer) / 6:50 AM PST (winter)
-    # Offset from :00 to reduce GitHub Actions queue delays
-    - cron: "50 14 * * 1-5"
+    # 10:50 UTC = 3:50 AM PDT (summer) / 2:50 AM PST (winter)
+    # Offset from :00 to reduce GitHub Actions queue delays; delivers ~4 AM PDT
+    - cron: "50 10 * * 1-5"
   workflow_dispatch: {}
 
 jobs:
