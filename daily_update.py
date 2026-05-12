@@ -98,35 +98,42 @@ def _extract_noon_weather(times, temps, feels, precips, winds, codes, uvs, date_
 
 def fetch_weather() -> dict | None:
     """Return a dict with today's and tomorrow's noon-hour weather data."""
-    try:
-        resp = requests.get(
-            "https://api.open-meteo.com/v1/forecast",
-            params={
-                "latitude": LATITUDE,
-                "longitude": LONGITUDE,
-                "hourly": "temperature_2m,apparent_temperature,precipitation_probability,wind_speed_10m,weather_code,uv_index",
-                "forecast_days": 2,
-                "temperature_unit": "fahrenheit",
-                "wind_speed_unit": "mph",
-                "timezone": "America/Los_Angeles",
-            },
-            timeout=15,
-        )
-        resp.raise_for_status()
-        data = resp.json()
-    except Exception as exc:
-        print(f"Weather fetch failed: {exc}", file=sys.stderr)
-        return None
+    for attempt in range(3):
+        try:
+            resp = requests.get(
+                "https://api.open-meteo.com/v1/forecast",
+                params={
+                    "latitude": LATITUDE,
+                    "longitude": LONGITUDE,
+                    "hourly": "temperature_2m,apparent_temperature,precipitation_probability,wind_speed_10m,weather_code,uv_index",
+                    "forecast_days": 2,
+                    "temperature_unit": "fahrenheit",
+                    "wind_speed_unit": "mph",
+                    "timezone": "America/Los_Angeles",
+                },
+                timeout=30,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            break
+        except Exception as exc:
+            print(f"Weather fetch attempt {attempt + 1} failed: {exc}", file=sys.stderr)
+            if attempt < 2:
+                import time
+                time.sleep(5)
+            else:
+                return None
 
     hourly = data.get("hourly", {})
     times = hourly.get("time", [])
     temps = hourly.get("temperature_2m", [])
-    feels = hourly.get("apparent_temperature", [])
+    feels = hourly.get("apparent_temperature", []) or temps
     precips = hourly.get("precipitation_probability", [])
     winds = hourly.get("wind_speed_10m", [])
     codes = hourly.get("weather_code", [])
     uvs = hourly.get("uv_index", [])
-
+    if not uvs:
+        uvs = [0] * len(times)
     now = datetime.now(PT)
     today_str = now.strftime("%Y-%m-%d")
     tomorrow_str = (now + timedelta(days=1)).strftime("%Y-%m-%d")
@@ -135,7 +142,8 @@ def fetch_weather() -> dict | None:
     tomorrow = _extract_noon_weather(times, temps, feels, precips, winds, codes, uvs, tomorrow_str)
 
     if not today:
-        print("No noon data found for today in weather response", file=sys.stderr)
+        print(f"No noon data found for today ({today_str}) in weather response.", file=sys.stderr)
+        print(f"  Times available: {times[:5]}...{times[-3:]}" if times else "  No times returned", file=sys.stderr)
         return None
 
     return {"today": today, "tomorrow": tomorrow}
