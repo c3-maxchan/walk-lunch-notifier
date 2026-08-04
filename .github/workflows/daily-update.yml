@@ -7,6 +7,9 @@ on:
     - cron: "50 10 * * 1-5"
   workflow_dispatch: {}
 
+permissions:
+  contents: write
+
 jobs:
   send-update:
     runs-on: ubuntu-latest
@@ -27,3 +30,16 @@ jobs:
           TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: python daily_update.py
+
+      - name: Commit menu history
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No menu data changes to commit."
+          else
+            git commit -m "data: record menu $(date -u +%F)"
+            git push
+          fi

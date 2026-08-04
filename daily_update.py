@@ -7,9 +7,12 @@ then posts a formatted Adaptive Card to a Teams channel via webhook.
 
 from __future__ import annotations
 
+import json
 import os
+import re
 import sys
-from datetime import datetime, timezone, timedelta
+from datetime import date, datetime, timezone, timedelta
+from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
@@ -19,6 +22,10 @@ LONGITUDE = -122.2006
 LOCATION_LABEL = "1400 Seaport Blvd, Redwood City"
 
 CAFE_URL = "https://c3ai.cafebonappetit.com/"
+
+DATA_DIR = Path(__file__).resolve().parent / "data"
+MENUS_DIR = DATA_DIR / "menus"
+HISTORY_FILE = DATA_DIR / "menu-history.json"
 
 PT = timezone(timedelta(hours=-7))  # PDT; close enough year-round for display
 
@@ -370,11 +377,122 @@ def fetch_menu() -> list[dict] | None:
 
 
 # ---------------------------------------------------------------------------
+# Allergens, sides, and menu history
+# ---------------------------------------------------------------------------
+
+# Word-boundary matching avoids false positives like "butternut squash",
+# "nutmeg", "doughnut", and "water chestnut".
+NUT_PATTERN = re.compile(
+    r"\b(peanuts?|walnuts?|almonds?|pecans?|cashews?|pistachios?|"
+    r"hazelnuts?|macadamias?|pine nuts?|brazil nuts?|filberts?|"
+    r"mixed nuts?|tree nuts?|praline|marzipan|nutella)\b",
+    re.IGNORECASE,
+)
+
+SHELLFISH_PATTERN = re.compile(
+    r"\b(shellfish|shrimps?|prawns?|crabs?|lobsters?|crawfish|crayfish|"
+    r"clams?|mussels?|oysters?|scallops?|calamari|squid|octopus)\b",
+    re.IGNORECASE,
+)
+
+SIDES_PATTERN = re.compile(r"\bSIDES?\s*:\s*", re.IGNORECASE)
+
+# Dishes that repeat so often a "last served" label would be noise.
+REPEAT_EXEMPT_PATTERN = re.compile(r"\b(pizza|cookies?)\b", re.IGNORECASE)
+
+
+def find_allergens(pattern: re.Pattern, text: str) -> list[str]:
+    """Return sorted unique matches, title-cased (e.g. ['Almonds', 'Walnuts'])."""
+    return sorted({m.group(1).title() for m in pattern.finditer(text)})
+
+
+def split_sides(description: str) -> tuple[str, str | None]:
+    """Split a 'SIDES:' segment out of a description. Returns (main, sides)."""
+    m = SIDES_PATTERN.search(description)
+    if not m:
+        return description.strip(), None
+    main = description[: m.start()].strip()
+    sides = description[m.end():].strip()
+    return main, (sides or None)
+
+
+def _normalize_name(name: str) -> str:
+    return " ".join(name.lower().split())
+
+
+def _is_repeat_exempt(name: str, station: str) -> bool:
+    """Pizza and cookies repeat constantly; @melted is the pizza station."""
+    return bool(REPEAT_EXEMPT_PATTERN.search(name)) or station.lower() == "@melted"
+
+
+def load_history() -> dict:
+    """Read data/menu-history.json ({normalized name: [YYYY-MM-DD, ...]})."""
+    try:
+        return json.loads(HISTORY_FILE.read_text())
+    except FileNotFoundError:
+        return {}
+    except Exception as exc:
+        print(f"Could not read menu history: {exc}", file=sys.stderr)
+        return {}
+
+
+def record_menu(items: list[dict], today_str: str) -> dict:
+    """Write today's snapshot to data/menus/ and update the history index.
+
+    Returns the updated history. Idempotent for the same day.
+    """
+    MENUS_DIR.mkdir(parents=True, exist_ok=True)
+    snapshot = [
+        {k: item.get(k) for k in ("name", "description", "station", "dietary")}
+        for item in items
+    ]
+    snapshot_path = MENUS_DIR / f"{today_str}.json"
+    snapshot_path.write_text(json.dumps(snapshot, indent=2, ensure_ascii=False) + "\n")
+
+    history = load_history()
+    for item in items:
+        key = _normalize_name(item["name"])
+        if not key:
+            continue
+        dates = history.setdefault(key, [])
+        if today_str not in dates:
+            dates.append(today_str)
+            dates.sort()
+    HISTORY_FILE.write_text(json.dumps(history, indent=2, sort_keys=True, ensure_ascii=False) + "\n")
+    print(f"Recorded {len(items)} items to {snapshot_path.name} and menu-history.json")
+    return history
+
+
+def last_served_label(name: str, station: str, history: dict, today_str: str) -> str | None:
+    """Return e.g. 'Last served 2 weeks ago', or None if new/exempt."""
+    if _is_repeat_exempt(name, station):
+        return None
+    dates = history.get(_normalize_name(name), [])
+    prior = [d for d in dates if d < today_str]
+    if not prior:
+        return None
+    days = (date.fromisoformat(today_str) - date.fromisoformat(max(prior))).days
+    if days <= 0:
+        return None
+    if days == 1:
+        return "Last served yesterday"
+    if days < 7:
+        return f"Last served {days} days ago"
+    if days < 30:
+        weeks = max(1, round(days / 7))
+        return "Last served 1 week ago" if weeks == 1 else f"Last served {weeks} weeks ago"
+    months = max(1, round(days / 30))
+    return "Last served 1 month ago" if months == 1 else f"Last served {months} months ago"
+
+
+# ---------------------------------------------------------------------------
 # Teams message
 # ---------------------------------------------------------------------------
 
-def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
+def build_adaptive_card(weather: dict | None, menu: list[dict] | None, history: dict | None = None) -> dict:
     today_str = datetime.now(PT).strftime("%A, %B %-d")
+    today_iso = datetime.now(PT).strftime("%Y-%m-%d")
+    history = history or {}
 
     body = [
         {
@@ -548,20 +666,39 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None) -> dict:
                 if item["dietary"]:
                     tags = " (" + ", ".join(item["dietary"]) + ")"
 
-                has_peanut = "peanut" in (display_name + " " + item.get("description", "")).lower()
+                full_text = display_name + " " + item.get("description", "")
+                nuts = find_allergens(NUT_PATTERN, full_text)
+                shellfish = find_allergens(SHELLFISH_PATTERN, full_text)
+
+                main_desc, sides = split_sides(item.get("description", ""))
+
+                title = f"**{display_name}**{tags}"
+                served = last_served_label(item["name"], station, history, today_iso)
+                if served:
+                    title += f" — _{served}_"
 
                 text_items = [
-                    {"type": "TextBlock", "text": f"**{display_name}**{tags}", "wrap": True},
+                    {"type": "TextBlock", "text": title, "wrap": True},
                 ]
-                if has_peanut:
+                if nuts:
                     text_items.append(
-                        {"type": "TextBlock", "text": "⚠️ Contains Peanuts", "wrap": True,
+                        {"type": "TextBlock", "text": "⚠️ Contains " + ", ".join(nuts), "wrap": True,
                          "size": "Small", "color": "Attention", "spacing": "None"},
                     )
-                if item["description"]:
+                if shellfish:
                     text_items.append(
-                        {"type": "TextBlock", "text": item["description"], "wrap": True,
+                        {"type": "TextBlock", "text": "⚠️ Contains " + ", ".join(shellfish), "wrap": True,
+                         "size": "Small", "color": "Attention", "spacing": "None"},
+                    )
+                if main_desc:
+                    text_items.append(
+                        {"type": "TextBlock", "text": main_desc, "wrap": True,
                          "size": "Small", "isSubtle": True, "spacing": "Small"},
+                    )
+                if sides:
+                    text_items.append(
+                        {"type": "TextBlock", "text": f"**Sides:** {sides}", "wrap": True,
+                         "size": "Small", "isSubtle": True, "spacing": "None"},
                     )
 
                 columns = []
@@ -655,8 +792,17 @@ def main():
     print("Fetching lunch menu…")
     menu = fetch_menu()
 
+    today_iso = datetime.now(PT).strftime("%Y-%m-%d")
+    history = {}
+    if menu:
+        try:
+            history = record_menu(menu, today_iso)
+        except Exception as exc:
+            print(f"Menu recording failed (continuing): {exc}", file=sys.stderr)
+            history = load_history()
+
     print("Building Teams message…")
-    card = build_adaptive_card(weather, menu)
+    card = build_adaptive_card(weather, menu, history)
 
     print("Sending to Teams…")
     ok = send_to_teams(card, webhook_url)

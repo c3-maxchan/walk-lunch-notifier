@@ -162,4 +162,17 @@ message may arrive between 7:30 and 9:00 AM.
 | `daily_update.py` | The main script — fetches weather, scrapes the menu, sends the Teams message |
 | `.github/workflows/daily-update.yml` | Tells GitHub when and how to run the script |
 | `requirements.txt` | Lists the Python libraries the script needs |
+| `data/menus/YYYY-MM-DD.json` | Daily snapshot of that day's full menu (committed automatically) |
+| `data/menu-history.json` | Index of every dish and the dates it was served — powers the "Last served" labels |
 | `README.md` | This file — setup instructions |
+
+## Menu history
+
+Each weekday run archives the day's menu into the `data/` folder and commits it
+back to this repository automatically (no extra setup needed — the workflow has
+`contents: write` permission using the built-in GitHub token).
+
+When a dish reappears, the Teams message shows a label next to its name, like
+_"Last served 2 weeks ago"_. Pizzas and cookies are exempt since they repeat
+constantly. History builds from the first day this feature runs — dishes served
+before then won't be recognized as repeats.
