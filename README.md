@@ -162,7 +162,9 @@ message may arrive between 7:30 and 9:00 AM.
 | `daily_update.py` | The main script — fetches weather, scrapes the menu, sends the Teams message |
 | `.github/workflows/daily-update.yml` | Tells GitHub when and how to run the script |
 | `requirements.txt` | Lists the Python libraries the script needs |
+| `assets/cafeteria-map.png` | Base cafeteria layout used for the daily annotated menu map |
 | `data/menus/YYYY-MM-DD.json` | Daily snapshot of that day's full menu (committed automatically) |
+| `data/layout/YYYY-MM-DD.png` | Daily cafeteria map annotated with menu items (shown in the Teams message) |
 | `data/menu-history.json` | Index of every dish and the dates it was served — powers the "Last served" labels |
 | `README.md` | This file — setup instructions |
 

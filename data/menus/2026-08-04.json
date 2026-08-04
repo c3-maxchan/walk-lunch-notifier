@@ -1,0 +1,55 @@
+[
+  {
+    "name": "Spicy Sesame-Hoisin Glazed Hodo Tofu",
+    "description": "SIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tgarlic green beans, \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tsteamed rice",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Shanghai-Style Sherry-Soy Braised Pork",
+    "description": "Pork shoulder braised in a sherry dark soy sauce with star anise and Szechuan peppercornsSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tgarlic green beans, \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tsteamed rice",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Creole Spiced Tofu And Mushroom Stew",
+    "description": "Hodo Soy Beanery tofu and mushrooms with tomatoes, onions, bell peppers, and celery simmered in a cafe made vegetable stock and a browned butter rouxSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tsauteed asparagus, summer squash, and onion, \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvegan dirty rice",
+    "station": "@charred",
+    "dietary": [
+      "V",
+      "F2F"
+    ]
+  },
+  {
+    "name": "Cajun Spiced Catfish And Okra Bouyon",
+    "description": "Catfish and okra simmered in a cafe made vegetable stock with bell peppers, onions, celery, garlic, corn, and a browned butter rouxSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvegan dirty rice, \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tsauteed asparagus, summer squash, and onion",
+    "station": "@charred",
+    "dietary": [
+      "SW"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Fresh Mozzarella, Tomato, And Pesto Pizza",
+    "description": "Cafe made pesto sauce with fresh mozzarella cheese, tomatoes, basil, and garlic on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Chicken, Mushroom, And Banana Pepper Pizza",
+    "description": "Cafe made pizza sauce with seared chicken breast, mushrooms, banana peppers, garlic, and mozzarella cheese on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]

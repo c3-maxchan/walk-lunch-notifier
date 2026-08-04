@@ -7,6 +7,7 @@ then posts a formatted Adaptive Card to a Teams channel via webhook.
 
 from __future__ import annotations
 
+import argparse
 import json
 import os
 import re
@@ -26,6 +27,11 @@ CAFE_URL = "https://c3ai.cafebonappetit.com/"
 DATA_DIR = Path(__file__).resolve().parent / "data"
 MENUS_DIR = DATA_DIR / "menus"
 HISTORY_FILE = DATA_DIR / "menu-history.json"
+LAYOUT_DIR = DATA_DIR / "layout"
+MAP_SOURCE = Path(__file__).resolve().parent / "assets" / "cafeteria-map.png"
+
+# Passes fetched data from the generate phase to the send phase (untracked).
+STATE_FILE = Path(__file__).resolve().parent / ".run-state.json"
 
 PT = timezone(timedelta(hours=-7))  # PDT; close enough year-round for display
 
@@ -395,7 +401,9 @@ SHELLFISH_PATTERN = re.compile(
     re.IGNORECASE,
 )
 
-SIDES_PATTERN = re.compile(r"\bSIDES?\s*:\s*", re.IGNORECASE)
+# Case-sensitive and no leading word boundary: the site often concatenates the
+# marker straight onto the text ("...browned butter rouxSIDES: dirty rice").
+SIDES_PATTERN = re.compile(r"\s*SIDES?\s*:\s*")
 
 # Dishes that repeat so often a "last served" label would be noise.
 REPEAT_EXEMPT_PATTERN = re.compile(r"\b(pizza|cookies?)\b", re.IGNORECASE)
@@ -485,11 +493,306 @@ def last_served_label(name: str, station: str, history: dict, today_str: str) ->
     return "Last served 1 month ago" if months == 1 else f"Last served {months} months ago"
 
 
+def display_item_name(name: str, station: str) -> str:
+    """Apply display transforms: 'Pizza' suffix for @melted, strip 'Soy-Enriched'."""
+    if station.lower() == "@melted" and not name.lower().rstrip().endswith("pizza"):
+        name = f"{name} Pizza"
+    if station.lower() == "@sweets":
+        name = name.replace("Soy-Enriched ", "").replace("Soy Enriched ", "")
+    return name
+
+
+# ---------------------------------------------------------------------------
+# Cafeteria map rendering
+# ---------------------------------------------------------------------------
+
+# Callout definitions in base-map coordinates (1024 x 549). Each station's
+# items are drawn inside a subtle rounded container connected to the station
+# by a line.
+#   anchor: point on the station shape where the connector line starts
+#   box:    optional fixed (x, y, max_width); stations without one share a row
+#           of identical, evenly spaced columns divided among the stations
+#           that actually have items, maximizing the empty lower area so the
+#           shared auto-fit can pick the largest possible text size.
+MAP_RENDER_SCALE = 2  # render at 2x so text stays crisp when Teams scales it
+
+# All callout coordinates below are expressed in this base coordinate space.
+# The source asset may be exported at any multiple of it; larger exports are
+# used as-is (downscaled to exactly 2x base) so the background stays sharp.
+MAP_BASE_SIZE = (1024, 549)
+
+MAP_CALLOUTS = {
+    "@melted":  {"anchor": (72, 114),  "color": (123, 88, 0)},
+    # Anchor sits partway up the BITES diagonal edge so the connector drops at
+    # roughly 45 degrees into its callout below.
+    "@bites":   {"anchor": (192, 92), "color": (74, 124, 32)},
+    "@grown":   {"anchor": (360, 81),  "color": (110, 110, 110)},
+    "@charred": {"anchor": (521, 81),  "color": (67, 53, 214)},
+    "@broiled": {"anchor": (751, 81),  "color": (110, 110, 110)},
+    "@spiced":  {"anchor": (936, 81),  "color": (214, 94, 10)},
+    # SWEETS sits on the right edge, so its callout hangs below the station.
+    "@sweets":  {"anchor": (993, 424), "box": (866, 455, 150), "color": (194, 24, 91),
+                 "max_h": 86},
+}
+
+# Shared row geometry for the evenly sized columns (stops clear of SWEETS).
+MAP_ROW_Y = 147
+MAP_ROW_X0, MAP_ROW_X1 = 8, 953
+MAP_COL_GAP = 12
+
+MAP_MAX_CALLOUT_H = 288  # default max callout height (base coords) before font shrinks
+
+MAP_WARNING_COLOR = (196, 32, 32)   # allergen warnings
+MAP_LABEL_COLOR = (128, 128, 128)   # "last served" labels
+
+FONTS_DIR = Path(__file__).resolve().parent / "assets" / "fonts"
+
+# Bundled Inter (OFL license) first so rendering matches on any machine,
+# then system fallbacks just in case.
+FONT_PATHS = {
+    "semibold": [
+        str(FONTS_DIR / "Inter-SemiBold.ttf"),
+        "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+    ],
+    "medium": [
+        str(FONTS_DIR / "Inter-Medium.ttf"),
+        "/System/Library/Fonts/Helvetica.ttc",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    ],
+}
+
+
+def _load_font(size: int, weight: str = "semibold"):
+    from PIL import ImageFont
+    for path in FONT_PATHS.get(weight, []):
+        try:
+            return ImageFont.truetype(path, size)
+        except Exception:
+            continue
+    return ImageFont.load_default()
+
+
+def _wrap_text(draw, text: str, font, max_w: int) -> list[str]:
+    words = text.split()
+    lines: list[str] = []
+    cur = ""
+    for word in words:
+        trial = f"{cur} {word}" if cur else word
+        if not cur or draw.textlength(trial, font=font) <= max_w:
+            cur = trial
+        else:
+            lines.append(cur)
+            cur = word
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def _tint(color: tuple[int, int, int], toward_white: float) -> tuple[int, int, int]:
+    """Blend a color toward white; toward_white=1.0 gives pure white."""
+    return tuple(round(c + (255 - c) * toward_white) for c in color)
+
+
+def render_menu_map(
+    items: list[dict],
+    out_path: Path,
+    history: dict | None = None,
+    today_str: str | None = None,
+) -> bool:
+    """Draw today's menu items in callout boxes connected to their stations."""
+    try:
+        from PIL import Image, ImageDraw
+    except ImportError:
+        print("Pillow not installed; skipping map render.", file=sys.stderr)
+        return False
+    if not MAP_SOURCE.exists():
+        print(f"Map asset missing ({MAP_SOURCE}); skipping map render.", file=sys.stderr)
+        return False
+
+    if history is None:
+        history = load_history()
+    if today_str is None:
+        today_str = datetime.now(PT).strftime("%Y-%m-%d")
+
+    try:
+        s = MAP_RENDER_SCALE
+        img = Image.open(MAP_SOURCE).convert("RGB")
+        target = (MAP_BASE_SIZE[0] * s, MAP_BASE_SIZE[1] * s)
+        if img.size != target:
+            if img.width < target[0]:
+                print(
+                    f"Note: map asset is {img.width}x{img.height}; exporting it at "
+                    f"{target[0]}x{target[1]} (or larger) would avoid upscaling blur.",
+                    file=sys.stderr,
+                )
+            img = img.resize(target, Image.LANCZOS)
+        draw = ImageDraw.Draw(img)
+
+        grouped: dict[str, list[dict]] = {}
+        for item in items:
+            grouped.setdefault((item.get("station") or "").lower(), []).append(item)
+
+        pad = 12 * s
+        radius = 7 * s
+
+        active = [
+            (station, spec, grouped[station])
+            for station, spec in MAP_CALLOUTS.items()
+            if grouped.get(station)
+        ]
+
+        # Callout geometry (base coords). Stations with a fixed box keep it;
+        # the rest share the row, divided into identical evenly spaced columns
+        # so the day's active stations use all of the available width.
+        boxes: dict[str, tuple[int, int, int]] = {
+            st: spec["box"] for st, spec, _ in active if "box" in spec
+        }
+        row = sorted(
+            (st for st, spec, _ in active if "box" not in spec),
+            key=lambda st: MAP_CALLOUTS[st]["anchor"][0],
+        )
+        if row:
+            n = len(row)
+            col_w = (MAP_ROW_X1 - MAP_ROW_X0 - (n - 1) * MAP_COL_GAP) // n
+            for i, st in enumerate(row):
+                x = MAP_ROW_X0 + i * (col_w + MAP_COL_GAP)
+                boxes[st] = (x, MAP_ROW_Y, col_w)
+
+        def callout_lines(station, spec, entries, size):
+            """Lay out one callout's text at the given title size.
+
+            Returns a list of (text, font, line_height, fill, gap_before).
+            """
+            text_w = boxes[station][2] * s - 2 * pad
+            color = spec["color"]
+            # Descriptions use a desaturated blend of the station color.
+            muted = tuple(round(c * 0.55 + 128 * 0.45) for c in color)
+            title_font = _load_font(size)
+            desc_size = max(round(size * 0.78), 8 * s)
+            # Main descriptions are a step heavier than the sides line so the
+            # two read as distinct levels.
+            desc_font = _load_font(desc_size, weight="semibold")
+            sub_font = _load_font(desc_size, weight="medium")
+            title_lh = size + size // 4
+            desc_lh = desc_size + desc_size // 4
+            item_gap = round(size * 1.3)   # blank space between menu items
+            desc_gap = size // 5           # small gap between title and description
+            sides_gap = desc_size // 3     # slight gap between description and sides
+
+            lines: list[tuple[str, object, int, tuple, int]] = []
+            for i, it in enumerate(entries):
+                name = display_item_name(it["name"], station)
+                for j, ln in enumerate(_wrap_text(draw, name, title_font, text_w)):
+                    gap = item_gap if (j == 0 and i > 0) else 0
+                    lines.append((ln, title_font, title_lh, color, gap))
+
+                served = last_served_label(it["name"], station, history, today_str)
+                if served:
+                    for ln in _wrap_text(draw, served, sub_font, text_w):
+                        lines.append((ln, sub_font, desc_lh, MAP_LABEL_COLOR, 0))
+
+                full_text = name + " " + (it.get("description") or "")
+                warnings = (
+                    find_allergens(NUT_PATTERN, full_text)
+                    + find_allergens(SHELLFISH_PATTERN, full_text)
+                )
+                if warnings:
+                    warn_text = "⚠ Contains " + ", ".join(warnings)
+                    for ln in _wrap_text(draw, warn_text, sub_font, text_w):
+                        lines.append((ln, sub_font, desc_lh, MAP_WARNING_COLOR, 0))
+
+                main, sides = split_sides(it.get("description") or "")
+                if main:
+                    for j, ln in enumerate(_wrap_text(draw, main, desc_font, text_w)):
+                        lines.append((ln, desc_font, desc_lh, muted,
+                                      desc_gap if j == 0 else 0))
+                if sides:
+                    for j, ln in enumerate(_wrap_text(draw, f"Sides: {sides}", sub_font, text_w)):
+                        lines.append((ln, sub_font, desc_lh, muted,
+                                      sides_gap if j == 0 else 0))
+            return lines
+
+        def content_height(lines) -> int:
+            return sum(lh + gap for _, _, lh, _, gap in lines)
+
+        # One common text size for every callout: the largest size at which
+        # all callouts fit their max height. Only shrinks when space runs out.
+        min_size, max_size = 9 * s, 20 * s
+        common_size = min_size
+        for size in range(max_size, min_size - 1, -s):
+            if all(
+                content_height(callout_lines(st, spec, entries, size)) + 2 * pad
+                <= spec.get("max_h", MAP_MAX_CALLOUT_H) * s
+                for st, spec, entries in active
+            ):
+                common_size = size
+                break
+
+        for station, spec, entries in active:
+            max_h = spec.get("max_h", MAP_MAX_CALLOUT_H) * s
+            bx, by, bw = [v * s for v in boxes[station]]
+            ax, ay = [v * s for v in spec["anchor"]]
+            color = spec["color"]
+
+            chosen = callout_lines(station, spec, entries, common_size)
+            box_h = min(content_height(chosen) + 2 * pad, max_h)
+
+            # Connector: runs perfectly straight when the anchor lines up with
+            # the callout, otherwise angles to the nearest point on that edge.
+            # The endpoint overshoots into the box (hidden under its fill) so
+            # angled lines meet the border cleanly even on rounded corners.
+            if ay <= by:  # station above the box -> drop through the top edge
+                cx = min(max(ax, bx + radius), bx + bw - radius)
+                cy2 = by + radius
+            else:  # station beside the box -> run through the right edge
+                cx = bx + bw - radius
+                cy2 = min(max(ay, by + radius), by + box_h - radius)
+            draw.line([(ax, ay), (cx, cy2)], fill=_tint(color, 0.35), width=2 * s)
+            r = 3 * s
+            draw.ellipse([ax - r, ay - r, ax + r, ay + r], fill=_tint(color, 0.35))
+
+            # Subtle container: light tinted fill with a soft matching border.
+            draw.rounded_rectangle(
+                [bx, by, bx + bw, by + box_h],
+                radius=radius,
+                fill=_tint(color, 0.93),
+                outline=_tint(color, 0.55),
+                width=1 * s,
+            )
+
+            ty = by + pad
+            for text, font, lh, fill, gap in chosen:
+                ty += gap
+                if ty + lh > by + box_h - pad + lh // 2:
+                    break  # box full; remaining details are in the card's text list
+                draw.text((bx + pad, ty), text, fill=fill, font=font)
+                ty += lh
+
+        stamp_font = _load_font(12 * s, weight="medium")
+        stamp = datetime.now(PT).strftime("Menu for %A, %B %-d, %Y")
+        draw.text((8 * s, img.height - 20 * s), stamp, fill=(150, 150, 150), font=stamp_font)
+
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        img.save(out_path, "PNG", optimize=True)
+        print(f"Rendered menu map to {out_path}")
+        return True
+    except Exception as exc:
+        print(f"Map render failed (continuing without it): {exc}", file=sys.stderr)
+        return False
+
+
+def map_image_url(today_str: str) -> str:
+    """Public raw URL where the committed map will live once pushed."""
+    repo = os.environ.get("GITHUB_REPOSITORY", "c3-maxchan/walk-lunch-notifier")
+    return f"https://raw.githubusercontent.com/{repo}/main/data/layout/{today_str}.png"
+
+
 # ---------------------------------------------------------------------------
 # Teams message
 # ---------------------------------------------------------------------------
 
-def build_adaptive_card(weather: dict | None, menu: list[dict] | None, history: dict | None = None) -> dict:
+def build_adaptive_card(weather: dict | None, menu: list[dict] | None, history: dict | None = None, map_url: str | None = None) -> dict:
     today_str = datetime.now(PT).strftime("%A, %B %-d")
     today_iso = datetime.now(PT).strftime("%Y-%m-%d")
     history = history or {}
@@ -626,6 +929,15 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None, history: 
         "spacing": "Medium",
     })
 
+    if menu and map_url:
+        body.append({
+            "type": "Image",
+            "url": map_url,
+            "size": "Stretch",
+            "altText": "Cafeteria map showing today's menu items at each station",
+            "spacing": "Small",
+        })
+
     if menu:
         STATION_ORDER = [
             "@charred", "@spiced", "@bites", "@melted",
@@ -656,11 +968,7 @@ def build_adaptive_card(weather: dict | None, menu: list[dict] | None, history: 
             })
 
             for idx, item in enumerate(items):
-                display_name = item["name"]
-                if station.lower() == "@melted":
-                    display_name = f"{display_name} Pizza"
-                if station.lower() == "@sweets":
-                    display_name = display_name.replace("Soy-Enriched ", "").replace("Soy Enriched ", "")
+                display_name = display_item_name(item["name"], station)
 
                 tags = ""
                 if item["dietary"]:
@@ -780,29 +1088,76 @@ def send_to_teams(card: dict, webhook_url: str) -> bool:
 # Main
 # ---------------------------------------------------------------------------
 
+def save_state(weather: dict | None, menu: list[dict] | None) -> None:
+    try:
+        STATE_FILE.write_text(json.dumps({"weather": weather, "menu": menu}))
+    except Exception as exc:
+        print(f"Could not save run state: {exc}", file=sys.stderr)
+
+
+def load_state() -> tuple[dict | None, list[dict] | None]:
+    try:
+        state = json.loads(STATE_FILE.read_text())
+        return state.get("weather"), state.get("menu")
+    except Exception:
+        return None, None
+
+
 def main():
+    parser = argparse.ArgumentParser(description="Daily walk & lunch Teams update")
+    parser.add_argument(
+        "--phase",
+        choices=["generate", "send", "all"],
+        default="all",
+        help="generate: fetch data, record menu, render map (no Teams send); "
+             "send: build card from saved state and post to Teams; all: both",
+    )
+    args = parser.parse_args()
+
+    today_iso = datetime.now(PT).strftime("%Y-%m-%d")
+    weather = None
+    menu = None
+    history = {}
+
+    if args.phase in ("generate", "all"):
+        print("Fetching weather forecast…")
+        weather = fetch_weather()
+
+        print("Fetching lunch menu…")
+        menu = fetch_menu()
+
+        if menu:
+            try:
+                history = record_menu(menu, today_iso)
+            except Exception as exc:
+                print(f"Menu recording failed (continuing): {exc}", file=sys.stderr)
+                history = load_history()
+            render_menu_map(menu, LAYOUT_DIR / f"{today_iso}.png", history, today_iso)
+
+        save_state(weather, menu)
+        if args.phase == "generate":
+            print("Generate phase complete.")
+            return
+
+    if args.phase == "send":
+        weather, menu = load_state()
+        if weather is None and menu is None:
+            print("No saved state found; fetching fresh data…", file=sys.stderr)
+            weather = fetch_weather()
+            menu = fetch_menu()
+        history = load_history()
+
     webhook_url = os.environ.get("TEAMS_WEBHOOK_URL", "")
     if not webhook_url:
         print("ERROR: TEAMS_WEBHOOK_URL environment variable is not set.", file=sys.stderr)
         sys.exit(1)
 
-    print("Fetching weather forecast…")
-    weather = fetch_weather()
-
-    print("Fetching lunch menu…")
-    menu = fetch_menu()
-
-    today_iso = datetime.now(PT).strftime("%Y-%m-%d")
-    history = {}
-    if menu:
-        try:
-            history = record_menu(menu, today_iso)
-        except Exception as exc:
-            print(f"Menu recording failed (continuing): {exc}", file=sys.stderr)
-            history = load_history()
+    map_url = None
+    if menu and (LAYOUT_DIR / f"{today_iso}.png").exists():
+        map_url = map_image_url(today_iso)
 
     print("Building Teams message…")
-    card = build_adaptive_card(weather, menu, history)
+    card = build_adaptive_card(weather, menu, history, map_url)
 
     print("Sending to Teams…")
     ok = send_to_teams(card, webhook_url)

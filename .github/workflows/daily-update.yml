@@ -25,14 +25,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run daily update
+      - name: Generate update (fetch data, render map)
         env:
-          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-        run: python daily_update.py
+        run: python daily_update.py --phase generate
 
-      - name: Commit menu history
-        if: always()
+      # Push data before sending so the map image URL resolves in Teams.
+      - name: Commit menu data and map
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -43,3 +42,8 @@ jobs:
             git commit -m "data: record menu $(date -u +%F)"
             git push
           fi
+
+      - name: Send Teams message
+        env:
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+        run: python daily_update.py --phase send
