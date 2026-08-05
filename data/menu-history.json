@@ -1,4 +1,7 @@
 {
+  "agave-lime chicken salad": [
+    "2026-08-05"
+  ],
   "cajun spiced catfish and okra bouyon": [
     "2026-08-04"
   ],
@@ -11,13 +14,29 @@
   "fresh mozzarella, tomato, and pesto pizza": [
     "2026-08-04"
   ],
+  "grilled chicken teriyaki pizza with pineapple and cheddar": [
+    "2026-08-05"
+  ],
+  "roasted kohlrabi with truffle mushroom cream sauce": [
+    "2026-08-05"
+  ],
+  "rosemary three cheese pizza": [
+    "2026-08-05"
+  ],
+  "seared chicken with truffle mushroom cream sauce": [
+    "2026-08-05"
+  ],
   "shanghai-style sherry-soy braised pork": [
     "2026-08-04"
   ],
   "spicy sesame-hoisin glazed hodo tofu": [
     "2026-08-04"
   ],
+  "taqueria bar": [
+    "2026-08-05"
+  ],
   "three cheese pizza": [
-    "2026-08-04"
+    "2026-08-04",
+    "2026-08-05"
   ]
 }
