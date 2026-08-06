@@ -14,8 +14,17 @@
   "fresh mozzarella, tomato, and pesto pizza": [
     "2026-08-04"
   ],
+  "general tso's chicken with sesame-soy garlic sauce": [
+    "2026-08-06"
+  ],
+  "general tso's tofu with chili-soy sauce": [
+    "2026-08-06"
+  ],
   "grilled chicken teriyaki pizza with pineapple and cheddar": [
     "2026-08-05"
+  ],
+  "roasted broccoli and ricotta pizza": [
+    "2026-08-06"
   ],
   "roasted kohlrabi with truffle mushroom cream sauce": [
     "2026-08-05"
@@ -26,17 +35,27 @@
   "seared chicken with truffle mushroom cream sauce": [
     "2026-08-05"
   ],
+  "seared dijon and herb pork chop": [
+    "2026-08-06"
+  ],
+  "seared white bean and lentil herb cakes": [
+    "2026-08-06"
+  ],
   "shanghai-style sherry-soy braised pork": [
     "2026-08-04"
   ],
   "spicy sesame-hoisin glazed hodo tofu": [
     "2026-08-04"
   ],
+  "supreme pizza": [
+    "2026-08-06"
+  ],
   "taqueria bar": [
     "2026-08-05"
   ],
   "three cheese pizza": [
     "2026-08-04",
-    "2026-08-05"
+    "2026-08-05",
+    "2026-08-06"
   ]
 }
