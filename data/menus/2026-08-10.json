@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Sesame Scallion Fried Rice",
+    "description": "Stir fried jasmine rice tossed with soy sauce, sesame oil, scallions, garlic, and toasted sesame seeds",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Garlic Bok Choy And Napa Cabbage",
+    "description": "Stir fried napa cabbage and baby bok choy with a sesame soya and garlic sauce",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Crispy Sesame-Miso Tofu",
+    "description": "Crispy roasted tofu with a sesame-soy miso sauce",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Sesame Ginger Grilled Chicken",
+    "description": "Sliced chicken breast grilled with a cafe made sesame-soy and ginger marinade",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Pearl Couscous With Cherries And Arugula",
+    "description": "Steamed couscous with dried cherries, arugula. parmesan cheese and a citrus stock",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Braised Collard Greens With Roasted Celery Root",
+    "description": "Collard greens braised braised in cafe made vegetable stock with apple cider vinegar, herbs, and spices with roasted celery root",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Chimichurri Portobello Steak",
+    "description": "Seared balsamic and soy marinated mushroom steak with cafe made chimichurri sauce",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Pork Tenderloin Agrodolce",
+    "description": "Seared pork tenderloin with cafe made cippolini and cherry agrodolce",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Coconut Sweet Potato Soup",
+    "description": "Coconut cream, cornstarch, yams, sweet potato, garlic, and onion",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Margherita Pizza",
+    "description": "Cafe made pizza sauce with fresh tomatoes, shredded mozzarella cheese, fresh mozzarella cheese, and fresh basil on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Hawaiian Barbecue Chicken Pizza",
+    "description": "Cafe made BBQ sauce with pineapples, chicken, and ham on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
