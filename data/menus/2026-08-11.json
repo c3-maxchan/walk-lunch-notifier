@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Turmeric Basmati Rice",
+    "description": "Toasted basmati rice with onions, parsley, and spices",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Eggplant With Peppers And Onions",
+    "description": "Roasted eggplants, peppers, and onions with spice blend",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Harissa Chickpeas",
+    "description": "Simmered chickpeas with garlic, tomatoes, onions, and harissaSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tpita bread",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Lamb Shawarma",
+    "description": "Seared marinated lamb with warm pita bread and cafe made tzatziki",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Roasted Fingerling Potatoes",
+    "description": "Roasted fingerling potatoes with garlic and rosemary",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Charred Broccolini",
+    "description": "Charred broccolini tossed with fresh lemon juice",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Seared White Bean And Lentil Herb Cakes",
+    "description": "Simmered lentils and cannellini beans blended with spices, herbs, and garbanzo flour",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Lemon Herb Chicken Breast",
+    "description": "Seared airline chicken breast with cafe made lemon herb oil",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Peach, Burrata, And Basil Pizza",
+    "description": "Hand tossed dough brushed with olive oil and topped with shredded mozzarella cheese, torn burrata cheese, peaches, balsamic reduction, and fresh basil",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Sausage And Olive Pizza",
+    "description": "Cafe made pizza sauce with mozzarella cheese, Italian pork sausage, onions, olives, bell peppers, mushrooms, green onions, and olive oil drizzle",
+    "station": "@melted",
+    "dietary": []
+  }
+]
