@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Taqueria Bar",
+    "description": "Spanish rice, \t\t\t\t\t\t\t\tpinto beans , \t\t\t\t\t\t\t\ttofu fajitas, \t\t\t\t\t\t\t\tpico de gallo , \t\t\t\t\t\t\t\ttortilla corn , \t\t\t\t\t\t\t\t12\" flour tortilla, \t\t\t\t\t\t\t\tsour cream, \t\t\t\t\t\t\t\tpork carnitas, \t\t\t\t\t\t\t\tlime wedge, \t\t\t\t\t\t\t\tsalsa roja",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Summer Pasta Salad And Honey Lemon Vinaigrette",
+    "description": "Blanched red lentil pasta with arugula, toybox tomatoes, cucumbers, peaches, basil and honey lime vinaitgrette",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Garlic Parmesan Roasted Romanesco",
+    "description": "Roasted Romanesco tossed with a garlic and parmesan cheese",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Farro And Summer Vegetable Cakes",
+    "description": "Seared steamed farro cakes with fresh corn, zucchini, eggs, panko and parsley",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Seared Barramundi With Tomato And Basil Relish",
+    "description": "Seared barramundi with a fresh cafe made tomato and basil relish",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Cabbage And Potato Roti Wrap",
+    "description": "Wheat roti, cabbage, potatoes, peas, curry spices with basmati yellow rice, sweet yogurt and tamarind chutney",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Chicken Roti Wrap",
+    "description": "Wheat roti, chicken marinated on yogurt and curry spices, with basmati yellow rice, peas, sauteed bell peppers and onions, sweet yogurt and tamarind chutney",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Mushroom, Spinach, And Goat Cheese Pizza",
+    "description": "Cafe made pizza sauce with garlic, mozzarella cheese, goat cheese, sauteed mushrooms, and spinach on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Cajun-Seasoned Chicken Pizza",
+    "description": "Cafe made pizza sauce with Cajun spiced chicken, onions, and bell peppers on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
