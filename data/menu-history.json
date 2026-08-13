@@ -2,11 +2,17 @@
   "agave-lime chicken salad": [
     "2026-08-05"
   ],
+  "bacon cheddar potato pizza": [
+    "2026-08-13"
+  ],
   "bombay-style mango chicken kebab": [
     "2026-08-07"
   ],
   "braised collard greens with roasted celery root": [
     "2026-08-10"
+  ],
+  "broccoli cheddar soup": [
+    "2026-08-13"
   ],
   "cabbage and potato roti wrap": [
     "2026-08-12"
@@ -18,7 +24,8 @@
     "2026-08-12"
   ],
   "charred broccolini": [
-    "2026-08-11"
+    "2026-08-11",
+    "2026-08-13"
   ],
   "chicken roti wrap": [
     "2026-08-12"
@@ -31,6 +38,9 @@
   ],
   "coconut sweet potato soup": [
     "2026-08-10"
+  ],
+  "coffee rubbed tri-tip and almond romesco sauce": [
+    "2026-08-13"
   ],
   "creole spiced tofu and mushroom stew": [
     "2026-08-04"
@@ -56,6 +66,9 @@
   "general tso's tofu with chili-soy sauce": [
     "2026-08-06"
   ],
+  "gochujang sesame chicken": [
+    "2026-08-13"
+  ],
   "grilled chicken teriyaki pizza with pineapple and cheddar": [
     "2026-08-05"
   ],
@@ -64,6 +77,9 @@
   ],
   "hawaiian barbecue chicken pizza": [
     "2026-08-10"
+  ],
+  "korean bbq king oyster mushrooms": [
+    "2026-08-13"
   ],
   "lamb shawarma": [
     "2026-08-11"
@@ -101,6 +117,9 @@
   "roasted broccoli and ricotta pizza": [
     "2026-08-06"
   ],
+  "roasted cauliflower steak": [
+    "2026-08-13"
+  ],
   "roasted eggplant with peppers and onions": [
     "2026-08-11"
   ],
@@ -109,6 +128,9 @@
   ],
   "roasted kohlrabi with truffle mushroom cream sauce": [
     "2026-08-05"
+  ],
+  "roasted yukon potatoes with capers": [
+    "2026-08-13"
   ],
   "rosemary three cheese pizza": [
     "2026-08-05"
@@ -129,6 +151,9 @@
     "2026-08-06",
     "2026-08-11"
   ],
+  "sesame garlic green beans": [
+    "2026-08-13"
+  ],
   "sesame ginger grilled chicken": [
     "2026-08-10"
   ],
@@ -147,11 +172,17 @@
   "spicy sesame-hoisin glazed hodo tofu": [
     "2026-08-04"
   ],
+  "steamed jasmine rice": [
+    "2026-08-13"
+  ],
   "summer pasta salad and honey lemon vinaigrette": [
     "2026-08-12"
   ],
   "supreme pizza": [
     "2026-08-06"
+  ],
+  "sweet corn, zucchini, ricotta, and basil pizza": [
+    "2026-08-13"
   ],
   "taqueria bar": [
     "2026-08-05",
@@ -164,7 +195,8 @@
     "2026-08-07",
     "2026-08-10",
     "2026-08-11",
-    "2026-08-12"
+    "2026-08-12",
+    "2026-08-13"
   ],
   "turmeric basmati rice": [
     "2026-08-11"

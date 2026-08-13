@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Steamed Jasmine Rice",
+    "description": "",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Sesame Garlic Green Beans",
+    "description": "Blanched green beans sauteed in a sesame garlic oil with toasted sesame seeds",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Korean Bbq King Oyster Mushrooms",
+    "description": "Roasted king oyster mushrooms tossed in a cafe made Korean BBQ glaze",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Gochujang Sesame Chicken",
+    "description": "Grilled chicken in a cafe made gochujang  and sesame soy marinade",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Charred Broccolini",
+    "description": "Charred broccolini tossed with fresh lemon juice",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Yukon Potatoes With Capers",
+    "description": "",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Cauliflower Steak",
+    "description": "Seared cauliflower steak with cafe made almond romesco",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Coffee Rubbed Tri-Tip And Almond Romesco Sauce",
+    "description": "Seared coffee rubbed trip tip with cafe made almond romesco",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Broccoli Cheddar Soup",
+    "description": "Onions, garlic, celery, carrots, broccoli florets, cheddar, heavy cream, butter, flour, and vegetable stock",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Sweet Corn, Zucchini, Ricotta, And Basil Pizza",
+    "description": "Hand tossed dough brushed with olive oil and topped with mozzarella and ricotta cheese, roasted corn kernels, roasted zucchini, fresh basil, and lemon zest",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Bacon Cheddar Potato Pizza",
+    "description": "Cafe made pizza sauce with mozzarella and cheddar cheese with roasted potatoes, crispy bacon, and green onions, on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
