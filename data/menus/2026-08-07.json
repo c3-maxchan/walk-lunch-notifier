@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Nepalese-Inspired Potato And Vegetable Curry",
+    "description": "Nepalese-inspired potato and vegetable curry infused with aromatic spices, served with dal and fragrant basmati riceSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcabbage potato bengali, \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tyellow rice and peas",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Bombay-Style Mango Chicken Kebab",
+    "description": "Bombay-style mango chicken kebab with tandoori chicken marinated in yogurt and mango, served with fragrant basmati rice and flavorful dalSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcabbage potato bengali, \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tyellow rice and peas",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Lemon And Chive Crispy Polenta And Mushroom Topping",
+    "description": "Lemon and herb seared polenta cake with cafe made mushroom ForestièreSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tgarlic parmesan roasted romanesco, \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tacini de pepe sarda with olive oil and parsley",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Lemon Chive Seared Barramundi Filet And Charred Leek And Lemon Cream Sauce",
+    "description": "Lemon pepper and chive marinated seared barramundi with a cafe made charred leek and cream sauceSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tgarlic parmesan roasted romanesco, \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tacini de pepe sarda with olive oil and parsley",
+    "station": "@charred",
+    "dietary": [
+      "SW"
+    ]
+  },
+  {
+    "name": "Sesame-Soy Roasted Pork Sandwich",
+    "description": "Thin sliced soy roasted pork with Dijon egg aioli, cafe made gochujang pickled napa cabbage, pickled red onions, sliced cucumbers, and carrots on  Panorama Baking Company focaccia",
+    "station": "@bites",
+    "dietary": [
+      "F2F"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Mediterranean Vegetable Pizza",
+    "description": "Olive oil brushed hand tossed dough with roasted red peppers, feta and mozzarella cheese, artichoke hearts and olives",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Shrimp And Bacon White Pizza",
+    "description": "Cafe made alfredo sauce with mozzarella and provolone cheese, bacon, poached shrimp, basil, and scallion on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "General Tso'S Tofu With Chili-Soy Sauce",
+    "description": "Fried tofu tossed in a cafe made General tso sauceSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tsteamed rice, \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tsesame mushrooms, \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tshredded red cabbage",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "General Tso'S Chicken With Sesame-Soy Garlic Sauce",
+    "description": "Egg battered fried chicken tossed in cafe made general tso sauceSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tsteamed rice, \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tsesame mushrooms, \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tshredded red cabbage",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Seared White Bean And Lentil Herb Cakes",
+    "description": "Mashed cannelini beans with lentils, garbanzo flour, herbs, and Dijon with bulls bloodSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tbrussels sprouts with caramelized garlic and lemon , \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlemon and thyme yam puree",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Seared Dijon And Herb Pork Chop",
+    "description": "Seared Dijon and herb pork chop with spiced apple and ginger gastrique and bulls blood micro greensSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tbrussels sprouts with caramelized garlic and lemon , \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlemon and thyme yam puree",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Roasted Broccoli And Ricotta Pizza",
+    "description": "Cafe made pizza sauce with mozzarella cheese, ricotta cheese, and roasted broccoli on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Supreme Pizza",
+    "description": "Cafe made pizza sauce with Italian pork sausage, pepperoni, mushrooms, bell peppers, and onions on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]

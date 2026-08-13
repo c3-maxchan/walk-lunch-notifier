@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Taqueria Bar",
+    "description": "Spanish rice, \t\t\t\t\t\t\t\tpinto beans , \t\t\t\t\t\t\t\ttofu fajitas, \t\t\t\t\t\t\t\tpico de gallo , \t\t\t\t\t\t\t\tsalsa verde , \t\t\t\t\t\t\t\ttortilla corn , \t\t\t\t\t\t\t\t12\" flour tortilla, \t\t\t\t\t\t\t\tsour cream, \t\t\t\t\t\t\t\tcarne asada skirt steak",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Roasted Kohlrabi With Truffle Mushroom Cream Sauce",
+    "description": "Roasted kohlrabi tossed with cafe made mushroom and truffle cream sauceSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tsauteed brussels sprouts with apples and dijon dressing, \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tparmesan egg noodles",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Seared Chicken With Truffle Mushroom Cream Sauce",
+    "description": "Seared airline chicken breast with cafe made mushroom and truffle cream sauceSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tsauteed brussels sprouts with apples and dijon dressing, \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tparmesan egg noodles",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Agave-Lime Chicken Salad",
+    "description": "Romaine lettuce, corn, black beans, tomatoes, onions, shredded cheddar cheese, and bell peppers tossed with a chipotle, soy, and lime vinaigrette topped with grilled agave lime chicken and fried tortilla strips",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Rosemary Three Cheese Pizza",
+    "description": "Cafe made pizza sauce with mozzarella, blue, and parmesan cheese with rosemary on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Grilled Chicken Teriyaki Pizza With Pineapple And Cheddar",
+    "description": "Cafe made teriyaki sauce with grilled chicken, pineapples, cheddar and mozzarella cheeses on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
