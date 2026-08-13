@@ -397,7 +397,7 @@ NUT_PATTERN = re.compile(
 
 SHELLFISH_PATTERN = re.compile(
     r"\b(shellfish|shrimps?|prawns?|crabs?|lobsters?|crawfish|crayfish|"
-    r"clams?|mussels?|oysters?|scallops?|calamari|squid|octopus)\b",
+    r"clams?|mussels?|oysters?(?!\s+mushrooms?)|scallops?|calamari|squid|octopus)\b",
     re.IGNORECASE,
 )
 
