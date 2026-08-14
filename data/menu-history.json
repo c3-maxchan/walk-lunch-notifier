@@ -23,6 +23,9 @@
   "cajun-seasoned chicken pizza": [
     "2026-08-12"
   ],
+  "chana masala": [
+    "2026-08-14"
+  ],
   "charred broccolini": [
     "2026-08-11",
     "2026-08-13"
@@ -48,6 +51,9 @@
   "crispy sesame-miso tofu": [
     "2026-08-10"
   ],
+  "dal": [
+    "2026-08-14"
+  ],
   "farro and summer vegetable cakes": [
     "2026-08-12"
   ],
@@ -56,6 +62,9 @@
   ],
   "garlic bok choy and napa cabbage": [
     "2026-08-10"
+  ],
+  "garlic naan or paratha": [
+    "2026-08-14"
   ],
   "garlic parmesan roasted romanesco": [
     "2026-08-12"
@@ -78,8 +87,14 @@
   "hawaiian barbecue chicken pizza": [
     "2026-08-10"
   ],
+  "herb seared chicken with tomato caper vinaigrette": [
+    "2026-08-14"
+  ],
   "korean bbq king oyster mushrooms": [
     "2026-08-13"
+  ],
+  "lamb rogan josh": [
+    "2026-08-14"
   ],
   "lamb shawarma": [
     "2026-08-11"
@@ -105,11 +120,17 @@
   "nepalese-inspired potato and vegetable curry": [
     "2026-08-07"
   ],
+  "parmesan herb polenta": [
+    "2026-08-14"
+  ],
   "peach, burrata, and basil pizza": [
     "2026-08-11"
   ],
   "pearl couscous with cherries and arugula": [
     "2026-08-10"
+  ],
+  "pepperoni pizza": [
+    "2026-08-14"
   ],
   "pork tenderloin agrodolce": [
     "2026-08-10"
@@ -122,6 +143,9 @@
   ],
   "roasted eggplant with peppers and onions": [
     "2026-08-11"
+  ],
+  "roasted eggplant, ricotta, and peppadew honey pizza": [
+    "2026-08-14"
   ],
   "roasted fingerling potatoes": [
     "2026-08-11"
@@ -137,6 +161,9 @@
   ],
   "sausage and olive pizza": [
     "2026-08-11"
+  ],
+  "sautéed mushrooms and rainbow carrots": [
+    "2026-08-14"
   ],
   "seared barramundi with tomato and basil relish": [
     "2026-08-12"
@@ -172,6 +199,9 @@
   "spicy sesame-hoisin glazed hodo tofu": [
     "2026-08-04"
   ],
+  "steamed basmati rice": [
+    "2026-08-14"
+  ],
   "steamed jasmine rice": [
     "2026-08-13"
   ],
@@ -196,9 +226,13 @@
     "2026-08-10",
     "2026-08-11",
     "2026-08-12",
-    "2026-08-13"
+    "2026-08-13",
+    "2026-08-14"
   ],
   "turmeric basmati rice": [
     "2026-08-11"
+  ],
+  "white bean cassoulet": [
+    "2026-08-14"
   ]
 }

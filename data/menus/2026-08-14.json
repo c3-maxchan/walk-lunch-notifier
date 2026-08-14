@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Garlic Naan Or Paratha",
+    "description": "Warm garlic naan or paratha",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Steamed Basmati Rice",
+    "description": "",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Dal",
+    "description": "Simmered lentils with tomatoes, onions, garlic, butter, chilies, and tempering spices",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Chana Masala",
+    "description": "Simmered chickpeas in tomatoes, onions, garlic, ginger, tamarind, and tempering spices",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Lamb Rogan Josh",
+    "description": "Seared lamb simmered with spices, herbs, tomatoes, onions, ginger, garlic, yogurt, and cafe made chicken stock",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Sautéed Mushrooms And Rainbow Carrots",
+    "description": "Steamed rainbow carrots tossed with sauteed chef blend mushrooms, and sesame oil",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Parmesan Herb Polenta",
+    "description": "Creamed cornmeal with fresh herbs, half and half, parmesan cheese, and butter",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "White Bean Cassoulet",
+    "description": "Simmered cannellini beans with tomatoes, onions, garlic, herbs, and carrots and cafe made vegetable stock",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Herb Seared Chicken With Tomato Caper Vinaigrette",
+    "description": "Seared airline chicken breast with a cafe made tomato and caper vinaigrette",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Roasted Eggplant, Ricotta, And Peppadew Honey Pizza",
+    "description": "Cafe made pizza sauce with roasted eggplants, mozzarella cheese, ricotta cheese, and sweet chili honey drizzle on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Pepperoni Pizza",
+    "description": "Cafe made pizza sauce with mozzarella cheese, and beef pepperoni on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
