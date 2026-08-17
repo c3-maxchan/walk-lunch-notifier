@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Vegetable Fried Rice",
+    "description": "Wok fried rice with mixed vegetables and soy sauce",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Sauteed Garlic-Soya Long Beans",
+    "description": "Blanched long beans sauteed with garlic and tossed in a vinegar and soy sauce with red chili flakes",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Crispy Orange Tofu",
+    "description": "Crispy roasted tofu tossed with a cafe made orange soya sauce",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Five Spice Chicken",
+    "description": "Roasted chicken with a five spice and ginger soy marinade",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Shaved Summer Squash Salad And Lemon-White Balsamic Vinaigrette",
+    "description": "Thin sliced squash and zucchini, cucumbers, radishes, arugula, and herbs with a lemon and white balsamic vinaigrette",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Potatoes And Parsnips",
+    "description": "Roasted potatoes and parsnips tossed with cafe made sage oil",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Seared Hen Of The Woods And Sweet Corn And Tomato Relish",
+    "description": "Balsamic-soy marinated maitake mushrooms seared and topped with cafe made sweet corn and tomato relish",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Herb Roasted Turkey Cutlet And Sweet Corn And Tomato Relish",
+    "description": "Seared herb marinated turkey breast cutlet with a cafe made sweet corn and tomato relish",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Chili Roasted Poblano And Corn",
+    "description": "Simmered potatoes, roasted corn, and fire roasted poblano chilies with vegetable stock, cream, and roux",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Cherry And Baba Ganoush Pizza",
+    "description": "Cafe made baba ganoush with mozzarella cheese, black garlic, fresh cherries, feta cheese, and micro arugula on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Carnitas & Pickled Red Onions Pizza",
+    "description": "Cafe made pizza sauce with pork carnitas, mozzarella cheese, pickled red onions, cotija cheese and cilantro on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
