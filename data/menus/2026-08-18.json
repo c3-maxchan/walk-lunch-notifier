@@ -1,0 +1,96 @@
+[
+  {
+    "name": "Saffron Basmati Rice",
+    "description": "",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Zucchini And Tomatoes",
+    "description": "Herb and garlic marinated zucchini, tomatoes, peppers, red onions, and summer squash roasted and tossed with lemon juice",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Lemon And Oregano Braised White Beans With Summer Tomato & Pepper Compote",
+    "description": "Braised cannellini beans with fresh herbs, vegetable stock, and lemon with cafe made summer tomato & pepper compote",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Mediterranean Pork Loin With Summer Tomato & Pepper Compote",
+    "description": "Roasted herb and lemon pork loin with cafe made summer tomato & pepper compote",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Lemon Orzo",
+    "description": "Blanched orzo pasta tossed with fresh lemon juices, zest, parsley, and olive oil",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Charred Broccolini",
+    "description": "Roasted broccolini tossed with garlic and lemon",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Seared White Bean And Lentil Herb Cakes",
+    "description": "SIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcharred lemon, sweet corn & basil beurre blanc",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Thyme And Lemon Zest Seared Scallops",
+    "description": "Seared scallops with a thyme and lemon zest marinade with a cafe made charred lemon and corn beurre blancSIDES:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcharred lemon, sweet corn & basil beurre blanc",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Sesame-Soy Gochujang Trumpet Sandwich",
+    "description": "Roasted sesame and soy marinated trumpet mushrooms with provolone cheese, caramelized onions, and arugula on a telera roll",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Almond Romesco And Tri-Tip Sandwich",
+    "description": "Seared tri-tip with cafe made coffee rub, almond romesco-egg aioli, provolone cheese, caramelized onions, and arugula on a telera roll",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Grilled Peach And Brie Pizza",
+    "description": "Cafe made alfredo sauce with mozzarella cheese, peaches, brie cheese, and micro green on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Chicken, Tomato, And Tarragon Pizza",
+    "description": "Cafe made pizza sauce with roasted chicken mozzarella cheese, tomatoes, onions, tarragon, and parmesan cheese on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]

@@ -2,6 +2,9 @@
   "agave-lime chicken salad": [
     "2026-08-05"
   ],
+  "almond romesco and tri-tip sandwich": [
+    "2026-08-18"
+  ],
   "bacon cheddar potato pizza": [
     "2026-08-13"
   ],
@@ -31,7 +34,8 @@
   ],
   "charred broccolini": [
     "2026-08-11",
-    "2026-08-13"
+    "2026-08-13",
+    "2026-08-18"
   ],
   "cherry and baba ganoush pizza": [
     "2026-08-17"
@@ -41,6 +45,9 @@
   ],
   "chicken, mushroom, and banana pepper pizza": [
     "2026-08-04"
+  ],
+  "chicken, tomato, and tarragon pizza": [
+    "2026-08-18"
   ],
   "chili roasted poblano and corn": [
     "2026-08-17"
@@ -96,6 +103,9 @@
   "grilled chicken teriyaki pizza with pineapple and cheddar": [
     "2026-08-05"
   ],
+  "grilled peach and brie pizza": [
+    "2026-08-18"
+  ],
   "harissa chickpeas": [
     "2026-08-11"
   ],
@@ -120,14 +130,23 @@
   "lemon and chive crispy polenta and mushroom topping": [
     "2026-08-07"
   ],
+  "lemon and oregano braised white beans with summer tomato & pepper compote": [
+    "2026-08-18"
+  ],
   "lemon chive seared barramundi filet and charred leek and lemon cream sauce": [
     "2026-08-07"
   ],
   "lemon herb chicken breast": [
     "2026-08-11"
   ],
+  "lemon orzo": [
+    "2026-08-18"
+  ],
   "margherita pizza": [
     "2026-08-10"
+  ],
+  "mediterranean pork loin with summer tomato & pepper compote": [
+    "2026-08-18"
   ],
   "mediterranean vegetable pizza": [
     "2026-08-07"
@@ -177,8 +196,14 @@
   "roasted yukon potatoes with capers": [
     "2026-08-13"
   ],
+  "roasted zucchini and tomatoes": [
+    "2026-08-18"
+  ],
   "rosemary three cheese pizza": [
     "2026-08-05"
+  ],
+  "saffron basmati rice": [
+    "2026-08-18"
   ],
   "sausage and olive pizza": [
     "2026-08-11"
@@ -203,7 +228,8 @@
   ],
   "seared white bean and lentil herb cakes": [
     "2026-08-06",
-    "2026-08-11"
+    "2026-08-11",
+    "2026-08-18"
   ],
   "sesame garlic green beans": [
     "2026-08-13"
@@ -213,6 +239,9 @@
   ],
   "sesame scallion fried rice": [
     "2026-08-10"
+  ],
+  "sesame-soy gochujang trumpet sandwich": [
+    "2026-08-18"
   ],
   "sesame-soy roasted pork sandwich": [
     "2026-08-07"
@@ -258,7 +287,11 @@
     "2026-08-12",
     "2026-08-13",
     "2026-08-14",
-    "2026-08-17"
+    "2026-08-17",
+    "2026-08-18"
+  ],
+  "thyme and lemon zest seared scallops": [
+    "2026-08-18"
   ],
   "turmeric basmati rice": [
     "2026-08-11"
