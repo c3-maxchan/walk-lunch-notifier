@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Coconut Jasmine Rice",
+    "description": "Steamed jasmine rice with coconut milk and kaffir lime leaves",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Garlic Napa Cabbage",
+    "description": "Stir fired cabbage and carrots with a garlic soy sauce",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Coconut Curry Chickpeas",
+    "description": "Simmered chickpeas in a red curry paste with onions, garlic, ginger, lime, and cilantro",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Thai Basil Pork",
+    "description": "Pan seared pork with a spicy Thai basil oyster-soya sauce",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Creamy Parmesan Polenta",
+    "description": "Slow cooked corn meal with cafe made vegetable stock, milk, butter, and parmesan cheese",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Garlic And Chili Roasted Romanesco",
+    "description": "Roasted Romanesco tossed with garlic, crushed red chilies, and lemon juice",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Lentil And Vegetable Kofa",
+    "description": "Simmered lentils with roasted vegetables, panko, eggs, and spices with cafe made tomato caper relish",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Dijon And Herb Seared Barramundi With Tomato Caper Relish",
+    "description": "Seared Dijon and herb marinated barramundi fillet with cafe made tomato and caper relish",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Saffron Basmati Rice Pilaf",
+    "description": "Steamed basmati rice with saffron, turmeric, onions, carrots, celery, mushrooms, and bay leaves",
+    "station": "@bites",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Thai Peanut Vegetable Pizza",
+    "description": "Cafe made peanut sauce with mozzarella cheese, fresh vegetables and scallions",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Grilled Chicken Teriyaki Pizza",
+    "description": "Cafe made teriyaki sauce with grilled chicken, mozzarella, cheese, scallions and sesame seeds",
+    "station": "@melted",
+    "dietary": []
+  }
+]
