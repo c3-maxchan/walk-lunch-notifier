@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Naan Or Lachcha Paratha",
+    "description": "",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Jeera Basmati Rice",
+    "description": "Steamed basmati rice with cumin seeds",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Adraki Masoor Dal",
+    "description": "Simmered red lentils with tomatoes, onions, garlic, ginger, and chilies",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Palak Chana",
+    "description": "Simmered garbanzo beans in a spiced spinach and tomato curry",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "description": "Simmered chicken marinated in a spiced yogurt sauce with tomatoes, onions, garlic, ginger, and cream",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Buttery Garlic Mashed Potatoes",
+    "description": "Simmered potatoes with garlic, cream and butter",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Honey And Thyme Roasted Rainbow Carrots",
+    "description": "Roasted baby carrots in a honey and thyme glaze",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "White Bean And Parmesan Polenta Cake",
+    "description": "Simmered cannellini beans and polenta with eggs, parmesan cheese, butter, and panko",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Steak Au Poivre",
+    "description": "Seared flat iron steak with thyme and garlic with cafe made Au poivre sauce",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Street Corn And Poblano Pizza",
+    "description": "Hand tossed dough with shredded mozzarella cheese, roasted corn, fire roasted poblano chilies, lime cream, cotija cheese, and fresh cilantro",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Meat Lover'S Pizza",
+    "description": "Cafe made pizza sauce with mozzarella cheese, bacon, ham, and Italian sausage on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
