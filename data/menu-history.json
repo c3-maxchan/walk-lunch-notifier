@@ -47,7 +47,11 @@
   "charred broccolini": [
     "2026-08-11",
     "2026-08-13",
-    "2026-08-18"
+    "2026-08-18",
+    "2026-08-25"
+  ],
+  "charred okra, tomatoes, and peppers": [
+    "2026-08-25"
   ],
   "cherry and baba ganoush pizza": [
     "2026-08-17"
@@ -57,6 +61,9 @@
   ],
   "chicken roti wrap": [
     "2026-08-12"
+  ],
+  "chicken saltimbocca": [
+    "2026-08-25"
   ],
   "chicken tikka masala": [
     "2026-08-21"
@@ -79,6 +86,9 @@
   "citrus and chile fish tacos": [
     "2026-08-19"
   ],
+  "citrus chicken, corn, and jalapeno pizza": [
+    "2026-08-25"
+  ],
   "coconut curry chickpeas": [
     "2026-08-20"
   ],
@@ -92,7 +102,8 @@
     "2026-08-13"
   ],
   "creamy parmesan polenta": [
-    "2026-08-20"
+    "2026-08-20",
+    "2026-08-25"
   ],
   "creole spiced tofu and mushroom stew": [
     "2026-08-04"
@@ -148,6 +159,9 @@
   "ginger cabbage and carrots": [
     "2026-08-24"
   ],
+  "goat cheese and zucchini": [
+    "2026-08-25"
+  ],
   "gochujang sesame chicken": [
     "2026-08-13"
   ],
@@ -186,6 +200,9 @@
   ],
   "jeera basmati rice": [
     "2026-08-21"
+  ],
+  "jollof rice": [
+    "2026-08-25"
   ],
   "korean bbq king oyster mushrooms": [
     "2026-08-13"
@@ -252,6 +269,9 @@
   ],
   "peach, burrata, and basil pizza": [
     "2026-08-11"
+  ],
+  "peanut sweet potato, lentils, and chickpeas": [
+    "2026-08-25"
   ],
   "pearl couscous with cherries and arugula": [
     "2026-08-10"
@@ -410,7 +430,8 @@
     "2026-08-19",
     "2026-08-20",
     "2026-08-21",
-    "2026-08-24"
+    "2026-08-24",
+    "2026-08-25"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -424,10 +445,16 @@
   "vegetable fried rice": [
     "2026-08-17"
   ],
+  "vegetarian eggplant moussaka": [
+    "2026-08-25"
+  ],
   "white bean and parmesan polenta cake": [
     "2026-08-21"
   ],
   "white bean cassoulet": [
     "2026-08-14"
+  ],
+  "yassa pork": [
+    "2026-08-25"
   ]
 }

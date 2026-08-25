@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Jollof Rice",
+    "description": "Jasmine rice with pepper, onions, garlic, vegetable stock, tomatoes, and spices",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Charred Okra, Tomatoes, And Peppers",
+    "description": "Roasted okra with charred peppers, tomatoes, garlic, red onions, and lemon juice",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Peanut Sweet Potato, Lentils, And Chickpeas",
+    "description": "Roasted sweet potatoes with creamy peanut butter, simmered lentils and chickpeas, tomatoes, onions, garlic, ginger, and coriander",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Yassa Pork",
+    "description": "Roasted pork loin with a caramelized onion and Dijon garlic sauce",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Charred Broccolini",
+    "description": "Charred broccolini tossed with lemon juices, lemon zest, garlic, and spices",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Creamy Parmesan Polenta",
+    "description": "Simmered coarse cornmeal with cafe made vegetable stock, milk, and parmesan cheese",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Vegetarian Eggplant Moussaka",
+    "description": "Roasted eggplant married with simmer lentils, squash, onions, and topped with buttery potatoes and feta cheese",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Chicken Saltimbocca",
+    "description": "Fried chicken cutlet stuffed with prosciutto, provolone cheese and sage",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Goat Cheese And Zucchini",
+    "description": "Roasted zucchini with mozzarella cheese, goat cheese, lemon zest and basil on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Citrus Chicken, Corn, And Jalapeno Pizza",
+    "description": "Roasted citrus chicken with pickled jalapenos, roasted corn, mozzarella cheese, and fresh cilantro on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
