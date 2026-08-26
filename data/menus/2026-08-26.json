@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Taqueria Bar",
+    "description": "Spanish rice, \t\t\t\t\t\t\t\tpinto beans , \t\t\t\t\t\t\t\ttofu fajitas, \t\t\t\t\t\t\t\tpico de gallo , \t\t\t\t\t\t\t\tsalsa verde , \t\t\t\t\t\t\t\ttortilla corn , \t\t\t\t\t\t\t\t12\" flour tortilla, \t\t\t\t\t\t\t\tsour cream, \t\t\t\t\t\t\t\tcotija cheese, \t\t\t\t\t\t\t\tpollo asado",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Roasted Zucchini And Squash",
+    "description": "Char roasted zucchini, squash, red onions, and bell peppers with garlic, parsley, and sherry vinegar",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Crispy Paprika Potaotes",
+    "description": "Roasted Yukon potatoes with paprika, sherry vinegar, lemon juice, and parsley",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Artichoke And Roasted Red Pepper Braised White Beans",
+    "description": "Simmered cannellini beans with roasted red peppers, artichoke hearts, cafe made vegetable stock with herbs and spices",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Seared Shrimp",
+    "description": "Seared shrimp with cafe made romesco sauce",
+    "station": "@charred",
+    "dietary": [
+      "SW"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Nectarine, Poblano ,And Queso Fresco Pizza",
+    "description": "Hand tossed pizza dough topped with mozzarella cheese, roasted nectarines, fire roasted poblano chilies, queso fresco, and fresh cilantro",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Barbecue Pork Pizza",
+    "description": "Cafe made barbecue sauce with three cheese blend, pepperoncini's, and pulled pork on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
