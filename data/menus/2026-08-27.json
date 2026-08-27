@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Coconut Jasmine Rice",
+    "description": "Steamed jasmine rice with coconut milk and lime leaves",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Garlic-Chile Roasted Vegetables",
+    "description": "Roasted mixed vegetables with garlic, Fresno chilies and  vinegar soya sauce",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Curry Tofu And Eggplant",
+    "description": "Roasted tofu and eggplant simmered in curry coconut milk with lime juice and Thai basil",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Thai Basil Chicken",
+    "description": "Seared chicken with garlic, fish sauce, oyster, sauce, soy sauce, cafe made vegetable stock, Fresno chilies, and Thai basil",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Roasted Lyonnaise Potatoes With Fresh Herbs",
+    "description": "Roasted Yukon potatoes with herbs, onions, and spices",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Sauteed Haricot Vert",
+    "description": "Sauteed haricot verts tossed with olive oil, lemon zest and spices",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Herbed Lentils With Roasted Mushrooms And Arugula",
+    "description": "Simmered lentils with mirepoix vegetables, herbs, mushrooms, tomatoes, and lemon juice",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Leg Of Lamb With Gremolata Sauce",
+    "description": "Roasted lamb with turmeric, tomatoes, onions, coriander and masala spices with cafe made gremolata",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Vegetable Medley Spinach Wraps",
+    "description": "Roasted vegetable medley with cafe made almond romesco caramelized onions, pickled chilies, and fresh lettuce in a spinach wrap",
+    "station": "@bites",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Almond Romesco Pork Sandwich",
+    "description": "Slow roasted Dijon marinated pork with cafe made almond romesco caramelized onions, pickled chilies, and fresh lettuce on a telera roll",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Roasted Eggplant And Feta Pizza",
+    "description": "Cafe made pizza sauce with mozzarella cheese, confit cherry tomatoes, roasted eggplant, feta cheese, and fresh oregano on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Chicken Apple And Banana Pepper Pizza",
+    "description": "Cafe made pizza sauce with broccolini, chicken apple sausage, and pickled banana peppers on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  },
+  {
+    "name": "Oreo Cookie Cake",
+    "description": "Egg and soy enriched yellow cake with butter, cream, crushed Oreos, and cafe made vanilla chantilly",
+    "station": "@sweets",
+    "dietary": []
+  }
+]
