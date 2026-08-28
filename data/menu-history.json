@@ -17,6 +17,9 @@
   "bacon cheddar potato pizza": [
     "2026-08-13"
   ],
+  "baingan bharta": [
+    "2026-08-28"
+  ],
   "barbecue pork pizza": [
     "2026-08-26"
   ],
@@ -46,6 +49,9 @@
   ],
   "cajun-seasoned chicken pizza": [
     "2026-08-12"
+  ],
+  "caldo de lentejas": [
+    "2026-08-28"
   ],
   "carnitas & pickled red onions pizza": [
     "2026-08-17"
@@ -91,6 +97,9 @@
   ],
   "chimichurri portobello steak": [
     "2026-08-10"
+  ],
+  "cider glazed brussels sprouts": [
+    "2026-08-28"
   ],
   "cilantro lime rice": [
     "2026-08-19"
@@ -247,6 +256,9 @@
   "lemon and oregano braised white beans with summer tomato & pepper compote": [
     "2026-08-18"
   ],
+  "lemon chive seared barramundi filet": [
+    "2026-08-28"
+  ],
   "lemon chive seared barramundi filet and charred leek and lemon cream sauce": [
     "2026-08-07"
   ],
@@ -278,7 +290,8 @@
     "2026-08-12"
   ],
   "naan or lachcha paratha": [
-    "2026-08-21"
+    "2026-08-21",
+    "2026-08-28"
   ],
   "nectarine, poblano ,and queso fresco pizza": [
     "2026-08-26"
@@ -287,7 +300,11 @@
     "2026-08-07"
   ],
   "oreo cookie cake": [
-    "2026-08-27"
+    "2026-08-27",
+    "2026-08-28"
+  ],
+  "orzo pasta with roasted tomatoes": [
+    "2026-08-28"
   ],
   "palak chana": [
     "2026-08-21"
@@ -308,7 +325,8 @@
     "2026-08-10"
   ],
   "pepperoni pizza": [
-    "2026-08-14"
+    "2026-08-14",
+    "2026-08-28"
   ],
   "pork tenderloin agrodolce": [
     "2026-08-10"
@@ -360,7 +378,8 @@
     "2026-08-05"
   ],
   "saffron basmati rice": [
-    "2026-08-18"
+    "2026-08-18",
+    "2026-08-28"
   ],
   "saffron basmati rice pilaf": [
     "2026-08-20"
@@ -385,6 +404,9 @@
   ],
   "seared dijon and herb pork chop": [
     "2026-08-06"
+  ],
+  "seared eggplant piccata": [
+    "2026-08-28"
   ],
   "seared hen of the woods and sweet corn and tomato relish": [
     "2026-08-17"
@@ -454,6 +476,9 @@
   "sweet corn, zucchini, ricotta, and basil pizza": [
     "2026-08-13"
   ],
+  "tandoori chicken": [
+    "2026-08-28"
+  ],
   "taqueria bar": [
     "2026-08-05",
     "2026-08-12",
@@ -486,7 +511,8 @@
     "2026-08-24",
     "2026-08-25",
     "2026-08-26",
-    "2026-08-27"
+    "2026-08-27",
+    "2026-08-28"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -503,6 +529,9 @@
   "vegetable medley spinach wraps": [
     "2026-08-27"
   ],
+  "vegetable supreme pizza with black olives": [
+    "2026-08-28"
+  ],
   "vegetarian eggplant moussaka": [
     "2026-08-25"
   ],
@@ -514,5 +543,8 @@
   ],
   "yassa pork": [
     "2026-08-25"
+  ],
+  "yellow dal tadka": [
+    "2026-08-28"
   ]
 }

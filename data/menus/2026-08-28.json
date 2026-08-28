@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Naan Or Lachcha Paratha",
+    "description": "",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Saffron Basmati Rice",
+    "description": "Steamed basmati rice with saffron",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Yellow Dal Tadka",
+    "description": "Simmered yellow lentils with onions, tomatoes, garlic, ginger, chilies, and spices",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Baingan Bharta",
+    "description": "Simmered eggplants, tomatoes, onions, lime juice, and spices",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Tandoori Chicken",
+    "description": "Roasted chicken thighs with a cafe made yogurt marinade",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Orzo Pasta With Roasted Tomatoes",
+    "description": "",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Cider Glazed Brussels Sprouts",
+    "description": "",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Seared Eggplant Piccata",
+    "description": "Eggplant dredged and seared in cornstarch with a cafe made lemon caper sauce",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Lemon Chive Seared Barramundi Filet",
+    "description": "Seared barramundi fillet with lemon pepper, chives, and dill",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Caldo De Lentejas",
+    "description": "Simmered lentils with mirepoix vegetables, herbs, potatoes, mushrooms, tomatoes, and lemon juice in a cafe made vegetable stock",
+    "station": "@bites",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Vegetable Supreme Pizza With Black Olives",
+    "description": "Cafe made pizza sauce with mozzarella cheese, bell peppers, tomatoes, onions, olives, and mushrooms on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Pepperoni Pizza",
+    "description": "Cafe made pizza sauce with mozzarella cheese, and beef pepperoni on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  },
+  {
+    "name": "Oreo Cookie Cake",
+    "description": "Egg and soy enriched yellow cake with butter, cream, crushed Oreos, and cafe made vanilla chantilly",
+    "station": "@sweets",
+    "dietary": []
+  }
+]
