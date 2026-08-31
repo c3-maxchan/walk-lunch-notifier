@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Steamed Jasmine Rice",
+    "description": "",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Garlic-Ginger-Sesame Bok Choy And Shiitake Mushrooms",
+    "description": "Sauteed mushrooms with steamed bok choy tossed with a garlic-ginger sesame oil",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Miso Roasted Kabocha And Edamame",
+    "description": "Roasted kabocha squash with edamame, maple syrup, ginger, and rice vinegar glaze",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Chicken Tsukune With Ginger Scallion Glaze",
+    "description": "Seared chicken patty with cafe made ginger and scallion soy glaze",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Crispy Smashed Potatoes",
+    "description": "Roasted baby potatoes with garlic, parsley and olive oil",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Sauteed Zucchini",
+    "description": "Sauteed zucchini with olive oil, chili flakes and spices",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Griddled Halloumi & Tomato Stack",
+    "description": "Seared halloumi cheese stacked with America Fresh Heirloom tomatoes, olive oil, and fresh basil",
+    "station": "@charred",
+    "dietary": [
+      "V",
+      "F2F"
+    ]
+  },
+  {
+    "name": "Seared Pork Medallions And Tarragon Mustard Sauce",
+    "description": "Seared pork medallions with a spicy paprika rub",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Vegetable Supreme Pizza With Black Olives",
+    "description": "Cafe made pizza sauce with mozzarella cheese, tomatoes, bell peppers, onions, and mushrooms on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Tandoori Spiced Chicken Pizza",
+    "description": "Café made pizza sauce, red onions, cilantro, mozzarella cheese, roasted tandoori spiced chicken, and yogurt sauce",
+    "station": "@melted",
+    "dietary": []
+  },
+  {
+    "name": "Tiramisu",
+    "description": "Eggs, soy, wheat, coconut oil, milk, mascarpone cheese, and whipped cream",
+    "station": "@sweets",
+    "dietary": [
+      "V"
+    ]
+  }
+]

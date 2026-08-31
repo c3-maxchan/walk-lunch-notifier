@@ -86,6 +86,9 @@
   "chicken tikka masala": [
     "2026-08-21"
   ],
+  "chicken tsukune with ginger scallion glaze": [
+    "2026-08-31"
+  ],
   "chicken, mushroom, and banana pepper pizza": [
     "2026-08-04"
   ],
@@ -142,6 +145,9 @@
   "crispy sesame-miso tofu": [
     "2026-08-10"
   ],
+  "crispy smashed potatoes": [
+    "2026-08-31"
+  ],
   "curry tofu and eggplant": [
     "2026-08-27"
   ],
@@ -181,6 +187,9 @@
   "garlic-chile roasted vegetables": [
     "2026-08-27"
   ],
+  "garlic-ginger-sesame bok choy and shiitake mushrooms": [
+    "2026-08-31"
+  ],
   "general tso's chicken with sesame-soy garlic sauce": [
     "2026-08-06"
   ],
@@ -195,6 +204,9 @@
   ],
   "gochujang sesame chicken": [
     "2026-08-13"
+  ],
+  "griddled halloumi & tomato stack": [
+    "2026-08-31"
   ],
   "grilled chicken teriyaki pizza": [
     "2026-08-20"
@@ -285,6 +297,9 @@
   ],
   "miso glazed eggplant and tofu": [
     "2026-08-24"
+  ],
+  "miso roasted kabocha and edamame": [
+    "2026-08-31"
   ],
   "mushroom, spinach, and goat cheese pizza": [
     "2026-08-12"
@@ -393,6 +408,9 @@
   "sauteed haricot vert": [
     "2026-08-27"
   ],
+  "sauteed zucchini": [
+    "2026-08-31"
+  ],
   "sautéed mushrooms and rainbow carrots": [
     "2026-08-14"
   ],
@@ -410,6 +428,9 @@
   ],
   "seared hen of the woods and sweet corn and tomato relish": [
     "2026-08-17"
+  ],
+  "seared pork medallions and tarragon mustard sauce": [
+    "2026-08-31"
   ],
   "seared shrimp": [
     "2026-08-26"
@@ -462,7 +483,8 @@
     "2026-08-14"
   ],
   "steamed jasmine rice": [
-    "2026-08-13"
+    "2026-08-13",
+    "2026-08-31"
   ],
   "street corn and poblano pizza": [
     "2026-08-21"
@@ -478,6 +500,9 @@
   ],
   "tandoori chicken": [
     "2026-08-28"
+  ],
+  "tandoori spiced chicken pizza": [
+    "2026-08-31"
   ],
   "taqueria bar": [
     "2026-08-05",
@@ -512,10 +537,14 @@
     "2026-08-25",
     "2026-08-26",
     "2026-08-27",
-    "2026-08-28"
+    "2026-08-28",
+    "2026-08-31"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
+  ],
+  "tiramisu": [
+    "2026-08-31"
   ],
   "turmeric basmati rice": [
     "2026-08-11"
@@ -530,7 +559,8 @@
     "2026-08-27"
   ],
   "vegetable supreme pizza with black olives": [
-    "2026-08-28"
+    "2026-08-28",
+    "2026-08-31"
   ],
   "vegetarian eggplant moussaka": [
     "2026-08-25"
