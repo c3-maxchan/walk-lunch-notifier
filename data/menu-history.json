@@ -63,10 +63,14 @@
     "2026-08-11",
     "2026-08-13",
     "2026-08-18",
-    "2026-08-25"
+    "2026-08-25",
+    "2026-09-01"
   ],
   "charred okra, tomatoes, and peppers": [
     "2026-08-25"
+  ],
+  "chermoula barramundi": [
+    "2026-09-01"
   ],
   "cherry and baba ganoush pizza": [
     "2026-08-17"
@@ -76,6 +80,9 @@
   ],
   "chicken katsu": [
     "2026-08-24"
+  ],
+  "chicken piccata": [
+    "2026-09-01"
   ],
   "chicken roti wrap": [
     "2026-08-12"
@@ -157,11 +164,17 @@
   "dijon and herb seared barramundi with tomato caper relish": [
     "2026-08-20"
   ],
+  "egg noodle": [
+    "2026-09-01"
+  ],
   "farro and summer vegetable cakes": [
     "2026-08-12"
   ],
   "farro and summer vegetable cakes with summer peach chimichurri": [
     "2026-08-19"
+  ],
+  "feta cheese, watercress pesto, and spinach pizza": [
+    "2026-09-01"
   ],
   "five spice chicken": [
     "2026-08-17"
@@ -223,8 +236,14 @@
   "grilled summer squash": [
     "2026-08-19"
   ],
+  "ham and cheddar white pizza": [
+    "2026-09-01"
+  ],
   "harissa chickpeas": [
     "2026-08-11"
+  ],
+  "harissa lentils with roasted carrots": [
+    "2026-09-01"
   ],
   "hawaiian barbecue chicken pizza": [
     "2026-08-10"
@@ -345,6 +364,9 @@
   ],
   "pork tenderloin agrodolce": [
     "2026-08-10"
+  ],
+  "preserved lemon & herb couscous": [
+    "2026-09-01"
   ],
   "roasted broccoli and ricotta pizza": [
     "2026-08-06"
@@ -538,7 +560,8 @@
     "2026-08-26",
     "2026-08-27",
     "2026-08-28",
-    "2026-08-31"
+    "2026-08-31",
+    "2026-09-01"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -568,6 +591,9 @@
   "white bean and parmesan polenta cake": [
     "2026-08-21"
   ],
+  "white bean and tomato ragout": [
+    "2026-09-01"
+  ],
   "white bean cassoulet": [
     "2026-08-14"
   ],
@@ -576,5 +602,8 @@
   ],
   "yellow dal tadka": [
     "2026-08-28"
+  ],
+  "zaalouk eggplant and tomatoes": [
+    "2026-09-01"
   ]
 }

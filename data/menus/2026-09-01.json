@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Preserved Lemon & Herb Couscous",
+    "description": "Blanched couscous with preserved lemons herbs and spices",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Zaalouk Eggplant And Tomatoes",
+    "description": "Simmered tomatoes with roasted eggplant cilantro, and lemon juice",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Harissa Lentils With Roasted Carrots",
+    "description": "Simmered lentils with roasted carrots and pickled onions",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Chermoula Barramundi",
+    "description": "Roasted chermoula marinated barramundi with cafe made chermoula and chef blend micro greens",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Charred Broccolini",
+    "description": "Blanched broccolini charred with fresh cracked black pepper and olive oil",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Egg Noodle",
+    "description": "Blanched egg noodle pasta",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "White Bean And Tomato Ragout",
+    "description": "Braised white beans with cafe made vegetable stock, onions, peppers, garlic, and fennel",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Chicken Piccata",
+    "description": "Seared chicken with a cafe made piccata sauce",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Feta Cheese, Watercress Pesto, And Spinach Pizza",
+    "description": "Cafe made watercress pesto with feta cheese, mozzarella cheese, spinach and garlic on had tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Ham And Cheddar White Pizza",
+    "description": "Cafe made alfredo sauce with mozzarella and cheddar cheese with ham on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
