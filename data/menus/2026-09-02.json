@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Taqueria Bar",
+    "description": "Spanish rice, \t\t\t\t\t\t\t\tpinto beans , \t\t\t\t\t\t\t\tpico de gallo , \t\t\t\t\t\t\t\tsalsa verde , \t\t\t\t\t\t\t\ttortilla corn , \t\t\t\t\t\t\t\t12\" flour tortilla, \t\t\t\t\t\t\t\tsour cream, \t\t\t\t\t\t\t\tcotija cheese, \t\t\t\t\t\t\t\tnopales con huevos , \t\t\t\t\t\t\t\tpork al pastor",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Herbed Orzo",
+    "description": "Blanched orzo pasta with fresh herbs and fresh cracked black pepper",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Sauteed Asparagus, Summer Squash, And Onion",
+    "description": "Sauteed asparagus and summer squash in olive oil and sea salt",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Grilled Polenta Cakes And White Bean And Tomato Ragout",
+    "description": "Morel musrhoom infused polenta cakes with parmesan cheese, thyme, and white bean ragout",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "California Turkey Smash Patty With Green Goddess",
+    "description": "Seared turkey patties with cafe made green goddess dressing",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Basil Pesto, Artichoke And Broccoli Pizza",
+    "description": "Cafe made pesto with mozzarella cheese, artichoke hearts, broccoli, and parmesan cheese on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Pepperoni, Pineapple, And Bacon Pizza",
+    "description": "Hand tossed dough with mozzarella cheese, pepperoni, bacon, pineapple, and cafe made garlic oil",
+    "station": "@melted",
+    "dietary": []
+  }
+]
