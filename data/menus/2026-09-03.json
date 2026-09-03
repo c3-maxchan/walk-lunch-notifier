@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Steamed Jasmine Rice",
+    "description": "",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Thai Basil Green Beans And Eggplant",
+    "description": "Charred eggplants and green beans with soy sauce, vinegar, Fresno chilies, and Thai basil",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Massaman-Style Tofu Coconut-Curry",
+    "description": "Simmered tofu and potatoes in a cafe made coconut and soy curry with shallots, garlic, pineapple, and spices",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Beef Rendang",
+    "description": "Seared beef simmered with cafe made tamarind and coconut curry with lemon grass lime leaves and spices",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Mashed Potatoes",
+    "description": "Steamed potatoes mashed with milk and butter",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Braised Collard Greens With Roasted Celery Root",
+    "description": "Braised collard greens with celery root, vegetable stock, garlic, and spices",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Vegan Lentil Salisbury Steaks With Mushroom Gravy",
+    "description": "Seared lentil patties with cafe made mushroom gravy",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Chicken A La Milanese",
+    "description": "Fried chicken cutlet with panko crust, parmesan and fresh lemon",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Burrata And Summer Squash Salad",
+    "description": "Steamed quinoa with tarragon, lemon zest, lemon juice, Persian cucumbers, roasted summer squash, burrata cheese, garlic, shallots, and cherry tomatoes with lemon-herb vinaigrette",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Broccoli Cheddar Alfredo Pizza",
+    "description": "Cafe made alfredo sauce with mozzarella cheese, broccoli, and cheddar cheese on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Chicken Fajita Pizza",
+    "description": "Cafe made pizza sauce with cheddar and mozzarella cheese, onions, bell peppers, seared chicken, and \"taco\" seasoning on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  },
+  {
+    "name": "Lemon Meringue Tartlet",
+    "description": "Sugar, wheat flour, butter, eggs, lemon puree, cornstarch, flan powder, and lemon zest",
+    "station": "@sweets",
+    "dietary": [
+      "V"
+    ]
+  }
+]

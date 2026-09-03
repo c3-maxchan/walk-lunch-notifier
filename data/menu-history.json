@@ -26,6 +26,9 @@
   "basil pesto, artichoke and broccoli pizza": [
     "2026-09-02"
   ],
+  "beef rendang": [
+    "2026-09-03"
+  ],
   "blackened pork tenderloin and caper remoulade sauce": [
     "2026-08-24"
   ],
@@ -33,10 +36,17 @@
     "2026-08-07"
   ],
   "braised collard greens with roasted celery root": [
-    "2026-08-10"
+    "2026-08-10",
+    "2026-09-03"
+  ],
+  "broccoli cheddar alfredo pizza": [
+    "2026-09-03"
   ],
   "broccoli cheddar soup": [
     "2026-08-13"
+  ],
+  "burrata and summer squash salad": [
+    "2026-09-03"
   ],
   "buttery garlic mashed potatoes": [
     "2026-08-21"
@@ -81,8 +91,14 @@
   "cherry and baba ganoush pizza": [
     "2026-08-17"
   ],
+  "chicken a la milanese": [
+    "2026-09-03"
+  ],
   "chicken apple and banana pepper pizza": [
     "2026-08-27"
+  ],
+  "chicken fajita pizza": [
+    "2026-09-03"
   ],
   "chicken katsu": [
     "2026-08-24"
@@ -308,6 +324,9 @@
   "lemon herb chicken breast": [
     "2026-08-11"
   ],
+  "lemon meringue tartlet": [
+    "2026-09-03"
+  ],
   "lemon orzo": [
     "2026-08-18"
   ],
@@ -316,6 +335,12 @@
   ],
   "margherita pizza": [
     "2026-08-10"
+  ],
+  "mashed potatoes": [
+    "2026-09-03"
+  ],
+  "massaman-style tofu coconut-curry": [
+    "2026-09-03"
   ],
   "meat lover's pizza": [
     "2026-08-21"
@@ -524,7 +549,8 @@
   ],
   "steamed jasmine rice": [
     "2026-08-13",
-    "2026-08-31"
+    "2026-08-31",
+    "2026-09-03"
   ],
   "street corn and poblano pizza": [
     "2026-08-21"
@@ -552,6 +578,9 @@
   ],
   "thai basil chicken": [
     "2026-08-27"
+  ],
+  "thai basil green beans and eggplant": [
+    "2026-09-03"
   ],
   "thai basil pork": [
     "2026-08-20"
@@ -581,7 +610,8 @@
     "2026-08-28",
     "2026-08-31",
     "2026-09-01",
-    "2026-09-02"
+    "2026-09-02",
+    "2026-09-03"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -594,6 +624,9 @@
   ],
   "vegan dirty rice": [
     "2026-08-24"
+  ],
+  "vegan lentil salisbury steaks with mushroom gravy": [
+    "2026-09-03"
   ],
   "vegetable fried rice": [
     "2026-08-17"
