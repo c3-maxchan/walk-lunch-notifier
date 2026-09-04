@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Subzi Pulao",
+    "description": "Steamed basmati rice with mixed vegetables and ghee",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Tandoori Moong Masoor Dal",
+    "description": "Simmered lentils with tomatoes, ginger, peppers, butter, and spices",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Rajma Masala",
+    "description": "Simmered kidney beans in a cafe made tomato and garam masala curry",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Goan Chicken Cafreal",
+    "description": "Grilled chicken marinated with cilantro, mint, garlic, ginger, green chilies, and spices",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Pommes Persillade",
+    "description": "Blanched potatoes seared and tossed with garlic and parsley",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Green Beans With Crispy Garlic",
+    "description": "Blanched green beans with crispy garlic",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Wild Mushroom & White Bean Fricassée",
+    "description": "Seared wild mushrooms with cannellini beans, vegetable stock, and cream",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Italian Herb Seared Cod With Sweet Corn And Tomato Relish",
+    "description": "Seared red rock cod with lemon, oregano, parsley and garlic",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheese with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Ratatouille Vegetable And Cheese Pizza",
+    "description": "Cafe made pizza sauce with mozzarella cheese, eggplant, onions, bell peppers, tomatoes, and summer squash on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Bacon, Sausage, Jalapeno Pizza With Sriracha",
+    "description": "Cafe made pizza sauce with pork sausage, onions, bell peppers, bacon, pickled chili peppers, and sriracha drizzle on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]

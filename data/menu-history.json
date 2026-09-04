@@ -17,6 +17,9 @@
   "bacon cheddar potato pizza": [
     "2026-08-13"
   ],
+  "bacon, sausage, jalapeno pizza with sriracha": [
+    "2026-09-04"
+  ],
   "baingan bharta": [
     "2026-08-28"
   ],
@@ -234,11 +237,17 @@
   "ginger cabbage and carrots": [
     "2026-08-24"
   ],
+  "goan chicken cafreal": [
+    "2026-09-04"
+  ],
   "goat cheese and zucchini": [
     "2026-08-25"
   ],
   "gochujang sesame chicken": [
     "2026-08-13"
+  ],
+  "green beans with crispy garlic": [
+    "2026-09-04"
   ],
   "griddled halloumi & tomato stack": [
     "2026-08-31"
@@ -287,6 +296,9 @@
   ],
   "honey and thyme roasted rainbow carrots": [
     "2026-08-21"
+  ],
+  "italian herb seared cod with sweet corn and tomato relish": [
+    "2026-09-04"
   ],
   "italian sausage and caramelized fennel": [
     "2026-08-19"
@@ -402,11 +414,20 @@
   "pepperoni, pineapple, and bacon pizza": [
     "2026-09-02"
   ],
+  "pommes persillade": [
+    "2026-09-04"
+  ],
   "pork tenderloin agrodolce": [
     "2026-08-10"
   ],
   "preserved lemon & herb couscous": [
     "2026-09-01"
+  ],
+  "rajma masala": [
+    "2026-09-04"
+  ],
+  "ratatouille vegetable and cheese pizza": [
+    "2026-09-04"
   ],
   "roasted broccoli and ricotta pizza": [
     "2026-08-06"
@@ -555,6 +576,9 @@
   "street corn and poblano pizza": [
     "2026-08-21"
   ],
+  "subzi pulao": [
+    "2026-09-04"
+  ],
   "summer pasta salad and honey lemon vinaigrette": [
     "2026-08-12"
   ],
@@ -566,6 +590,9 @@
   ],
   "tandoori chicken": [
     "2026-08-28"
+  ],
+  "tandoori moong masoor dal": [
+    "2026-09-04"
   ],
   "tandoori spiced chicken pizza": [
     "2026-08-31"
@@ -611,7 +638,8 @@
     "2026-08-31",
     "2026-09-01",
     "2026-09-02",
-    "2026-09-03"
+    "2026-09-03",
+    "2026-09-04"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -649,6 +677,9 @@
   ],
   "white bean cassoulet": [
     "2026-08-14"
+  ],
+  "wild mushroom & white bean fricassée": [
+    "2026-09-04"
   ],
   "yassa pork": [
     "2026-08-25"
