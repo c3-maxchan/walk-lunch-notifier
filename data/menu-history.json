@@ -274,13 +274,17 @@
     "2026-09-01"
   ],
   "harissa chickpeas": [
-    "2026-08-11"
+    "2026-08-11",
+    "2026-09-08"
   ],
   "harissa lentils with roasted carrots": [
     "2026-09-01"
   ],
   "hawaiian barbecue chicken pizza": [
     "2026-08-10"
+  ],
+  "hearty veggie soup": [
+    "2026-09-08"
   ],
   "herb roasted turkey cutlet and sweet corn and tomato relish": [
     "2026-08-17"
@@ -316,7 +320,8 @@
     "2026-08-14"
   ],
   "lamb shawarma": [
-    "2026-08-11"
+    "2026-08-11",
+    "2026-09-08"
   ],
   "latin succotash": [
     "2026-08-19"
@@ -334,7 +339,8 @@
     "2026-08-07"
   ],
   "lemon herb chicken breast": [
-    "2026-08-11"
+    "2026-08-11",
+    "2026-09-08"
   ],
   "lemon meringue tartlet": [
     "2026-09-03"
@@ -399,7 +405,8 @@
     "2026-08-14"
   ],
   "peach, burrata, and basil pizza": [
-    "2026-08-11"
+    "2026-08-11",
+    "2026-09-08"
   ],
   "peanut sweet potato, lentils, and chickpeas": [
     "2026-08-25"
@@ -439,14 +446,19 @@
     "2026-08-27"
   ],
   "roasted eggplant with peppers and onions": [
-    "2026-08-11"
+    "2026-08-11",
+    "2026-09-08"
   ],
   "roasted eggplant, ricotta, and peppadew honey pizza": [
     "2026-08-14"
   ],
   "roasted fingerling potatoes": [
     "2026-08-11",
-    "2026-08-19"
+    "2026-08-19",
+    "2026-09-08"
+  ],
+  "roasted green beans": [
+    "2026-09-08"
   ],
   "roasted kohlrabi with truffle mushroom cream sauce": [
     "2026-08-05"
@@ -483,7 +495,8 @@
     "2026-08-20"
   ],
   "sausage and olive pizza": [
-    "2026-08-11"
+    "2026-08-11",
+    "2026-09-08"
   ],
   "sauteed asparagus, summer squash, and onion": [
     "2026-09-02"
@@ -524,7 +537,8 @@
   "seared white bean and lentil herb cakes": [
     "2026-08-06",
     "2026-08-11",
-    "2026-08-18"
+    "2026-08-18",
+    "2026-09-08"
   ],
   "sesame furikake rice": [
     "2026-08-24"
@@ -639,7 +653,8 @@
     "2026-09-01",
     "2026-09-02",
     "2026-09-03",
-    "2026-09-04"
+    "2026-09-04",
+    "2026-09-08"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -649,6 +664,9 @@
   ],
   "turmeric basmati rice": [
     "2026-08-11"
+  ],
+  "turmeric potato and basmati rice": [
+    "2026-09-08"
   ],
   "vegan dirty rice": [
     "2026-08-24"
