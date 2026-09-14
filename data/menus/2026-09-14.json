@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Sesame Furikake Rice",
+    "description": "Steamed jasmine rice fluffed with sesame furikake seasoning",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Ginger Cabbage And Carrots",
+    "description": "Stir fried cabbage and carrots with garlic, ginger, and soy sauce",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Miso Glazed Eggplant And Tofu",
+    "description": "Roasted eggplants and tofu tossed in a cafe made miso glaze with fresh scallions",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Chicken Katsu",
+    "description": "Fried chicken cutlet with flour, eggs, and panko with a cafe made tonkatsu sauce",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Vegan Dirty Rice",
+    "description": "Steamed rice with onions, bell peppers, celery, Cajun seasoning, and cafe made vegetable stock",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Smothered Summer Okra & Tomatoes",
+    "description": "Charred okra with sauteed onions, garlic, tomatoes, peppers, and apple cider vinegar",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Cajun Red Bean And Corn Fritters And Caper Remoulade Sauce",
+    "description": "",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Fried Cod With Caper Remoulade",
+    "description": "Fried egg and flour battered rock cod with cafe made caper remoulade",
+    "station": "@charred",
+    "dietary": [
+      "SW"
+    ]
+  },
+  {
+    "name": "Peanut-Sesame Gochujang Mushroom Wrap",
+    "description": "Grilled gochujang and soy marinated mushrooms with rice noodles tossed in a peanut and sesame chili sauce with fresh scallions and cilantro in a flour wrap",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Peanut-Sesame Gochujang Chicken Wrap",
+    "description": "Grilled gochujang and soy marinated chicken with rice noodles tossed in a peanut and sesame chili sauce with fresh scallions and cilantro in a flour wrap",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Roasted Peach, Ricotta, And Basil",
+    "description": "Roasted peaches with mozzarella cheese, ricotta, cheese, and chiffonade basil on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Sesame Korean Bbq Pork",
+    "description": "Cafe made Korean BBQ sauce with mozzarella cheese, pulled pork, scallions and toasted sesame seeds on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
