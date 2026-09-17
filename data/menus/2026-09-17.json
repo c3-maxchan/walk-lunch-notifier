@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Coconut Jasmine Rice",
+    "description": "Steamed jasmine rice with coconut milk and lime leaves",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Garlic-Chile Roasted Vegetables",
+    "description": "Roasted mixed vegetables with garlic, Fresno chilies and  vinegar soya sauce",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Curry Tofu And Eggplant",
+    "description": "Roasted tofu and eggplant simmered in curry coconut milk with lime juice and Thai basil",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Thai Basil Chicken",
+    "description": "Seared chicken with garlic, fish sauce, oyster, sauce, soy sauce, cafe made vegetable stock, Fresno chilies, and Thai basil",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Roasted Lyonnaise Potatoes With Fresh Herbs",
+    "description": "Roasted Yukon potatoes with herbs, onions, and spices",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Sauteed Haricot Vert",
+    "description": "Sauteed haricot verts tossed with olive oil, lemon zest and spices",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Herbed Lentils With Roasted Mushrooms And Arugula",
+    "description": "Simmered lentils with mirepoix vegetables, herbs, mushrooms, tomatoes, and lemon juice",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Leg Of Lamb With Gremolata Sauce",
+    "description": "Roasted lamb with turmeric, tomatoes, onions, coriander and masala spices with cafe made gremolata",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Mushroom White Pizza",
+    "description": "Cafe made white cream sauce with sauteed musrhooms, olives, and pesto drizzle on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  },
+  {
+    "name": "Spicy Honey And Pork Pizza",
+    "description": "Cafe made pizza sauce with mozzarella cheese, crispy bacon, Italian pork sausage, and spicy honey drizzle on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
