@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Naan Or Lachcha Paratha",
+    "description": "",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Saffron Basmati Rice",
+    "description": "Steamed basmati rice with saffron",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Yellow Dal Tadka",
+    "description": "Simmered yellow lentils with onions, tomatoes, garlic, ginger, chilies, and spices",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Tawa Vegetables",
+    "description": "Mixed vegetable with okra, and eggplant fried and tossed in a cafe made tomato and onions masala gravy with cumin, ginger, garlic, amchur, and garam masala",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Tandoori Chicken",
+    "description": "Roasted chicken thighs with a cafe made yogurt marinade",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Orzo Pasta With Roasted Tomatoes",
+    "description": "",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Cider Glazed Brussels Sprouts",
+    "description": "",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Seared Halloumi Piccata With Lemon Caper Sauce",
+    "description": "Seared halloumi cheese with cafe made piccata sauce",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Lemon Chive Seared Barramundi Filet",
+    "description": "Seared barramundi fillet with lemon pepper, chives, and dill",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Chicken Apple Sausage Mac And Cheese",
+    "description": "Blanched macaroni noodles with cafe made butter and flour cheese sauce with gouda, Havarti, and cheddar cheese, and a butter and sage panko bread topping",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Vegetable Supreme Pizza With Black Olives",
+    "description": "Cafe made pizza sauce with mozzarella cheese, bell peppers, tomatoes, onions, olives, and mushrooms on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Sausage And Balsamic Onion Pizza",
+    "description": "Garlic oil brushed hand tossed dough with pork sausage, caramelized onions, and balsamic reduction and micro greens",
+    "station": "@melted",
+    "dietary": []
+  }
+]

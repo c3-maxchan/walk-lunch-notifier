@@ -109,6 +109,9 @@
   "chicken apple and banana pepper pizza": [
     "2026-08-27"
   ],
+  "chicken apple sausage mac and cheese": [
+    "2026-09-18"
+  ],
   "chicken fajita pizza": [
     "2026-09-03"
   ],
@@ -145,7 +148,8 @@
     "2026-08-10"
   ],
   "cider glazed brussels sprouts": [
-    "2026-08-28"
+    "2026-08-28",
+    "2026-09-18"
   ],
   "cilantro lime rice": [
     "2026-08-19"
@@ -369,7 +373,8 @@
     "2026-08-18"
   ],
   "lemon chive seared barramundi filet": [
-    "2026-08-28"
+    "2026-08-28",
+    "2026-09-18"
   ],
   "lemon chive seared barramundi filet and charred leek and lemon cream sauce": [
     "2026-08-07"
@@ -424,7 +429,8 @@
   ],
   "naan or lachcha paratha": [
     "2026-08-21",
-    "2026-08-28"
+    "2026-08-28",
+    "2026-09-18"
   ],
   "nectarine, poblano ,and queso fresco pizza": [
     "2026-08-26",
@@ -438,7 +444,8 @@
     "2026-08-28"
   ],
   "orzo pasta with roasted tomatoes": [
-    "2026-08-28"
+    "2026-08-28",
+    "2026-09-18"
   ],
   "palak chana": [
     "2026-08-21"
@@ -551,10 +558,14 @@
   ],
   "saffron basmati rice": [
     "2026-08-18",
-    "2026-08-28"
+    "2026-08-28",
+    "2026-09-18"
   ],
   "saffron basmati rice pilaf": [
     "2026-08-20"
+  ],
+  "sausage and balsamic onion pizza": [
+    "2026-09-18"
   ],
   "sausage and olive pizza": [
     "2026-08-11",
@@ -589,6 +600,9 @@
   ],
   "seared eggplant piccata": [
     "2026-08-28"
+  ],
+  "seared halloumi piccata with lemon caper sauce": [
+    "2026-09-18"
   ],
   "seared hen of the woods and sweet corn and tomato relish": [
     "2026-08-17"
@@ -680,7 +694,8 @@
     "2026-09-10"
   ],
   "tandoori chicken": [
-    "2026-08-28"
+    "2026-08-28",
+    "2026-09-18"
   ],
   "tandoori moong masoor dal": [
     "2026-09-04"
@@ -695,6 +710,9 @@
     "2026-09-02",
     "2026-09-09",
     "2026-09-16"
+  ],
+  "tawa vegetables": [
+    "2026-09-18"
   ],
   "thai basil chicken": [
     "2026-08-27",
@@ -741,7 +759,8 @@
     "2026-09-14",
     "2026-09-15",
     "2026-09-16",
-    "2026-09-17"
+    "2026-09-17",
+    "2026-09-18"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -770,7 +789,8 @@
   ],
   "vegetable supreme pizza with black olives": [
     "2026-08-28",
-    "2026-08-31"
+    "2026-08-31",
+    "2026-09-18"
   ],
   "vegetarian eggplant moussaka": [
     "2026-08-25",
@@ -796,7 +816,8 @@
     "2026-09-15"
   ],
   "yellow dal tadka": [
-    "2026-08-28"
+    "2026-08-28",
+    "2026-09-18"
   ],
   "zaalouk eggplant and tomatoes": [
     "2026-09-01"
