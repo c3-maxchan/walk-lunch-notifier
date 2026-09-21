@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Garlic Scallion Rice",
+    "description": "Steamed jasmine rice fluffed and folded with a garlic and scallion oil",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Wok Charred Chinese Long Beans",
+    "description": "Wok fried long beans with garlic, peppers, and chilies",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Ginisang Munggo With Roasted Delicata",
+    "description": "Simmered mung beans with spinach tomatoes, ginger, garlic, onions, and vegetable stock",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Filipino-Inspired Chicken Inasal With Calamansi-Annatto Glaze",
+    "description": "Grilled chicken with a calamansi and achiote glaze",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Skillet Potato Rösti",
+    "description": "Griddled shredded potatoes with onions and spices",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Carrots And Red Peppers",
+    "description": "",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "White Bean Cacciatore",
+    "description": "Simmered cannellini beans, tomatoes, red wine, mushrooms, onions, bell peppers, celery, olive oil, garlic, and herbs",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Seared Pork Scaloppine With Cider-Calvados Pan Jus",
+    "description": "Seared pork cutlet with a cafe made shallot and calvado reduction",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Broccoli Cheese Soup",
+    "description": "Sauteed onions, garlic, celery, carrots, broccoli florets, cheddar, gouda, Havarti cheese, heavy cream and vegetable stock",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheese with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Roasted Grape Ricotta Pizza",
+    "description": "Ricotta spread topped with mozzarella cheese, roasted grapes, parmesan cheese, and rosemary on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Smoked Salmon, Caper, And Dill White Pizza",
+    "description": "Garlic oil brushed hand tossed dough topped with mozzarella cheese, smoked salmon, roasted garlic cloves, capers, and fresh dill",
+    "station": "@melted",
+    "dietary": []
+  }
+]

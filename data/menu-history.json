@@ -51,6 +51,9 @@
   "broccoli cheddar soup": [
     "2026-08-13"
   ],
+  "broccoli cheese soup": [
+    "2026-09-21"
+  ],
   "burrata and summer squash salad": [
     "2026-09-03"
   ],
@@ -224,6 +227,9 @@
   "feta cheese, watercress pesto, and spinach pizza": [
     "2026-09-01"
   ],
+  "filipino-inspired chicken inasal with calamansi-annatto glaze": [
+    "2026-09-21"
+  ],
   "five spice chicken": [
     "2026-08-17"
   ],
@@ -250,6 +256,9 @@
     "2026-08-12",
     "2026-09-09"
   ],
+  "garlic scallion rice": [
+    "2026-09-21"
+  ],
   "garlic-chile roasted vegetables": [
     "2026-08-27",
     "2026-09-17"
@@ -266,6 +275,9 @@
   "ginger cabbage and carrots": [
     "2026-08-24",
     "2026-09-14"
+  ],
+  "ginisang munggo with roasted delicata": [
+    "2026-09-21"
   ],
   "goan chicken cafreal": [
     "2026-09-04"
@@ -501,6 +513,9 @@
   "roasted broccoli and ricotta pizza": [
     "2026-08-06"
   ],
+  "roasted carrots and red peppers": [
+    "2026-09-21"
+  ],
   "roasted cauliflower steak": [
     "2026-08-13",
     "2026-09-10"
@@ -520,6 +535,9 @@
     "2026-08-11",
     "2026-08-19",
     "2026-09-08"
+  ],
+  "roasted grape ricotta pizza": [
+    "2026-09-21"
   ],
   "roasted green beans": [
     "2026-09-08"
@@ -610,6 +628,9 @@
   "seared pork medallions and tarragon mustard sauce": [
     "2026-08-31"
   ],
+  "seared pork scaloppine with cider-calvados pan jus": [
+    "2026-09-21"
+  ],
   "seared shrimp": [
     "2026-08-26",
     "2026-09-16"
@@ -652,6 +673,12 @@
   ],
   "shrimp and bacon white pizza": [
     "2026-08-07"
+  ],
+  "skillet potato rösti": [
+    "2026-09-21"
+  ],
+  "smoked salmon, caper, and dill white pizza": [
+    "2026-09-21"
   ],
   "smothered summer okra & tomatoes": [
     "2026-08-24",
@@ -760,7 +787,8 @@
     "2026-09-15",
     "2026-09-16",
     "2026-09-17",
-    "2026-09-18"
+    "2026-09-18",
+    "2026-09-21"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -802,12 +830,18 @@
   "white bean and tomato ragout": [
     "2026-09-01"
   ],
+  "white bean cacciatore": [
+    "2026-09-21"
+  ],
   "white bean cassoulet": [
     "2026-08-14",
     "2026-09-11"
   ],
   "wild mushroom & white bean fricassée": [
     "2026-09-04"
+  ],
+  "wok charred chinese long beans": [
+    "2026-09-21"
   ],
   "yassa pork": [
     "2026-08-25"
