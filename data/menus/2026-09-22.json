@@ -1,0 +1,108 @@
+[
+  {
+    "name": "Herbed Bulgur With Roasted Grapes",
+    "description": "Steamed bulgur wheat with vegetable stock roasted grapes, fresh herbs, and lemon juice",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Charred Cabbage And Adjika Butter",
+    "description": "Charred cabbage with a garlic and chili butter tossed in fresh lemon juice",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Lobio-Style Beans With Walnut & Herbs",
+    "description": "Simmered pinto beans with onions, coriander, herbs, and red wine vinegar",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Pork Mtsvadi And Plum-Tarragon Sauce",
+    "description": "Charred pork with an onion and coriander marinade with cafe made plum-tarragon sauce",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Garlic Mashed Potatoes",
+    "description": "Steamed russet potatoes creamed with garlic, butter, and milk",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Roasted Green Beans With Almond Gremolata",
+    "description": "Blaned green beans roasted and topped with cafe made almond gremolata",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Italian Eggplant Marsala",
+    "description": "Seared flour dusted eggplant with cafe made marsala wine sauce",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Chicken With Mushroom Marsala",
+    "description": "Seared chicken with cafe made marsala wine sauce",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Watermelon And Cucumber Salad",
+    "description": "America Fresh watermelon, cucumbers, mint, pumpkin seeds, feta cheese, and lime juice",
+    "station": "@grown",
+    "dietary": [
+      "V",
+      "F2F"
+    ]
+  },
+  {
+    "name": "Eat Local Challenge- Bay Area Harvest Tostadas",
+    "description": "Crispy Mi Rancho corn tortillas topped with roasted America fresh squash and zucchinis, fire roasted poblano chilies, cafe made early girl tomato salsa, and Sparrow lane red wine vinegar and Marshalls local honey pickled red onions",
+    "station": "@bites",
+    "dietary": [
+      "V",
+      "F2F"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheese with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Pear And Leek Pizza",
+    "description": "Cafe made alfredo sauce with sauteed leeks, pears, mozzarella and gruyere cheese on hand tossed dough with micro greens",
+    "station": "@melted",
+    "dietary": []
+  },
+  {
+    "name": "Chicken, Tomato, And Tarragon Pizza",
+    "description": "Cafe made pizza sauce with roasted chicken breast, tarragon, parmesan cheese, tomatoes, and mozzarella cheese on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  },
+  {
+    "name": "Oreo Cream Brownie",
+    "description": "Soy enriched egg brownie batter with milk, cream cheese, and crushed Oreos",
+    "station": "@sweets",
+    "dietary": [
+      "V"
+    ]
+  }
+]
