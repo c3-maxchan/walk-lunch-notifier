@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Ancho-Tomato Arroz Rojo",
+    "description": "Toasted jasmine rice with a an ancho and tomato blended stock",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Delicata, Corn & Poblano",
+    "description": "Roasted delicata squash with sauteed red onions, charred corn and poblano peppers tossed in fresh lime juice and cilantro",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Mushroom & Black Bean Tlayuda",
+    "description": "Simmered black beans with onions, garlic, tomatoes, and sauteed mushrooms",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Chile-Rubbed Barramundi And Roasted Grape Salsa Macha",
+    "description": "Roasted chili marinated fish with cafe made roasted grape salsa macha",
+    "station": "@spiced",
+    "dietary": [
+      "SW"
+    ]
+  },
+  {
+    "name": "Roasted Fingerling Potatoes",
+    "description": "Roasted fingerling potatoes with garlic and herbs",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Crispy Roasted Parmesan Brussels Sprouts",
+    "description": "Roasted brussels sprouts with onions, garlic, and parmesan cheese",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Grilled Polenta Cakes And White Bean And Tomato Ragout",
+    "description": "Morel musrhoom infused polenta cakes with parmesan cheese, thyme, and white bean ragout",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "California Seared Chicken Paillard With Roasted Grape And Tarragon Sauce",
+    "description": "Seared chicken cutlets with cafe made grape and tarragon pan sauce",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheese with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Butternut Squash Kale Alfredo Pizza",
+    "description": "Roasted butternut squash, kale, and alfredo cream sauce on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Pulled Pork, Pineapple, & Jalapeno Pizza",
+    "description": "Cafe made pizza sauce with pulled pork , mozzarella cheese, pineapple, chili peppers, and olive oil on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
