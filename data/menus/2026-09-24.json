@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Coconut Jasmine Rice",
+    "description": "Steamed jasmine rice with coconut milk and lime leaves",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Wok-Charred Green Beans & Eggplant",
+    "description": "Wok charred egg[plants and green beans tossed in a garlic-ginger and soya vinegar sauce",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Turmeric Tempeh With Tamarind-Chile Glaze",
+    "description": "Roasted tempeh with a sambal and tamarind glaze",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Beef Rendang Pendang",
+    "description": "Seared beef braised in a spiced coconut milk with tamarind, lime leaves, and galangal",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Wild Rice Pilaf",
+    "description": "Steamed white and wild rice with onions, and cafe made vegeable stock",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Zucchini And Squash",
+    "description": "",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Portobello Steak And Summer Peach Chimichurri",
+    "description": "Grilled marinated balsamic soy portobello \"steak\" with cafe made summer peach chimichurri",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Seared Salmon And Summer Peach Chimichurri",
+    "description": "Seared salmon with cafe made chimichurri",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheese with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Roasted Pumpkin And Mint Chutney Pizza",
+    "description": "Hand tossed dough topped with roasted pumpkin, mozzarella cheese, paneer cheese and mint chutney drizzle",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Buffalo Chicken Pizza 19Oz 8 Cut",
+    "description": "Cafe made pizza sauce with roasted chicken, onions, cheese blend, blue cheese, and franks redhot buffalo on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]

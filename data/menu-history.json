@@ -38,6 +38,9 @@
   "beef rendang": [
     "2026-09-03"
   ],
+  "beef rendang pendang": [
+    "2026-09-24"
+  ],
   "blackened pork tenderloin and caper remoulade sauce": [
     "2026-08-24"
   ],
@@ -56,6 +59,9 @@
   ],
   "broccoli cheese soup": [
     "2026-09-21"
+  ],
+  "buffalo chicken pizza 19oz 8 cut": [
+    "2026-09-24"
   ],
   "burrata and summer squash salad": [
     "2026-09-03"
@@ -189,7 +195,8 @@
   "coconut jasmine rice": [
     "2026-08-20",
     "2026-08-27",
-    "2026-09-17"
+    "2026-09-17",
+    "2026-09-24"
   ],
   "coconut sweet potato soup": [
     "2026-08-10"
@@ -550,6 +557,9 @@
   "pork tenderloin agrodolce": [
     "2026-08-10"
   ],
+  "portobello steak and summer peach chimichurri": [
+    "2026-09-24"
+  ],
   "preserved lemon & herb couscous": [
     "2026-09-01"
   ],
@@ -620,13 +630,17 @@
   "roasted potatoes and parsnips": [
     "2026-08-17"
   ],
+  "roasted pumpkin and mint chutney pizza": [
+    "2026-09-24"
+  ],
   "roasted yukon potatoes with capers": [
     "2026-08-13",
     "2026-09-10"
   ],
   "roasted zucchini and squash": [
     "2026-08-26",
-    "2026-09-16"
+    "2026-09-16",
+    "2026-09-24"
   ],
   "roasted zucchini and tomatoes": [
     "2026-08-18"
@@ -690,6 +704,9 @@
   ],
   "seared pork scaloppine with cider-calvados pan jus": [
     "2026-09-21"
+  ],
+  "seared salmon and summer peach chimichurri": [
+    "2026-09-24"
   ],
   "seared shrimp": [
     "2026-08-26",
@@ -850,7 +867,8 @@
     "2026-09-18",
     "2026-09-21",
     "2026-09-22",
-    "2026-09-23"
+    "2026-09-23",
+    "2026-09-24"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -863,6 +881,9 @@
   ],
   "turmeric potato and basmati rice": [
     "2026-09-08"
+  ],
+  "turmeric tempeh with tamarind-chile glaze": [
+    "2026-09-24"
   ],
   "vegan dirty rice": [
     "2026-08-24",
@@ -905,8 +926,14 @@
   "wild mushroom & white bean fricassée": [
     "2026-09-04"
   ],
+  "wild rice pilaf": [
+    "2026-09-24"
+  ],
   "wok charred chinese long beans": [
     "2026-09-21"
+  ],
+  "wok-charred green beans & eggplant": [
+    "2026-09-24"
   ],
   "yassa pork": [
     "2026-08-25"
