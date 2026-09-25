@@ -1,0 +1,108 @@
+[
+  {
+    "name": "Naan Or Lachcha Paratha",
+    "description": "",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Moong Dal With Tomato Tadka",
+    "description": "Simmered yellow moong dal with onions, garlic, ginger, Kashmiri chili powder, turmeric, and tomato tadka",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Lemon-Cumin Basmati Rice",
+    "description": "Steamed jasmine rice with bloomed cumin seeds, lemon juice and zest",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Pumpkin & Chickpea Kootu",
+    "description": "Simmered pumpkin and chickpeas with ground coconut, and tempering spices",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Coconut Chicken Chettinad",
+    "description": "Simmered chicken thighs in a coconut gravy with onions, ginger, garlic, garam masala, and tempering spices",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Cornbread",
+    "description": "Cafe baked corn bread",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Honey Glazed Brussels Sprouts",
+    "description": "Roasted brussels sprouts with honey glaze",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Vegan Lentil Salisbury Steaks With Mushroom Gravy",
+    "description": "Seared cafe made lentil patties with a soy and mushroom gravy",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Smokey Peach Pork Chops",
+    "description": "Seared pork chops with cafe made peach glaze",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Pistachio And Bulgur Wheat Salad",
+    "description": "Steamed bulgur, grapes, onions, bell peppers, lemon juice, pistachio, and chopped parsley",
+    "station": "@grown",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Black Bean And Mushroom Wraps",
+    "description": "Refried black beans with sauteed mushrooms, caramelized onions, and Spanish rice with honey pickled red onion and cabbage salad",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheese with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Mushroom And Ricotta Pizza",
+    "description": "Cafe made pizza sauce with sauteed mushrooms, chard, mozzarella cheese, and ricotta salata cheese on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Pepperoni Pizza",
+    "description": "Cafe made pizza sauce with mozzarella cheese, and beef pepperoni on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
