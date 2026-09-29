@@ -1,0 +1,96 @@
+[
+  {
+    "name": "Coconut Jasmine Rice",
+    "description": "Steamed jasmine rice with coconut milk and kaffir lime leaves",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Garlic Napa Cabbage",
+    "description": "Stir fired cabbage and carrots with a garlic soy sauce",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Coconut Curry Chickpeas",
+    "description": "Simmered chickpeas in a red curry paste with onions, garlic, ginger, lime, and cilantro",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Thai Basil Pork",
+    "description": "Fried pork tossed in cafe made Thai basil and Fresno chili sauce",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Lemon Orzo",
+    "description": "Blanched orzo pasta tossed with fresh lemon juices, zest, parsley, and olive oil",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Charred Broccolini",
+    "description": "Roasted broccolini tossed with garlic and lemon",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Lentil And Vegetable Kofa",
+    "description": "Simmered lentils with roasted vegetables, panko, eggs, and spices with cafe made tomato caper relish",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Italian Herb Seared Cod With Tomato Caper Relish",
+    "description": "Seared red rock cod with lemon, oregano, parsley and garlic",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Sesame Pita With Grilled Portobello",
+    "description": "Warm sesame pita bread with spiced grilled portobello mushrooms, shredded lettuce, tomatoes, red onions, and yogurt sauce",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Sesame Pita And Grilled Chicken",
+    "description": "Warm sesame pita bread with a spiced grilled chicken, shredded lettuce, tomatoes, red onions, and yogurt sauce",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Grilled Peach And Brie Pizza",
+    "description": "Cafe made alfredo sauce with mozzarella cheese, peaches, brie cheese, and micro green on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Chicken, Tomato, And Tarragon Pizza",
+    "description": "Cafe made pizza sauce with roasted chicken mozzarella cheese, tomatoes, onions, tarragon, and parmesan cheese on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
