@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Cilantro Lime Rice",
+    "description": "Steamed jasmine rice with fresh lime juice and zest and chopped cilantro",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Latin Succotash",
+    "description": "Roasted corn and zucchini tossed with black beans, cumin, onions, peppers, garlic, and lime juice",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Crispy Chile And Lime Heart Of Palm Tacos",
+    "description": "Roasted hearts of palm in warm corn tortilla with an apple Pico de gallo and avocado lime crema",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Fried Shrimp Tacos",
+    "description": "Fried egg and panko breaded spiced shrimp in warm corn tortillas with an apple pico de gallo and avocado lime crema",
+    "station": "@spiced",
+    "dietary": [
+      "SW"
+    ]
+  },
+  {
+    "name": "Roasted Fingerling Potatoes",
+    "description": "Fingerling potatoes roasted with a garlic and rosemary herb oil",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Squash",
+    "description": "Roasted yellow squash and zucchini with garlic, oregano and lemon juice",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Farro And Summer Vegetable Cakes With Summer Peach Chimichurri",
+    "description": "Seared mixed vegetable and farro cakes with cafe made peach chimichurri",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Grilled Citrus Chicken With Summer Peach Chimichurri",
+    "description": "Seared citrus marinated airline chicken breast with cafe made peach chimichurri",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Creamy Potato And Parsnip Soup",
+    "description": "Roasted potatoes and parsnips with cafe made vegetable stock, mirepoix vegetables, fresh herbs, and cream",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Paneer Spinach, And Pickled Onion Pizza",
+    "description": "Cafe made tikka masala sauce with shredded mozzarella, paneer cheese, wilted spinach, and pickled red onions on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Pepperoni Pizza",
+    "description": "Beef pepperoni, café made pizza sauce, and mozzarella cheese on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
