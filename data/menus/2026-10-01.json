@@ -1,0 +1,108 @@
+[
+  {
+    "name": "Saffron Basmati Rice Pilaf",
+    "description": "Steamed basmati rice with saffron, turmeric, onions, carrots, celery, mushrooms, and bay leaves",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Zucchini And Tomatoes",
+    "description": "Herb and garlic marinated zucchini, tomatoes, peppers, red onions, and summer squash roasted and tossed with lemon juice",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Lemon And Oregano Braised White Beans",
+    "description": "Braised cannellini beans with fresh herbs, vegetable stock, and lemon with cafe made summer tomato & pepper compote",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Mediterranean Pork Loin",
+    "description": "Roasted herb and lemon pork loin with cafe made summer tomato & pepper compote",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Creamy Parmesan Polenta",
+    "description": "Slow cooked corn meal with cafe made vegetable stock, milk, butter, and parmesan cheese",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Garlic And Chili Roasted Romanesco",
+    "description": "Roasted Romanesco tossed with garlic, crushed red chilies, and lemon juice",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Vegetarian Eggplant Moussaka",
+    "description": "Roasted eggplant married with simmered lentils, squash, onions, and topped with buttery potatoes and feta cheese",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Herbes De Provence Chicken With Lemon Honey Glaze",
+    "description": "Seared chicken with cafe made lemon honey glaze",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Orzo Pasta Salad",
+    "description": "Blanched orzo pasta with olives, parsley, sundried tomatoes, cherry tomatoes, roasted zucchini and squash",
+    "station": "@grown",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Three Cheese Melt",
+    "description": "Toasted telera roll with cafe made Dijon egg aioli with provolone cheese, cheddar cheese, and pepper jack cheese",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Ham And Cheese Melt",
+    "description": "Toasted telera roll with cafe made Dijon egg aioli with deli sliced ham, provolone cheese, cheddar cheese, and pepper jack cheese",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Thai Peanut Vegetable Pizza",
+    "description": "Cafe made peanut sauce with mozzarella cheese, fresh vegetables and scallions",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Salmon And Almond Pesto Pizza",
+    "description": "Café made garlic cream sauce, almond-basil pesto, mozzarella cheese, sun-dried tomatoes, and baked salmon",
+    "station": "@melted",
+    "dietary": [
+      "SW"
+    ]
+  }
+]

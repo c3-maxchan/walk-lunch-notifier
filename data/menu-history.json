@@ -224,7 +224,8 @@
   "creamy parmesan polenta": [
     "2026-08-20",
     "2026-08-25",
-    "2026-09-15"
+    "2026-09-15",
+    "2026-10-01"
   ],
   "creamy potato and parsnip soup": [
     "2026-09-30"
@@ -297,7 +298,8 @@
     "2026-09-30"
   ],
   "garlic and chili roasted romanesco": [
-    "2026-08-20"
+    "2026-08-20",
+    "2026-10-01"
   ],
   "garlic bok choy and napa cabbage": [
     "2026-08-10"
@@ -384,6 +386,9 @@
   "ham and cheddar white pizza": [
     "2026-09-01"
   ],
+  "ham and cheese melt": [
+    "2026-10-01"
+  ],
   "harissa chickpeas": [
     "2026-08-11",
     "2026-09-08"
@@ -413,6 +418,9 @@
   ],
   "herbed orzo": [
     "2026-09-02"
+  ],
+  "herbes de provence chicken with lemon honey glaze": [
+    "2026-10-01"
   ],
   "honey and thyme roasted rainbow carrots": [
     "2026-08-21"
@@ -458,6 +466,9 @@
   "lemon and chive crispy polenta and mushroom topping": [
     "2026-08-07"
   ],
+  "lemon and oregano braised white beans": [
+    "2026-10-01"
+  ],
   "lemon and oregano braised white beans with summer tomato & pepper compote": [
     "2026-08-18"
   ],
@@ -500,6 +511,9 @@
   ],
   "meat lover's pizza": [
     "2026-08-21"
+  ],
+  "mediterranean pork loin": [
+    "2026-10-01"
   ],
   "mediterranean pork loin with summer tomato & pepper compote": [
     "2026-08-18"
@@ -555,6 +569,9 @@
   ],
   "oreo cream brownie": [
     "2026-09-22"
+  ],
+  "orzo pasta salad": [
+    "2026-10-01"
   ],
   "orzo pasta with roasted tomatoes": [
     "2026-08-28",
@@ -712,7 +729,8 @@
     "2026-09-24"
   ],
   "roasted zucchini and tomatoes": [
-    "2026-08-18"
+    "2026-08-18",
+    "2026-10-01"
   ],
   "rosemary three cheese pizza": [
     "2026-08-05"
@@ -723,7 +741,11 @@
     "2026-09-18"
   ],
   "saffron basmati rice pilaf": [
-    "2026-08-20"
+    "2026-08-20",
+    "2026-10-01"
+  ],
+  "salmon and almond pesto pizza": [
+    "2026-10-01"
   ],
   "sausage and balsamic onion pizza": [
     "2026-09-18"
@@ -914,7 +936,11 @@
     "2026-09-29"
   ],
   "thai peanut vegetable pizza": [
-    "2026-08-20"
+    "2026-08-20",
+    "2026-10-01"
+  ],
+  "three cheese melt": [
+    "2026-10-01"
   ],
   "three cheese pizza": [
     "2026-08-04",
@@ -957,7 +983,8 @@
     "2026-09-25",
     "2026-09-28",
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-01"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -996,7 +1023,8 @@
   ],
   "vegetarian eggplant moussaka": [
     "2026-08-25",
-    "2026-09-15"
+    "2026-09-15",
+    "2026-10-01"
   ],
   "watermelon and cucumber salad": [
     "2026-09-22"
