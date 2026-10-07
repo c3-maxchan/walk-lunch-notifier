@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Taqueria Bar",
+    "description": "Spanish rice, \t\t\t\t\t\t\t\tpinto beans , \t\t\t\t\t\t\t\ttofu fajitas, \t\t\t\t\t\t\t\tpico de gallo , \t\t\t\t\t\t\t\ttortilla corn , \t\t\t\t\t\t\t\t12\" flour tortilla, \t\t\t\t\t\t\t\tsour cream, \t\t\t\t\t\t\t\tpork carnitas, \t\t\t\t\t\t\t\tlime wedge, \t\t\t\t\t\t\t\tsalsa roja, \t\t\t\t\t\t\t\tcotija cheese",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Summer Pasta Salad And Honey Lemon Vinaigrette",
+    "description": "Blanched red lentil pasta with arugula, toybox tomatoes, cucumbers, peaches, basil and honey lime vinaitgrette",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Garlic Parmesan Roasted Romanesco",
+    "description": "Roasted Romanesco tossed with a garlic and parmesan cheese",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Farro And Summer Vegetable Cakes",
+    "description": "Seared steamed farro cakes with fresh corn, zucchini, eggs, panko and parsley",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Coffee Rubbed Tri-Tip And Almond Romesco Sauce",
+    "description": "Seared coffee rubbed trip tip with cafe made almond romesco",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Black Bean And Corn Salad",
+    "description": "Simmered black beans with tomatoes, corn, onions, and dice jalapenos tossed with fresh cilantro, and lime juice",
+    "station": "@grown",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Coconut Sweet Potato Soup",
+    "description": "Coconut cream, cornstarch, sweet potato, milk, herbs, garlic, and onion",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Mushroom, Spinach, And Goat Cheese Pizza",
+    "description": "Cafe made pizza sauce with garlic, mozzarella cheese, goat cheese, sauteed mushrooms, and spinach on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Cajun-Seasoned Chicken Pizza",
+    "description": "Cafe made pizza sauce with Cajun spiced chicken, onions, and bell peppers on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  },
+  {
+    "name": "Tiramisu Mousse Cake",
+    "description": "Eggs, soy, wheat, cocoa powder and milk,",
+    "station": "@sweets",
+    "dietary": [
+      "V"
+    ]
+  }
+]
