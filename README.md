@@ -134,12 +134,31 @@ a small Python script that:
 
 ### Schedule
 
-The script runs at **15:30 UTC** on weekdays (Monday–Friday), which is:
-- **8:30 AM PDT** during daylight saving time (March–November)
-- **7:30 AM PST** during standard time (November–March)
+The update is sent at **4:00 AM Pacific** on weekdays (Monday–Friday).
 
-GitHub Actions scheduled runs can sometimes be delayed by 5–30 minutes, so the
-message may arrive between 7:30 and 9:00 AM.
+GitHub's built-in `schedule` trigger is best-effort and regularly fires 4–8
+hours late, so the real trigger is an external scheduler
+([cron-job.org](https://cron-job.org)) that calls GitHub's `workflow_dispatch`
+API on time:
+
+1. Create a **fine-grained personal access token** (GitHub → Settings →
+   Developer settings → Fine-grained tokens) with access to **only this
+   repository** and the permission **Actions: Read and write**.
+2. In cron-job.org, create a cronjob:
+   - **URL:** `https://api.github.com/repos/c3-maxchan/walk-lunch-notifier/actions/workflows/daily-update.yml/dispatches`
+   - **Schedule:** Custom — minute `0`, hour `4`, days of week Mon–Fri,
+     time zone `America/Los_Angeles` (handles daylight saving automatically)
+   - **Advanced → Request method:** `POST`
+   - **Headers:** `Authorization: Bearer <token>`,
+     `Accept: application/vnd.github+json`,
+     `X-GitHub-Api-Version: 2022-11-28`
+   - **Request body:** `{"ref":"main"}`
+3. Click **Test run** — a `204` response means it worked.
+
+The GitHub `schedule` trigger is kept as a fallback. After a successful send,
+the workflow writes today's date (Pacific) to `data/last-sent`; any later run
+that day sees the marker and skips, so Teams never gets a duplicate. To send
+again on purpose, run the workflow manually with **force** checked.
 
 ---
 
@@ -150,7 +169,8 @@ message may arrive between 7:30 and 9:00 AM.
 | No message appears in Teams | Check the **Actions** tab in GitHub for errors. Make sure the `TEAMS_WEBHOOK_URL` secret is set correctly. |
 | "No lunch specials posted today" | The café website may not have updated yet, or the café is closed. Check <https://c3ai.cafebonappetit.com/#lunch> directly. |
 | Weather shows as unavailable | The Open-Meteo API may be temporarily down. The menu portion will still send. |
-| Action doesn't run on schedule | GitHub may skip scheduled runs if the repo has had no activity in 60 days. Push a small change or run it manually to re-activate. |
+| Action doesn't run on schedule | Check the cron-job.org job history. A `401`/`403` usually means the GitHub token expired — create a new one and update the `Authorization` header. |
+| Message arrives hours late | cron-job.org isn't triggering, so the late GitHub fallback ran instead. Check the cron-job.org job history. |
 | Webhook URL changed | Go to **Settings → Secrets → Actions** in GitHub, delete the old secret, and create a new one with the same name (`TEAMS_WEBHOOK_URL`). |
 
 ---

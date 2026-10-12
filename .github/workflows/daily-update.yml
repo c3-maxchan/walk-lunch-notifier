@@ -1,14 +1,27 @@
 name: Daily Walk & Lunch Update
 
 on:
+  # Primary trigger: cron-job.org calls the workflow_dispatch API at 4:00 AM
+  # America/Los_Angeles on weekdays (GitHub's own cron runs hours late).
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Send even if today's update was already sent"
+        type: boolean
+        default: false
   schedule:
-    # 10:50 UTC = 3:50 AM PDT (summer) / 2:50 AM PST (winter)
-    # Offset from :00 to reduce GitHub Actions queue delays; delivers ~4 AM PDT
+    # Fallback only. GitHub's scheduler often fires this 4-8 hours late; if
+    # cron-job.org already delivered today's update, this run skips itself.
     - cron: "50 10 * * 1-5"
-  workflow_dispatch: {}
 
 permissions:
   contents: write
+
+# Never run two updates at once; a second trigger waits for the first to
+# finish, then sees the "already sent" marker and skips.
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
 
 jobs:
   send-update:
@@ -16,25 +29,51 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          # Always use the latest main (not the commit at trigger time) so a
+          # queued run sees a marker pushed by the run before it.
+          ref: main
+
+      - name: Check whether today's update was already sent
+        id: check
+        env:
+          FORCE: ${{ inputs.force || false }}
+        run: |
+          today=$(TZ=America/Los_Angeles date +%F)
+          echo "today=$today" >> "$GITHUB_OUTPUT"
+          if [ "$FORCE" != "true" ] && [ "$(cat data/last-sent 2>/dev/null)" = "$today" ]; then
+            echo "Already sent today's update ($today); skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Set up Python
+        if: steps.check.outputs.skip != 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Install dependencies
+        if: steps.check.outputs.skip != 'true'
         run: pip install -r requirements.txt
 
       - name: Generate update (fetch data, render map)
+        if: steps.check.outputs.skip != 'true'
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: python daily_update.py --phase generate
 
-      # Push data before sending so the map image URL resolves in Teams.
-      - name: Commit menu data and map
+      - name: Configure git
+        if: steps.check.outputs.skip != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      # Push data before sending so the map image URL resolves in Teams.
+      - name: Commit menu data and map
+        if: steps.check.outputs.skip != 'true'
+        run: |
           git add data
           if git diff --cached --quiet; then
             echo "No menu data changes to commit."
@@ -44,6 +83,19 @@ jobs:
           fi
 
       - name: Send Teams message
+        if: steps.check.outputs.skip != 'true'
         env:
           TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
         run: python daily_update.py --phase send
+
+      - name: Record that today's update was sent
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          echo "${{ steps.check.outputs.today }}" > data/last-sent
+          git add data/last-sent
+          if git diff --cached --quiet; then
+            echo "Marker already up to date."
+          else
+            git commit -m "data: mark update sent ${{ steps.check.outputs.today }}"
+            git push
+          fi
