@@ -138,6 +138,9 @@
   "charred cabbage and adjika butter": [
     "2026-09-22"
   ],
+  "charred cabbage, carrots & herbs": [
+    "2026-10-13"
+  ],
   "charred okra, tomatoes, and peppers": [
     "2026-08-25",
     "2026-09-15"
@@ -186,7 +189,8 @@
     "2026-08-31"
   ],
   "chicken with mushroom marsala": [
-    "2026-09-22"
+    "2026-09-22",
+    "2026-10-13"
   ],
   "chicken, mushroom, and banana pepper pizza": [
     "2026-08-04"
@@ -333,6 +337,9 @@
   "five spice chicken": [
     "2026-08-17"
   ],
+  "five-spice tofu & mushroom": [
+    "2026-10-13"
+  ],
   "fresh mozzarella, tomato, and pesto pizza": [
     "2026-08-04"
   ],
@@ -370,6 +377,9 @@
   "garlic rosemary potatoes": [
     "2026-10-12"
   ],
+  "garlic sauteed broccoli rabe": [
+    "2026-10-13"
+  ],
   "garlic scallion rice": [
     "2026-09-21",
     "2026-10-12"
@@ -391,8 +401,14 @@
     "2026-08-24",
     "2026-09-14"
   ],
+  "ginger cilantro rice": [
+    "2026-10-13"
+  ],
   "ginisang munggo with roasted delicata": [
     "2026-09-21"
+  ],
+  "gnocchi with sage brown butter": [
+    "2026-10-13"
   ],
   "goan chicken cafreal": [
     "2026-09-04"
@@ -417,6 +433,9 @@
   ],
   "griddled halloumi & tomato stack": [
     "2026-08-31"
+  ],
+  "griddled polenta with tuscan white bean ragout": [
+    "2026-10-13"
   ],
   "grilled chicken teriyaki pizza": [
     "2026-08-20"
@@ -516,6 +535,12 @@
     "2026-08-13",
     "2026-09-10",
     "2026-10-08"
+  ],
+  "korean sesame-soy beef lettuce cup": [
+    "2026-10-13"
+  ],
+  "korean sesame-soy lettuce cups": [
+    "2026-10-13"
   ],
   "lamb rogan josh": [
     "2026-08-14",
@@ -692,6 +717,9 @@
   "pear and leek pizza": [
     "2026-09-22"
   ],
+  "pear, fontina & caramelized onion pizza": [
+    "2026-10-13"
+  ],
   "pearl couscous with cherries and arugula": [
     "2026-08-10",
     "2026-10-05"
@@ -854,6 +882,9 @@
     "2026-08-11",
     "2026-09-08",
     "2026-10-06"
+  ],
+  "sausage, mushroom & rosemary pizza": [
+    "2026-10-13"
   ],
   "sauteed asparagus, summer squash, and onion": [
     "2026-09-02"
@@ -1108,7 +1139,8 @@
     "2026-10-07",
     "2026-10-08",
     "2026-10-09",
-    "2026-10-12"
+    "2026-10-12",
+    "2026-10-13"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -1158,6 +1190,9 @@
     "2026-08-25",
     "2026-09-15",
     "2026-10-01"
+  ],
+  "vietnamese lemongrass pork with caramelized pear": [
+    "2026-10-13"
   ],
   "watermelon and cucumber salad": [
     "2026-09-22"

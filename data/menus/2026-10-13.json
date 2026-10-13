@@ -1,0 +1,99 @@
+[
+  {
+    "name": "Ginger Cilantro Rice",
+    "description": "Steamed jasmine rice with ginger, cilantro, cafe made vegetable stock, and seasoned with vinegar",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Charred Cabbage, Carrots & Herbs",
+    "description": "Charred cabbage with steamed carrots, fresh herbs, and lime juice",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Five-Spice Tofu & Mushroom",
+    "description": "Roasted tofu and seared mushrooms with a soy sauce, five spice, and ginger-garlic glaze",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Vietnamese Lemongrass Pork With Caramelized Pear",
+    "description": "Grilled pork with a lemongrass and soy marinade with caramelized pears",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Garlic Sauteed Broccoli Rabe",
+    "description": "Sauteed broccoli rabe with garlic and red chili flakes",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Gnocchi With Sage Brown Butter",
+    "description": "Blanched egg and potato gnocchi pasta sauteed with a butter and sage sauce",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Griddled Polenta With Tuscan White Bean Ragout",
+    "description": "Seared polenta cakes with a Tuscan white bean ragout",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Chicken With Mushroom Marsala",
+    "description": "Seared chicken with cafe made marsala wine sauce",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Korean Sesame-Soy Lettuce Cups",
+    "description": "Fried Hodo Soy Beanery tofu tossed in a cafe made sesame and soy Korean BBQ glaze with a sesame seed and ginger coleslaw, pickled cucumbers, and scallion in a butter lettuce cup",
+    "station": "@bites",
+    "dietary": [
+      "VG",
+      "F2F"
+    ]
+  },
+  {
+    "name": "Korean Sesame-Soy Beef Lettuce Cup",
+    "description": "Grilled sesame-soy beef tri-tip and a cafe made sesame and soy Korean BBQ glaze with a sesame seed and ginger coleslaw, pickled cucumbers, and scallions in a butter lettuce cup",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Pear, Fontina & Caramelized Onion Pizza",
+    "description": "Oil brushed hand tossed pizza dough with mozzarella cheese, fontina cheese, caramelized onions, pears, and micro arugula",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Sausage, Mushroom & Rosemary Pizza",
+    "description": "Cafe made pizza sauce with mozzarella cheese, browned Italian sausage, sauteed mushrooms, and fresh rosemary on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
