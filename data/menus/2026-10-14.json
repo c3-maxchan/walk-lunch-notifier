@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Toasted Pepita Red Rice",
+    "description": "Toasted jasmine rice steamed with cafe made tomato broth and toasted pumpkin seeds",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Cumin And Green Onion Roasted Cauliflower",
+    "description": "Roasted cauliflower with cumin and scallions",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Black Bean & Sweet Potato Picadillo",
+    "description": "Simmered black beans and roasted sweet potatoes in a spiced tomato and ancho chili broth",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Chile Colorado Pork With Roasted Pumpkin",
+    "description": "Braised pork and roasted pumpkin in a tomato and chili sauce",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Haricot Vert And Shallot Salad With Vinaigrette",
+    "description": "Blanched haricot verts with roasted shallots and a red wine vinaigrette",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Crispy Paprika Potatoes",
+    "description": "Roasted Yukon potatoes with paprika, sherry vinegar, lemon juice, and parsley",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Lentil-Mushroom Bourguignon",
+    "description": "Sautéed mushrooms and simmered lentils with carrots, onions, and tomato in a red wine sauce",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Lemon Chive Seared Barramundi Filet With Delicata And Pomegranate Relish",
+    "description": "Seared lemon and chive marinated barramundi with cafe made delicata and pomegranate relish",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Roasted Pumpkin, Poblano & Pepita Pizza",
+    "description": "Hand tossed dough with roasted pumpkin, fire roasted poblano chilies, mozzarella cheese, and toasted pepitas",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Triple Pork Pizza",
+    "description": "Cafe made pizza sauce with bacon, pepperoni, pork sausage, and cheese on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
