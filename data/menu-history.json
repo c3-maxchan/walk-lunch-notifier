@@ -15,6 +15,9 @@
   "ancho-tomato arroz rojo": [
     "2026-09-23"
   ],
+  "apple-jam turkey panini": [
+    "2026-10-15"
+  ],
   "artichoke and roasted red pepper braised white beans": [
     "2026-08-26",
     "2026-09-16"
@@ -198,6 +201,9 @@
   "chicken, mushroom, and banana pepper pizza": [
     "2026-08-04"
   ],
+  "chicken, pomegranate molasses & feta pizza": [
+    "2026-10-15"
+  ],
   "chicken, tomato, and tarragon pizza": [
     "2026-08-18",
     "2026-09-22",
@@ -276,6 +282,9 @@
   "creole spiced tofu and mushroom stew": [
     "2026-08-04"
   ],
+  "crispy chickpea panisse with herb pistou": [
+    "2026-10-15"
+  ],
   "crispy chile and lime heart of palm tacos": [
     "2026-08-19",
     "2026-09-30"
@@ -322,6 +331,9 @@
   "dijon and herb seared barramundi with tomato caper relish": [
     "2026-08-20"
   ],
+  "dijon-herb pork medallions with pear mostarda": [
+    "2026-10-15"
+  ],
   "doenjang mushroom & tofu": [
     "2026-10-12"
   ],
@@ -331,6 +343,9 @@
   "egg noodle": [
     "2026-09-01"
   ],
+  "eggplant and apple-jam panini": [
+    "2026-10-15"
+  ],
   "farro and summer vegetable cakes": [
     "2026-08-12",
     "2026-09-09",
@@ -339,6 +354,9 @@
   "farro and summer vegetable cakes with summer peach chimichurri": [
     "2026-08-19",
     "2026-09-30"
+  ],
+  "farro with roasted grapes & herbs": [
+    "2026-10-15"
   ],
   "feta cheese, watercress pesto, and spinach pizza": [
     "2026-09-01"
@@ -618,6 +636,9 @@
   "lobio-style beans with walnut & herbs": [
     "2026-09-22"
   ],
+  "maple-dijon brussels sprouts": [
+    "2026-10-15"
+  ],
   "margherita pizza": [
     "2026-08-10",
     "2026-10-05"
@@ -759,8 +780,14 @@
   "pistachio and bulgur wheat salad": [
     "2026-09-25"
   ],
+  "pistachio roasted carrots and dates": [
+    "2026-10-15"
+  ],
   "pomegranate sumac chicken macro bowl": [
     "2026-10-02"
+  ],
+  "pomegranate-sumac chicken": [
+    "2026-10-15"
   ],
   "pommes persillade": [
     "2026-09-04"
@@ -774,6 +801,9 @@
   "pork tenderloin agrodolce": [
     "2026-08-10",
     "2026-10-08"
+  ],
+  "portobello mushroom and fontina pizza": [
+    "2026-10-15"
   ],
   "portobello steak and summer peach chimichurri": [
     "2026-09-24"
@@ -895,6 +925,9 @@
   "saffron basmati rice pilaf": [
     "2026-08-20",
     "2026-10-01"
+  ],
+  "saffron-herb basmati rice": [
+    "2026-10-15"
   ],
   "salmon and almond pesto pizza": [
     "2026-10-01"
@@ -1165,7 +1198,8 @@
     "2026-10-09",
     "2026-10-12",
     "2026-10-13",
-    "2026-10-14"
+    "2026-10-14",
+    "2026-10-15"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -1224,6 +1258,9 @@
   ],
   "vietnamese lemongrass pork with caramelized pear": [
     "2026-10-13"
+  ],
+  "walnut, lentil & roasted squash khoresh": [
+    "2026-10-15"
   ],
   "watermelon and cucumber salad": [
     "2026-09-22"

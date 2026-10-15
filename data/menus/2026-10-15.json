@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Pistachio Roasted Carrots And Dates",
+    "description": "Roasted carrots and dates with coriander, lemon juice, and toasted pistachios",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Saffron-Herb Basmati Rice",
+    "description": "Steamed basmati rice with saffron and fresh herbs",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Walnut, Lentil & Roasted Squash Khoresh",
+    "description": "Simmered lentils and roasted butternut squash with ground walnuts, pomegrante molasses, and spiced vegetable stock",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Pomegranate-Sumac Chicken",
+    "description": "Grilled pomegranate and sumac marinated chicken with charred onions",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Maple-Dijon Brussels Sprouts",
+    "description": "Roasted brussels sprouts tossed in a cider vinegar and maple-Dijon glaze",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Farro With Roasted Grapes & Herbs",
+    "description": "Steamed farro with blistered grapes and fresh herbs",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Crispy Chickpea Panisse With Herb Pistou",
+    "description": "Crispy garbanzo flour panisse with cafe made pistou",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Dijon-Herb Pork Medallions With Pear Mostarda",
+    "description": "Seared pork medallions with cafe made pear and Dijon mostarda",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Eggplant And Apple-Jam Panini",
+    "description": "Fresh telera roll with cafe made apple jam, grilled eggplant, lettuce, tomato, onions, Swiss cheese, and avocado-lime mash",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Apple-Jam Turkey Panini",
+    "description": "Fresh telera roll with cafe made apple jam, cafe roasted turkey breast, lettuce, tomato, onions, Swiss cheese, and avocado-lime mash",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Portobello Mushroom And Fontina Pizza",
+    "description": "Cafe made pizza sauce with roasted portobello mushrooms, garlic, mozzarella cheese, fontina cheese, and fresh thyme on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Chicken, Pomegranate Molasses & Feta Pizza",
+    "description": "Hand tossed dough with mozzarella cheese, roasted chicken, feta cheese, fresh parsley, and pomegranate drizzle",
+    "station": "@melted",
+    "dietary": []
+  }
+]
