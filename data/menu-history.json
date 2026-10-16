@@ -87,8 +87,12 @@
   "burrata and summer squash salad": [
     "2026-09-03"
   ],
+  "butternut squash & white bean griddle cake": [
+    "2026-10-16"
+  ],
   "butternut squash kale alfredo pizza": [
-    "2026-09-23"
+    "2026-09-23",
+    "2026-10-16"
   ],
   "buttery garlic mashed potatoes": [
     "2026-08-21",
@@ -523,6 +527,9 @@
     "2026-09-11",
     "2026-10-09"
   ],
+  "herb-roasted chicken with cranberry-apple agrodolce": [
+    "2026-10-16"
+  ],
   "herbed bulgur with roasted grapes": [
     "2026-09-22"
   ],
@@ -558,11 +565,15 @@
   ],
   "jeera basmati rice": [
     "2026-08-21",
-    "2026-10-02"
+    "2026-10-02",
+    "2026-10-16"
   ],
   "jollof rice": [
     "2026-08-25",
     "2026-09-15"
+  ],
+  "kashmiri-spiced lamb seekh kebab": [
+    "2026-10-16"
   ],
   "korean bbq king oyster mushrooms": [
     "2026-08-13",
@@ -574,6 +585,9 @@
   ],
   "korean sesame-soy lettuce cups": [
     "2026-10-13"
+  ],
+  "lamb and ground beef pizza with tzatziki sauce": [
+    "2026-10-16"
   ],
   "lamb rogan josh": [
     "2026-08-14",
@@ -626,6 +640,9 @@
   "lemon-cumin basmati rice": [
     "2026-09-25"
   ],
+  "lemongrass pork wrap": [
+    "2026-10-16"
+  ],
   "lentil and vegetable kofa": [
     "2026-08-20",
     "2026-09-29"
@@ -676,7 +693,8 @@
     "2026-08-31"
   ],
   "moong dal with tomato tadka": [
-    "2026-09-25"
+    "2026-09-25",
+    "2026-10-16"
   ],
   "mushroom & black bean tlayuda": [
     "2026-09-23"
@@ -827,6 +845,9 @@
   "roasted broccoli and ricotta pizza": [
     "2026-08-06"
   ],
+  "roasted carrots and fennel": [
+    "2026-10-16"
+  ],
   "roasted carrots and red peppers": [
     "2026-09-21"
   ],
@@ -893,6 +914,9 @@
   ],
   "roasted pumpkin and mint chutney pizza": [
     "2026-09-24"
+  ],
+  "roasted pumpkin chana masala": [
+    "2026-10-16"
   ],
   "roasted pumpkin, poblano & pepita pizza": [
     "2026-10-14"
@@ -1107,6 +1131,9 @@
     "2026-09-10",
     "2026-10-08"
   ],
+  "sweet potato-scallion hash": [
+    "2026-10-16"
+  ],
   "tandoori chicken": [
     "2026-08-28",
     "2026-09-18"
@@ -1199,7 +1226,8 @@
     "2026-10-12",
     "2026-10-13",
     "2026-10-14",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"

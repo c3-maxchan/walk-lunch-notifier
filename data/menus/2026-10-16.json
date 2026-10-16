@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Jeera Basmati Rice",
+    "description": "Steamed rice with cumin seeds",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Moong Dal With Tomato Tadka",
+    "description": "Simmered yellow mung lentils with tomatoes and tempering spices",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Pumpkin Chana Masala",
+    "description": "Roasted pumpkin and simmered chickpeas win a cafe made tempering spiced tomato sauce",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Kashmiri-Spiced Lamb Seekh Kebab",
+    "description": "Seared lamb kebab with garlic, ginger, onions, and spices",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Roasted Carrots And Fennel",
+    "description": "",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Sweet Potato-Scallion Hash",
+    "description": "Seared sweet potatoes with green onions, onions, and paprika",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Butternut Squash & White Bean Griddle Cake",
+    "description": "Roasted delicata and white bean cakes with fresh herbs and garlic",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Herb-Roasted Chicken With Cranberry-Apple Agrodolce",
+    "description": "Seared herb marinated chicken with cafe made apple and cranberry agrodolce sauce",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Lemongrass Pork Wrap",
+    "description": "Grilled pork with lemon grass marinade and cafe made napa cabbage coleslaw in a warm flour wrap",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Butternut Squash Kale Alfredo Pizza",
+    "description": "Cafe made alfredo sauce with mozzarella cheese, roasted butternut squash, and kale on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Lamb And Ground Beef Pizza With Tzatziki Sauce",
+    "description": "Hand tossed dough with sliced lamb, seared ground beef, mozzarella cheese, onions, and cucumber yogurt sauce",
+    "station": "@melted",
+    "dietary": []
+  }
+]
