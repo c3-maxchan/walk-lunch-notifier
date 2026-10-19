@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Ginger And Garlic Brown Rice",
+    "description": "Steamed brown rice with garlic and ginger",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Sesame-Soy Glazed Gai Lan And Shiitakes",
+    "description": "Sauteed gai-lan broccoli, onions, and shiitake mushrooms with cafe made sesame-soya glaze",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Sesame Mapo Eggplant & Tofu",
+    "description": "Roasted tofu and eggplant with garlic, ginger, toasted Sichuan chilies and a black bean and garlic-soya sauce with cafe made vegetable stock",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Black Vinegar & Five-Spice Pork",
+    "description": "Seared pork with a black vinegar and five spice soy-glaze with chopped green onions",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Roasted Lyonnaise Potatoes With Fresh Herbs",
+    "description": "Roasted potatoes with fresh herbs and caramelized onions",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Charred Cabbage, Carrots & Herbs",
+    "description": "Charred cabbage and carrots tossed with fresh herbs, garlic, and lime juice",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Wild Mushroom & Gruyère Buckwheat Cake And Dijon-Thyme Cream Sauce",
+    "description": "Griddled buckwheat cakes with sauteed mushrooms, gruyere cheese, and chives with a cafe made dijon-thyme and cream sauce",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Seared Shrimp With Apple-Brandy Cream",
+    "description": "Garlic seared shrimp with a cafe made apple and brandy cream sauce",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Lemon-Garlic Tofu Power Bowl",
+    "description": "Romaine and spinach tossed with lemon-parsley quinoa, cherry tomatoes, cucumbers, red onions, lemon-garlic and oregano grilled tofu, and yogurt tzatziki",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Lemon-Garlic Chicken Power Bowl",
+    "description": "Romaine and spinach tossed with lemon-parsley quinoa, cherry tomatoes, cucumbers, red onions, lemon-garlic and oregano grilled chicken breast, and yogurt tzatziki",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Roasted Peach, Ricotta, And Basil",
+    "description": "Roasted peaches with mozzarella cheese, ricotta, cheese, and chiffonade basil on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Sesame Korean Bbq Beef",
+    "description": "Hand tossed dough with sesame Korean BBQ beef , scallions, sesame seeds, and cafe made Korean BBQ sauce",
+    "station": "@melted",
+    "dietary": []
+  }
+]

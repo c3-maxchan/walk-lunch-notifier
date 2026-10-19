@@ -58,6 +58,9 @@
   "black bean and mushroom wraps": [
     "2026-09-25"
   ],
+  "black vinegar & five-spice pork": [
+    "2026-10-19"
+  ],
   "blackened pork tenderloin and caper remoulade sauce": [
     "2026-08-24"
   ],
@@ -149,7 +152,8 @@
     "2026-09-22"
   ],
   "charred cabbage, carrots & herbs": [
-    "2026-10-13"
+    "2026-10-13",
+    "2026-10-19"
   ],
   "charred okra, tomatoes, and peppers": [
     "2026-08-25",
@@ -431,6 +435,9 @@
   "general tso's tofu with chili-soy sauce": [
     "2026-08-06"
   ],
+  "ginger and garlic brown rice": [
+    "2026-10-19"
+  ],
   "ginger cabbage and carrots": [
     "2026-08-24",
     "2026-09-14"
@@ -639,6 +646,12 @@
   ],
   "lemon-cumin basmati rice": [
     "2026-09-25"
+  ],
+  "lemon-garlic chicken power bowl": [
+    "2026-10-19"
+  ],
+  "lemon-garlic tofu power bowl": [
+    "2026-10-19"
   ],
   "lemongrass pork wrap": [
     "2026-10-16"
@@ -899,11 +912,13 @@
   ],
   "roasted lyonnaise potatoes with fresh herbs": [
     "2026-08-27",
-    "2026-09-17"
+    "2026-09-17",
+    "2026-10-19"
   ],
   "roasted peach, ricotta, and basil": [
     "2026-08-24",
-    "2026-09-14"
+    "2026-09-14",
+    "2026-10-19"
   ],
   "roasted poblano and corn chili": [
     "2026-09-28"
@@ -1021,6 +1036,9 @@
     "2026-08-26",
     "2026-09-16"
   ],
+  "seared shrimp with apple-brandy cream": [
+    "2026-10-19"
+  ],
   "seared white bean and lentil herb cakes": [
     "2026-08-06",
     "2026-08-11",
@@ -1041,9 +1059,15 @@
     "2026-08-10",
     "2026-10-05"
   ],
+  "sesame korean bbq beef": [
+    "2026-10-19"
+  ],
   "sesame korean bbq pork": [
     "2026-08-24",
     "2026-09-14"
+  ],
+  "sesame mapo eggplant & tofu": [
+    "2026-10-19"
   ],
   "sesame pita and grilled chicken": [
     "2026-09-29"
@@ -1057,6 +1081,9 @@
   ],
   "sesame-roasted delicata & bok choy": [
     "2026-10-12"
+  ],
+  "sesame-soy glazed gai lan and shiitakes": [
+    "2026-10-19"
   ],
   "sesame-soy gochujang trumpet sandwich": [
     "2026-08-18"
@@ -1227,7 +1254,8 @@
     "2026-10-13",
     "2026-10-14",
     "2026-10-15",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-19"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -1306,6 +1334,9 @@
     "2026-08-14",
     "2026-09-11",
     "2026-10-09"
+  ],
+  "wild mushroom & gruyère buckwheat cake and dijon-thyme cream sauce": [
+    "2026-10-19"
   ],
   "wild mushroom & white bean fricassée": [
     "2026-09-04"
