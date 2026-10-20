@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Thai Basil Brussels Sprouts & Green Beans",
+    "description": "Roasted brussels sprouts and green beans with soy sauce, chili peppers, and Thai basil",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Thai Drunken Rice Noodles",
+    "description": "Blanched rice noodles tossed in a dark soya sauce with ginger, garlic, Fresno chilies, and Thai basil",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Red Curry Pumpkin & Tempeh",
+    "description": "Roasted tempeh and pumpkin simmered in a red coconut curry broth with kidney beans, and fresh Thai basil",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Tamarind-Lemongrass Chicken",
+    "description": "Grilled chicken with a cafe made tamarind and lemon grass glaze",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Creamy Parmesan Polenta",
+    "description": "Simmered cornmeal with butter and parmesan cheese",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Sautéed Tuscan Kale",
+    "description": "Kale sauteed with garlic, and chili flakes finished with lemon juice",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Crispy Eggplant Milanese With Whipped Ricotta",
+    "description": "Fried eggplant cutlet with lemon and basil whipped ricotta",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Pork Milanese With Roasted Tomato-Fennel Agrodolce",
+    "description": "Fried pork cutlet with cafe made tomato and fennel agrodolce",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Goat Cheese And Zucchini",
+    "description": "Roasted zucchini with mozzarella cheese, goat cheese, lemon zest and basil on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Citrus Chicken, Corn, And Jalapeno Pizza",
+    "description": "Roasted citrus chicken with pickled jalapenos, roasted corn, mozzarella cheese, and fresh cilantro on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
