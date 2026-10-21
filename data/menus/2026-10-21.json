@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Taqueria Bar",
+    "description": "Spanish rice, \t\t\t\t\t\t\t\tpinto beans , \t\t\t\t\t\t\t\tpico de gallo , \t\t\t\t\t\t\t\tsalsa verde , \t\t\t\t\t\t\t\ttortilla corn , \t\t\t\t\t\t\t\t12\" flour tortilla, \t\t\t\t\t\t\t\tsour cream, \t\t\t\t\t\t\t\tcotija cheese, \t\t\t\t\t\t\t\tnopales con huevos , \t\t\t\t\t\t\t\tpork al pastor, \t\t\t\t\t\t\t\tlime wedge",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Crispy Smashed Potatoes",
+    "description": "Steamed potatoes smashed and roasted till crispy with garlic, olive oil, and parsley",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted-Garlic Brussels Sprouts With Pomegranate Molasses",
+    "description": "Brussels sprouts roasted with garlic, shallots, and finished with pomegranate molasses drizzle",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Griddled Delicata With White Bean Purée & Pepita Gremolata",
+    "description": "Seared delicata squash with a cafe made cannellini white bean puree and toasted pumpkin seed and parsley gremolata",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Citrus-Oregano Chicken With Charred Grape Salsa",
+    "description": "Seared chicken with cafe made charred grape and scallion salsa",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Lemon And Herb Tofu Wrap",
+    "description": "Grilled lemon and herb tofu tomatoes, kale, lettuce, avocado, Swiss, and chive-garlic aioli in a wheat tomato wrap",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Roasted Turkey And Bacon Wrap",
+    "description": "Fresh roasted turkey breast, bacon, tomatoes, kale, lettuce, avocado, Swiss, and chive-garlic aioli in a wheat spinach wrap",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Nectarine, Poblano ,And Queso Fresco Pizza",
+    "description": "Hand tossed dough with sliced persimmon, fire roasted poblano chilies, mozzarella cheese, queso fresco, and fresh cilantro",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Barbecue Pork Pizza",
+    "description": "Cafe made barbecue sauce with three cheese blend, pepperoncini's, and pulled pork on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
