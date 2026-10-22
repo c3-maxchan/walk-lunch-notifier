@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Furikake Rice",
+    "description": "Steamed rice with a sesame-furikake seasoning",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Sesame-Roasted Mushrooms & Gai-Lan Broccoli",
+    "description": "Roasted mushrooms and gai-lan broccoli tossed with a sesame-soy garlic sauce",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Kabocha & Edamame Soboro",
+    "description": "Roasted kabocha squash and edamame beans with mirin-soya and garlic",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Miso-Maple Glazed Salmon",
+    "description": "Roasted salmon with cafe made miso-maple glaze",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Charred Broccolini",
+    "description": "",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Garlic Parmesan Potato Wedges",
+    "description": "Crispy roasted Kennebec potatoes with garlic, parmesan and parsley",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Crispy Lentil & Mushroom Melt",
+    "description": "Seared lentil and mushroom patty with vegan cheddar cheese on sourdough bread",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Apple-Sage Turkey Melt With Cider Onion Relish",
+    "description": "Seared turkey patty with cafe made cider onion relish on sourdough with Havarti cheese",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Sesame-Soy Rice Noodle And Crunchy Vegetable Salad",
+    "description": "Blanched rice noodles with kale, broccoli, carrots, cabbage, Thai basil, cilantro, scallions, and red bell peppers with a sesame-tahini and soy dressing",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Sesame-Soy Chicken And Rice Noodle Salad",
+    "description": "Blanched rice noodles with kale, broccoli, carrots, cabbage, Thai basil, cilantro, scallions, red bell peppers, and seared chicken with a sesame-tahini and soy dressing",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Mushroom White Pizza",
+    "description": "Cafe made white cream sauce with sauteed mushrooms, olives, mozzarella cheese, and pesto drizzle on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  },
+  {
+    "name": "Spicy Honey And Pork Pizza",
+    "description": "Cafe made pizza sauce with mozzarella cheese, crispy bacon, Italian pork sausage, and spicy honey drizzle on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
