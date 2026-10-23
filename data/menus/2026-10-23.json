@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Naan Or Lachcha Paratha",
+    "description": "",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Saffron Basmati Rice",
+    "description": "Steamed basmati rice with saffron",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Yellow Dal Tadka",
+    "description": "Simmered yellow lentils with onions, tomatoes, garlic, ginger, chilies, and spices",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Tawa Vegetables",
+    "description": "Mixed vegetable with okra, and eggplant fried and tossed in a cafe made tomato and onions masala gravy with cumin, ginger, garlic, amchur, and garam masala",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Tandoori Chicken",
+    "description": "Roasted chicken thighs with a cafe made yogurt marinade",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Creamy Horseradish Mashed Potatoes",
+    "description": "Steamed potatoes mashed with cream, horseradish root, and sour cream",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Charred Green Beans With Crispy Shallots",
+    "description": "Blanched green beans charred and tossed with crispy fried shallots, and fresh lemon juice",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Cauliflower Steak",
+    "description": "Cauliflower steak seared and roasted with spices",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Flat-Top Pork Steak With Bourbon-Apple Glaze",
+    "description": "Seared pork shoulder steak with a cafe made apple and bourbon glaze",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Coleslaw Salad",
+    "description": "Shredded cabbages with carrots, egg mayonnaise, vinegar, sugar, and Dijon mustard",
+    "station": "@grown",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Vegetable Supreme Pizza With Black Olives",
+    "description": "Cafe made pizza sauce with mozzarella cheese, bell peppers, tomatoes, onions, olives, and mushrooms on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Sausage And Balsamic Onion Pizza",
+    "description": "Garlic oil brushed hand tossed dough with Italian pork sausage, caramelized onions, and balsamic reduction and micro greens",
+    "station": "@melted",
+    "dietary": []
+  }
+]
