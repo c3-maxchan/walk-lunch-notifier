@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Wheat Bulgur Pilaf",
+    "description": "Steamed bulgur with vegetable stock, and sauteed mixed vegetables",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Paprika-Charred Cauliflower",
+    "description": "Charred cauliflower with scallions, lemon juice, onions, spices and fresh parsley",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Eggplant & Chickpea Güveç",
+    "description": "Simmered tofu and chickpeas with seared eggplant, cafe made vegetable stock, fresh herbs, spices, sauteed onions, garlic, and lemon juice",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Braised Pomegranate-Sumac Chicken",
+    "description": "Seared pomegranate marinated chicken braised with fresh herbs, sumac, shallots, and cafe made vegetable stock",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Shaved Brussels Sprouts With Toasted Hazelnut",
+    "description": "Sauteed shaved brussels sprouts with shallots, lemon juice, and toasted hazelnuts",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Rosemary Fingerling Potatoes",
+    "description": "Roasted potatoes with garlic, rosemary, and salt",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Wild Rice & Mushroom Griddle Cakes",
+    "description": "Seared mushrooms and onions folded with mashed cannellini beans, panko, parsley, and wild rice",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Seared Dijon And Herb Pork Tenderloin And Pear-Cider Gastrique",
+    "description": "Seared pork tenderloin with a Dijon mustard and herb marinade with cafe made pear-cider gastrique",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Roasted Pear, Blue Cheese & Walnut Pizza",
+    "description": "Cafe made alfredo sauce with roasted pears, blue cheese thyme, and toasted walnuts on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Sicilian-Style Pizza With Pepperoni And Basil Marinated Mushroom",
+    "description": "Cafe made pizza sauce with basil marinated mushrooms, beef pepperoni, and red chili flakes on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
