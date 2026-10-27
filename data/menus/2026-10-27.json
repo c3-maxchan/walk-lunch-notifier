@@ -1,0 +1,96 @@
+[
+  {
+    "name": "Turmeric Basmati Rice",
+    "description": "",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Gomen Braised Collard Greens",
+    "description": "Braised collard greens with butter, onions, garlic, coriander, ginger, and cumin",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Misir Wot Red Lentils",
+    "description": "Simmered red lentils with cafe made vegetable stock berbere spice, tomatoes, onions, garlic, and ginger",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Berbere-Braised Pork With Tomato",
+    "description": "Seared pork marinated with garlic, onions, and berbere spice braised in a tomato-vegetable stock",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Charred Broccoli Rapini With Currants",
+    "description": "Broccoli rapini charred with shallots, green onions, lemon, and garlic",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Creamy Saffron Polenta",
+    "description": "Cornmeal with saffron, cheese, butter, and vegetable stock",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Halloumi Piccata",
+    "description": "Seared halloumi cheese with cafe made piccata sauce",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Turkey Piccata",
+    "description": "Seared turkey cutlet with cafe made piccata sauce",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Roasted Eggplant And Honey-Lime Salad",
+    "description": "Chopped romaine lettuce with sliced Fresno chili peppers, shallots, scallions, cilantro, avocado mash, garbanzo beans, and roasted eggplant with a cafe made honey-lime dressing",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Mango Chicken Salad",
+    "description": "Chopped romaine lettuce with sliced Fresno chili peppers, shallots, scallions, cilantro, avocado mash, and grilled mango chicken with a cafe made honey-lime dressing",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Buffalo-Style Cauliflower Pizza",
+    "description": "Cafe made pizza sauce with mozzarella cheese, blue cheese, onions, bell peppers, and cafe made buffalo sauce on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Tex Mex Beef And Cheddar Pizza",
+    "description": "Cafe made salsa with bell peppers , seared ground beef, soy adobo chipotle peppers, mozzarella and cheddar cheese on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
