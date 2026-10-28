@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Cilantro Lime Rice",
+    "description": "Steamed jasmine rice with fresh lime juice and zest and chopped cilantro",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Latin Succotash",
+    "description": "Roasted corn and zucchini tossed with black beans, cumin, onions, peppers, garlic, and lime juice",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Crispy Chile And Lime Heart Of Palm Tacos",
+    "description": "Roasted hearts of palm in warm corn tortilla with a persimmon Pico de gallo and avocado lime crema",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Fried Fish Tacos",
+    "description": "Fried egg and panko breaded fish in a warm corn tortillas with a persimmon pico de gallo and avocado lime crema",
+    "station": "@spiced",
+    "dietary": [
+      "SW"
+    ]
+  },
+  {
+    "name": "Sauteed Haricot Vert",
+    "description": "Haricot verts sauteed with cracked black pepper and lemon zest",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Creamy Parsnip Puree",
+    "description": "Steamed potatoes and parsnips with milk",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Leek & Gruyère Potato Galette",
+    "description": "Griddled shredded potatoes with leeks, gruyere cheese, cream and eggs",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Steak Haché With Green Peppercorn Jus",
+    "description": "Seared beef patties with cage made green peppercorn and butter jus",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Fire Roasted Piquillo Panini",
+    "description": "Fire roasted piquillo peppers with Swiss cheese, basil pesto aioli, tomatoes, onions, and butter lettuce on a telera roll",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Pesto Turkey Panini",
+    "description": "Cafe roasted turkey breast with Swiss cheese, basil pesto aioli, tomatoes, onions, and butter lettuce on a telera roll",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Roasted Apple And Brie Pizza",
+    "description": "Cafe made alfredo sauce with mozzarella cheese, roasted apples, brie cheese,  and fresh arugula",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Shrimp And Bacon White Pizza",
+    "description": "Cafe made alfredo sauce with shredded mozzarella and fontina cheese, crispy bacon, poached shrimp green onions, and basil on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
