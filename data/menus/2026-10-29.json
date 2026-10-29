@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Steamed Jasmine Rice",
+    "description": "",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Sesame Garlic Green Beans",
+    "description": "Blanched green beans sauteed in a sesame garlic oil with toasted sesame seeds",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Korean Bbq King Oyster Mushrooms",
+    "description": "Roasted king oyster mushrooms tossed in a cafe made Korean BBQ glaze",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Gochujang Sesame Chicken",
+    "description": "Grilled chicken in a cafe made gochujang  and sesame soy marinade",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Roasted Broccolini Almandine",
+    "description": "",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Farro Currant Pilaf",
+    "description": "",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Parmesan Polenta Cake",
+    "description": "",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Lemon Chive Seared Barramundi Filet And Persimmon-Fennel Salsa",
+    "description": "Seared barramundi with a lemon and chive marinade and cafe made persimmon and fennel salsa",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Asparagus Goat Cheese Pizza",
+    "description": "Cafe made pizza sauce with goat cheese, mozzarella cheese, and asparagus on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Southwestern Chorizo Pizza",
+    "description": "Cafe made pizza sauce with browned chorizo sausage, mozzarella cheese, and pico de gallo salsa on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
