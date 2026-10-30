@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Naan Or Methi Paratha",
+    "description": "Warm naan or methi paratha",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Cardamom Basmati Rice",
+    "description": "Basmati rice steamed with cinnamon, cardamom, and bay leaves",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Tomato-Garlic Toor Dal",
+    "description": "Simmered toor dal with tomatoes, onions, garlic and tempering spices",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Paneer Tikka Masala",
+    "description": "Simmered paneer cheese with yogurt, tomatoes, onions, ginger, garlic and tempering spices",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Kerala Black Pepper Chicken",
+    "description": "Seared chicken pieces braised in coconut milk with toasted black pepper, cardamom, onions, garlic, and ginger",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Skillet Kale With Cranberries & Pecans",
+    "description": "Sauteed kale with shallots, apple cider vinegar, cranberries, and toasted pecans",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Maple-Roasted Sweet Potato Hash",
+    "description": "Sauteed red onions with roasted sweet potatoes, maple syrup, and paprika",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Pumpkin & Lentil Skillet Cakes",
+    "description": "Seared pumkin and lentil cakes with flour, eggs, and green onions",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Turkey Meatballs And Apple Cider Glaze",
+    "description": "Seared herb and panko turkey meatball with cafe made apple-cider glaze",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Caramelized Onion And Fennel Pizza With Goat Cheese",
+    "description": "Cafe made pizza sauce with caramelized onions, mozzarella, fennel and goat cheese on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Shrimp And Pesto",
+    "description": "Poached shrimp with cafe made alfredo cream sauce, artichoke hearts, caramelized onions and pesto drizzle",
+    "station": "@melted",
+    "dietary": []
+  }
+]
