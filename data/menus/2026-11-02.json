@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Sesame Furikake Rice",
+    "description": "Steamed jasmine rice fluffed with sesame furikake seasoning",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Ginger Cabbage And Carrots",
+    "description": "Stir fried cabbage and carrots with garlic, ginger, and soy sauce",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Miso Glazed Shiitake Mushrooms And Tofu",
+    "description": "Roasted shiitakes and tofu tossed in a cafe made miso glaze with fresh scallions",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Pork Katsu",
+    "description": "Fried pork cutlet with eggs, flour and panko breading with cafe made tonkatsu sauce",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Charred Broccoli",
+    "description": "Charred broccoli tossed with lemon juices, lemon zest, garlic, and spices",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Creamy Parmesan Polenta",
+    "description": "Simmered coarse cornmeal with cafe made vegetable stock, milk, and parmesan cheese",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Vegetarian Eggplant Moussaka",
+    "description": "Roasted eggplant married with simmered lentils, squash, onions, and topped with buttery potatoes and feta cheese",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Herb Seared Chicken With Tomato Caper Vinaigrette",
+    "description": "Seared airline chicken breast with a cafe made tomato and caper vinaigrette",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Farro Walnut  Salad",
+    "description": "Steamed farro with soy bean edamame, toybox tomatoes, cranberries, onions, walnuts, roasted brussels sprouts and honey dijon vinaigrette",
+    "station": "@grown",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Fall Barley Bowl",
+    "description": "Steamed lemon herb barley with roasted brussels sprouts, pomegranate seeds, pepitas, roasted sweet potato, fried shallots, feta cheese and citrus vinaigrette",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Roasted Pear, Ricotta, And Basil",
+    "description": "Roasted pears with mozzarella cheese, ricotta, cheese, and chiffonade basil on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Sesame Korean Bbq Beef",
+    "description": "Hand tossed dough with sesame Korean BBQ beef , scallions, sesame seeds, and cafe made Korean BBQ sauce",
+    "station": "@melted",
+    "dietary": []
+  }
+]
