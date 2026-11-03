@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Coconut Jasmine Rice",
+    "description": "Steamed jasmine rice with coconut milk and lime leaves",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Garlic-Chile Roasted Vegetables",
+    "description": "Roasted mixed vegetables with garlic, Fresno chilies and  vinegar soya sauce",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Curry Tofu And Eggplant",
+    "description": "Roasted tofu and eggplant simmered in curry coconut milk with lime juice and Thai basil",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Thai Basil Chicken",
+    "description": "Seared chicken with garlic, fish sauce, oyster, sauce, soy sauce, cafe made vegetable stock, Fresno chilies, and Thai basil",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Vegan Dirty Rice",
+    "description": "Steamed rice with onions, bell peppers, celery, Cajun seasoning, and cafe made vegetable stock",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Smothered Summer Okra & Tomatoes",
+    "description": "Charred okra with sauteed onions, garlic, tomatoes, peppers, and apple cider vinegar",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Cajun Red Bean And Corn Fritters And Caper Remoulade Sauce",
+    "description": "",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Fried Cod With Caper Remoulade",
+    "description": "Fried egg and flour battered rock cod with cafe made caper remoulade",
+    "station": "@charred",
+    "dietary": [
+      "SW"
+    ]
+  },
+  {
+    "name": "Beef Chili",
+    "description": "Sautéed ground beef, onions, garlic, peppers, corn, and black beans with cumin, Chile powder, and herbs",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Goat Cheese And Zucchini",
+    "description": "Roasted zucchini with mozzarella cheese, goat cheese, lemon zest and basil on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Citrus Chicken, Corn, And Jalapeno Pizza",
+    "description": "Roasted citrus chicken with pickled jalapenos, roasted corn, mozzarella cheese, and fresh cilantro on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
