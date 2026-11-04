@@ -23,7 +23,8 @@
   ],
   "artichoke and roasted red pepper braised white beans": [
     "2026-08-26",
-    "2026-09-16"
+    "2026-09-16",
+    "2026-11-04"
   ],
   "asparagus goat cheese pizza": [
     "2026-10-29"
@@ -42,10 +43,14 @@
   "barbecue pork pizza": [
     "2026-08-26",
     "2026-09-16",
-    "2026-10-21"
+    "2026-10-21",
+    "2026-11-04"
   ],
   "basil pesto, artichoke and broccoli pizza": [
     "2026-09-02"
+  ],
+  "beef bolognese": [
+    "2026-11-04"
   ],
   "beef chili": [
     "2026-11-03"
@@ -370,7 +375,8 @@
     "2026-09-16"
   ],
   "crispy paprika potatoes": [
-    "2026-10-14"
+    "2026-10-14",
+    "2026-11-04"
   ],
   "crispy roasted parmesan brussels sprouts": [
     "2026-09-23"
@@ -443,6 +449,9 @@
   ],
   "feta cheese, watercress pesto, and spinach pizza": [
     "2026-09-01"
+  ],
+  "fig, poblano ,and queso fresco pizza": [
+    "2026-11-04"
   ],
   "filipino-inspired chicken inasal with calamansi-annatto glaze": [
     "2026-09-21"
@@ -1140,7 +1149,8 @@
   "roasted zucchini and squash": [
     "2026-08-26",
     "2026-09-16",
-    "2026-09-24"
+    "2026-09-24",
+    "2026-11-04"
   ],
   "roasted zucchini and tomatoes": [
     "2026-08-18",
@@ -1239,7 +1249,8 @@
   ],
   "seared shrimp": [
     "2026-08-26",
-    "2026-09-16"
+    "2026-09-16",
+    "2026-11-04"
   ],
   "seared shrimp with apple-brandy cream": [
     "2026-10-19"
@@ -1422,7 +1433,8 @@
     "2026-09-09",
     "2026-09-16",
     "2026-10-07",
-    "2026-10-21"
+    "2026-10-21",
+    "2026-11-04"
   ],
   "tawa vegetables": [
     "2026-09-18",
@@ -1521,7 +1533,8 @@
     "2026-10-29",
     "2026-10-30",
     "2026-11-02",
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-04"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -1571,6 +1584,9 @@
   "vegan lentil salisbury steaks with mushroom gravy": [
     "2026-09-03",
     "2026-09-25"
+  ],
+  "vegetable bolognese": [
+    "2026-11-04"
   ],
   "vegetable fried rice": [
     "2026-08-17",
