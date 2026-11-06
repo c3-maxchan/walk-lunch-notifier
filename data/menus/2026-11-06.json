@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Cucumber & Pomegranate Raita",
+    "description": "Yogurt with lemon juice, cilantro, mint, cucumber, roasted cumin seeds, and pomegranate arils",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Punjabi Chole Masala And Bhatura",
+    "description": "Simmered chickpeas with black tea, tomatoes, onions, garlic, ginger, masala spices, lemon juice, amchur, and fresh cilantro with fresh cafe made bhatura",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Royal Paneer Dum Biryani",
+    "description": "Paneer masala with basmati rice, ginger, garlic, spices, saffron, lemon juice, ghee, fresh cilantro, mint, and fried onions",
+    "station": "@spiced",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Hyderabadi Chicken Dum Biryani",
+    "description": "Yogurt marinated chicken cooked in ghee with basmati rice ginger, garlic, spices, lemon juice, mint, cilantro, saffron, cardamom, whole spices, and fried onions",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Orzo Pasta With Roasted Tomatoes",
+    "description": "Blanched orzo pasta with scallions, balsamic vinegar, and roasted tomatoes",
+    "station": "@charred",
+    "dietary": [
+      "V",
+      "VG"
+    ]
+  },
+  {
+    "name": "Cider Glazed Brussels Sprouts",
+    "description": "Roasted brussels sprouts with café made cider glaze",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Seared Halloumi Piccata With Lemon Caper Sauce",
+    "description": "Seared halloumi cheese with cafe made piccata sauce",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Lemon Chive Seared Barramundi Filet",
+    "description": "Seared barramundi fillet with lemon pepper, chives, and dill",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Nachos",
+    "description": "Tortilla chips with refried beans, café made cheese sauce, cotija cheese, sour cream, pico de gallo, pickled jalapenos and salsa",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Chicken Nachos",
+    "description": "Roasted achiote chicken with tortilla chips with refried beans, café made cheese sauce, cotija cheese, sour cream, pico de gallo, pickled jalapenos and salsa",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Vegetable Supreme Pizza With Black Olives",
+    "description": "Cafe made pizza sauce with mozzarella cheese, bell peppers, tomatoes, onions, olives, and mushrooms on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Sausage And Balsamic Onion Pizza",
+    "description": "Garlic oil brushed hand tossed dough with pork sausage, caramelized onions, and balsamic reduction and micro greens",
+    "station": "@melted",
+    "dietary": []
+  },
+  {
+    "name": "Saffron Mango Shrikhand",
+    "description": "Yogurt with mango pulp, saffron, cardamom, milk, sugar, and pistachios",
+    "station": "@sweets",
+    "dietary": [
+      "V"
+    ]
+  }
+]
