@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Steamed Jasmine Rice",
+    "description": "",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Garlic-Ginger-Sesame Bok Choy And Shiitake Mushrooms",
+    "description": "Sauteed mushrooms with steamed bok choy tossed with a garlic-ginger sesame oil",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Miso Roasted Kabocha And Edamame",
+    "description": "Roasted kabocha squash with edamame, maple syrup, ginger, and rice vinegar glaze",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Chicken Tsukune With Ginger Scallion Glaze",
+    "description": "Seared chicken patty with cafe made ginger and scallion soy glaze",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Crispy Smashed Potatoes",
+    "description": "Roasted baby potatoes with garlic, parsley and olive oil",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Sauteed Zucchini",
+    "description": "Sauteed zucchini with olive oil, chili flakes and spices",
+    "station": "@charred",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Griddled Halloumi & Tomato Stack",
+    "description": "Seared halloumi cheese stacked with America Fresh Heirloom tomatoes, olive oil, and fresh basil",
+    "station": "@charred",
+    "dietary": [
+      "V",
+      "F2F"
+    ]
+  },
+  {
+    "name": "Seared Pork Medallions And Tarragon Mustard Sauce",
+    "description": "Seared pork medallions with a spicy paprika rub",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Coconut Kabocha Soup",
+    "description": "Coconut cream, cornstarch, kabocha squash, milk, herbs, garlic, celery, carrot and onion",
+    "station": "@bites",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheese with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Basil Pesto, Artichoke And Broccoli Pizza",
+    "description": "Cafe made pesto with mozzarella cheese, artichoke hearts, broccoli, and parmesan cheese on hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Chicken, Tomato, And Tarragon Pizza",
+    "description": "Cafe made pizza sauce with mozzarella cheese, parmesan cheese, onions, tomatoes, and tarragon on hand tossed dough",
+    "station": "@melted",
+    "dietary": []
+  }
+]
