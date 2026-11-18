@@ -1,0 +1,88 @@
+[
+  {
+    "name": "Toasted Pepita Red Rice",
+    "description": "Toasted jasmine rice steamed with cafe made tomato broth and toasted pumpkin seeds",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Cumin And Green Onion Roasted Cauliflower",
+    "description": "Roasted cauliflower with cumin and scallions",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Black Bean & Sweet Potato Picadillo",
+    "description": "Simmered black beans and roasted sweet potatoes in a spiced tomato and ancho chili broth",
+    "station": "@spiced",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Chile Colorado Pork With Roasted Pumpkin",
+    "description": "Braised pork and roasted pumpkin in a tomato and chili sauce",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Mediterranean Harvest Quinoa Salad",
+    "description": "Steamed quinoa with roasted cauliflower, simmered chickpeas, baby arugula, sliced Persian cucumbers, cherry tomatoes, pickled red onions, fresh parsley, and lemon tahini vinaigrette",
+    "station": "@grown",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Autumn Farro And Roasted Delicata Salad",
+    "description": "Steamed farro with maple roasted delicata squash, baby kale, goat cheese, dried cranberries, toasted pumpkin seeds, and an apple-cider and Dijon mustard vinaigrette",
+    "station": "@grown",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Citrus And Herb Poached Bay Shrimp Salad",
+    "description": "Chilled lemon and herb poached bay shrimp with butter lettuce, shaved fennel, orange segments, avocado, cucumber, watermelon radish, and citrus champagned vinaigrette",
+    "station": "@grown",
+    "dietary": [
+      "SW"
+    ]
+  },
+  {
+    "name": "Fruit Salad",
+    "description": "",
+    "station": "@grown",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "Roasted Vegetable And Vegan Cheddar Wrap",
+    "description": "Spinach tortilla filled with roasted eggplant, bell peppers, zucchini, spinach, garlic chickpea hummus, vegan cheddar cheese, and lemon-herb dressing",
+    "station": "@bites",
+    "dietary": [
+      "VG"
+    ]
+  },
+  {
+    "name": "California Herb Roasted Chicken Ciabatta",
+    "description": "Sliced herb roasted chicken breast with roasted piquillo peppers, baby arugula, tomatoes, and basil egg aioli on Panorama Baking Company ciabatta",
+    "station": "@bites",
+    "dietary": [
+      "F2F"
+    ]
+  },
+  {
+    "name": "Roasted Carrot, Ginger, And Coconut Soup",
+    "description": "Roasted carrots with fresh ginger, coconut milk, cafe made vegetable stock, spices, and fresh herbs",
+    "station": "@simmer",
+    "dietary": [
+      "VG"
+    ]
+  }
+]
