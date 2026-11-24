@@ -357,6 +357,9 @@
   "coconut kabocha soup": [
     "2026-11-09"
   ],
+  "coconut sweet potato and carrot soup": [
+    "2026-11-24"
+  ],
   "coconut sweet potato soup": [
     "2026-08-10",
     "2026-10-07"
@@ -710,7 +713,8 @@
   "harissa chickpeas": [
     "2026-08-11",
     "2026-09-08",
-    "2026-10-06"
+    "2026-10-06",
+    "2026-11-24"
   ],
   "harissa lentils with roasted carrots": [
     "2026-09-01",
@@ -832,7 +836,8 @@
   "lamb shawarma": [
     "2026-08-11",
     "2026-09-08",
-    "2026-10-06"
+    "2026-10-06",
+    "2026-11-24"
   ],
   "latin succotash": [
     "2026-08-19",
@@ -872,7 +877,8 @@
   "lemon herb chicken breast": [
     "2026-08-11",
     "2026-09-08",
-    "2026-10-06"
+    "2026-10-06",
+    "2026-11-24"
   ],
   "lemon meringue tartlet": [
     "2026-09-03"
@@ -1077,6 +1083,9 @@
   "pear and leek pizza": [
     "2026-09-22"
   ],
+  "pear, burrata, and basil pizza": [
+    "2026-11-24"
+  ],
   "pear, fontina & caramelized onion pizza": [
     "2026-10-13",
     "2026-11-17"
@@ -1210,7 +1219,8 @@
   "roasted eggplant with peppers and onions": [
     "2026-08-11",
     "2026-09-08",
-    "2026-10-06"
+    "2026-10-06",
+    "2026-11-24"
   ],
   "roasted eggplant, ricotta, and peppadew honey pizza": [
     "2026-08-14",
@@ -1223,14 +1233,16 @@
     "2026-09-08",
     "2026-09-23",
     "2026-09-30",
-    "2026-10-06"
+    "2026-10-06",
+    "2026-11-24"
   ],
   "roasted grape ricotta pizza": [
     "2026-09-21"
   ],
   "roasted green beans": [
     "2026-09-08",
-    "2026-10-06"
+    "2026-10-06",
+    "2026-11-24"
   ],
   "roasted green beans with almond gremolata": [
     "2026-09-22"
@@ -1343,7 +1355,8 @@
   "sausage and olive pizza": [
     "2026-08-11",
     "2026-09-08",
-    "2026-10-06"
+    "2026-10-06",
+    "2026-11-24"
   ],
   "sausage, mushroom & rosemary pizza": [
     "2026-10-13",
@@ -1425,7 +1438,8 @@
     "2026-08-11",
     "2026-08-18",
     "2026-09-08",
-    "2026-10-06"
+    "2026-10-06",
+    "2026-11-24"
   ],
   "sesame furikake rice": [
     "2026-08-24",
@@ -1729,7 +1743,8 @@
     "2026-11-17",
     "2026-11-19",
     "2026-11-20",
-    "2026-11-23"
+    "2026-11-23",
+    "2026-11-24"
   ],
   "thyme and lemon zest seared scallops": [
     "2026-08-18"
@@ -1764,7 +1779,8 @@
   "turmeric basmati rice": [
     "2026-08-11",
     "2026-10-06",
-    "2026-10-27"
+    "2026-10-27",
+    "2026-11-24"
   ],
   "turmeric potato and basmati rice": [
     "2026-09-08"
