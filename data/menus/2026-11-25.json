@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Taqueria Bar",
+    "description": "Spanish rice, \t\t\t\t\t\t\t\tpinto beans , \t\t\t\t\t\t\t\ttofu fajitas, \t\t\t\t\t\t\t\tpico de gallo , \t\t\t\t\t\t\t\ttortilla corn , \t\t\t\t\t\t\t\t12\" flour tortilla, \t\t\t\t\t\t\t\tsour cream, \t\t\t\t\t\t\t\tpork carnitas, \t\t\t\t\t\t\t\tlime wedge, \t\t\t\t\t\t\t\tsalsa roja, \t\t\t\t\t\t\t\tcotija cheese",
+    "station": "@spiced",
+    "dietary": []
+  },
+  {
+    "name": "Winter Pasta Salad And Honey Lemon Vinaigrette",
+    "description": "Blanched pasta with pomegranate aril, tomatoes, cucumbers, arugula, basil, and cafe made honey lemon vinaigrette",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Garlic Parmesan Roasted Romanesco",
+    "description": "Roasted Romanesco tossed with garlic and parmesan cheese",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Farro And Mixed Vegetable Cakes",
+    "description": "Seared steamed farro cakes with fresh corn, zucchini, eggs, panko and parsley",
+    "station": "@charred",
+    "dietary": [
+      "V"
+    ]
+  },
+  {
+    "name": "Coffee Rubbed Tri-Tip And Almond Romesco Sauce",
+    "description": "Seared coffee rubbed tri-tip with cafe made almond romesco",
+    "station": "@charred",
+    "dietary": []
+  },
+  {
+    "name": "Caldo De Res",
+    "description": "Slow simmered beef, fresh corn on the cob, carrots, potatoes, chayote, calabacita, cabbage, cilantro and beef broth",
+    "station": "@bites",
+    "dietary": []
+  },
+  {
+    "name": "Three Cheese Pizza",
+    "description": "Jack, cheddar, and mozzarella cheeses with cafe made pizza sauce on a hand tossed dough",
+    "station": "@melted",
+    "dietary": [
+      "V"
+    ]
+  }
+]
